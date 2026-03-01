@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Naturals Salon &amp; Spa Bangalore</title>
-<meta name="description" content="Contact Naturals Salon &amp; Spa Bangalore — 5 locations across the city. Call, WhatsApp, or send us a message and we'll respond within 24 hours.">
 <link rel="canonical" href="https://naturals-blr.github.io/contact.html">
+<meta name="description" content="Contact Naturals Salon &amp; Spa Bangalore — find your nearest store, call, WhatsApp or send us a message.">
+<title>Contact Us | Naturals Salon &amp; Spa Bangalore</title>
 <meta property="og:type" content="website">
-<meta property="og:title" content="Contact Us | Naturals Salon &amp; Spa Bangalore">
 <meta property="og:site_name" content="Naturals Salon &amp; Spa Bangalore">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>(function(){var t=localStorage.getItem('naturals-theme')||'luxury';document.documentElement.setAttribute('data-theme',t);})();</script>
 
@@ -31,67 +31,63 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
-/* Image responsiveness */
-img{max-width:100%;height:auto;display:block;}
-/* Prevent horizontal scroll */
-html,body{max-width:100%;overflow-x:hidden;}
-/* Smooth font scaling baseline */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
-/* Tap highlight suppression */
-a,button{-webkit-tap-highlight-color:transparent;}
-/* Min tap target */
-button,a{touch-action:manipulation;}
-@media(max-width:640px){
-/* Body bottom padding for sticky bar on all pages */
-body{padding-bottom:62px;}
-/* Tighten section padding globally */
-.section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
-}
-
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
-a{text-decoration:none;color:inherit;}
-img{display:block;width:100%;object-fit:cover;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);}
+a{text-decoration:none;color:inherit;}img{display:block;width:100%;object-fit:cover;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo img{height:34px;width:auto;filter:brightness(0) invert(1);}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;letter-spacing:1px;}
+.nav-logo-text span{color:var(--gold);font-style:italic;font-weight:300;}
+.nav-right{display:flex;align-items:center;gap:24px;}
+.nav-back{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}
+.nav-back:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:var(--dark);padding:10px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all 0.3s;}
+.nav-cta:hover{background:var(--gold-pale);}
 .page-hero{padding-top:70px;background:var(--dark);}
-.page-hero-inner{padding:64px 60px 56px;max-width:1380px;margin:0 auto;}
+.page-hero-inner{padding:60px 60px 60px;}
 .lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
 .lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
-.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,80px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:14px;}
+.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,80px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:14px;}
 .page-hero-inner h1 em{font-style:italic;color:var(--gold);}
-.page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.8;max-width:560px;}
-.contact-wrap{max-width:1200px;margin:0 auto;padding:64px 60px;display:grid;grid-template-columns:1fr 400px;gap:56px;align-items:start;}
-.form-block{background:#fff;padding:40px;border-radius:4px;}
-.form-block h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;margin-bottom:6px;}
+.page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.42);font-weight:300;line-height:1.8;max-width:560px;}
+/* LAYOUT */
+.contact-wrap{max-width:1160px;margin:0 auto;padding:64px 60px;display:grid;grid-template-columns:1fr 420px;gap:64px;align-items:start;}
+/* FORM */
+.form-block{background:#fff;padding:40px;}
+.form-block h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:6px;}
 .form-block h2 em{font-style:italic;color:var(--green-mid);}
 .form-sub{font-size:13px;color:var(--text-light);margin-bottom:28px;font-weight:300;}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
 .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px;}
 .form-group label{font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600;color:var(--text-mid);}
-.form-group input,.form-group select,.form-group textarea{border:1px solid rgba(0,0,0,0.12);padding:12px 14px;font-size:13px;font-family:'Jost',sans-serif;color:var(--text);background:var(--cream);transition:border-color 0.3s;outline:none;border-radius:3px;}
+.form-group input,.form-group select,.form-group textarea{
+border:1px solid rgba(0,0,0,0.12);padding:11px 14px;font-size:13px;
+font-family:'Jost',sans-serif;color:var(--text);background:var(--cream);
+transition:border-color 0.3s;outline:none;
+}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--green-mid);}
-.form-group textarea{resize:vertical;min-height:110px;}
+.form-group textarea{resize:vertical;min-height:100px;}
 .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23999' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;}
 .form-req{font-size:10px;color:var(--text-light);margin-bottom:20px;}
-.form-submit{background:#1A73E8;color:#fff;padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border:none;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.3s;width:100%;border-radius:6px;}
-.form-submit:hover{background:#1557B0;transform:translateY(-1px);}
-.form-submit:disabled{opacity:0.6;cursor:not-allowed;transform:none;}
-.form-success{display:none;background:#f0fdf4;border:1px solid #86efac;padding:16px 20px;font-size:13px;color:#166534;margin-top:16px;text-align:center;border-radius:4px;}
-.stores-col h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;margin-bottom:6px;}
+.form-submit{background:var(--gold);color:var(--dark);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border:none;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.3s;width:100%;}
+.form-submit:hover{background:var(--gold-pale);}
+.form-success{display:none;background:#f0fdf4;border:1px solid #86efac;padding:16px 20px;font-size:13px;color:#166534;margin-top:16px;text-align:center;}
+/* STORE CARDS */
+.stores-col h2{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:6px;}
 .stores-col h2 em{font-style:italic;color:var(--green-mid);}
 .stores-col .form-sub{margin-bottom:20px;}
-.store-contact-card{background:#fff;padding:22px 24px;margin-bottom:8px;border-left:3px solid transparent;transition:border-color 0.3s;border-radius:4px;}
+.store-contact-card{background:#fff;padding:22px 24px;margin-bottom:3px;border-left:3px solid transparent;transition:border-color 0.3s;}
 .store-contact-card:hover{border-left-color:var(--gold);}
 .scc-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:2px;}
-.scc-area{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
-.scc-addr{font-size:12px;color:var(--text-light);margin-bottom:10px;line-height:1.6;}
-.scc-hours{font-size:11px;color:var(--text-light);margin-bottom:12px;}
+.scc-area{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:12px;}
+.scc-addr{font-size:12px;color:var(--text-light);margin-bottom:12px;line-height:1.6;}
 .scc-btns{display:flex;flex-wrap:wrap;gap:6px;}
-.btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-book{background:#1A73E8;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.btn-wa{background:#25D366;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-wa{background:#25D366;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-call{background:#5F6368;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
 .btn-maps{background:#D93025;color:#fff;border:none;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-maps:hover{background:#b71c1c;transform:translateY(-1px);}
@@ -99,9 +95,6 @@ img{display:block;width:100%;object-fit:cover;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
-@media(max-width:480px){
-.btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
-}
 
 footer{background:#080f0b;}
 [data-theme="naturals"] footer{background:#0D0120;}
@@ -120,25 +113,11 @@ footer{background:#080f0b;}
 @media(max-width:960px){.ft-top{grid-template-columns:1fr 1fr;gap:28px;padding:36px 20px 24px;}.ft-bottom{padding:14px 20px;flex-direction:column;text-align:center;}}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
 
-.social-icons{display:flex;gap:10px;align-items:center;}
-.soc-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;text-decoration:none;}
-.soc-icon:hover{transform:translateY(-2px);background:rgba(255,255,255,0.12);}
-.soc-wa:hover{border-color:#25D366;box-shadow:0 4px 12px rgba(37,211,102,0.25);}
-.soc-fb:hover{border-color:#1877F2;box-shadow:0 4px 12px rgba(24,119,242,0.25);}
-.soc-ig:hover{border-color:#C13584;box-shadow:0 4px 12px rgba(193,53,132,0.25);}
-
-@media(max-width:1024px){
-.contact-wrap{grid-template-columns:1fr;padding:48px 40px;gap:40px;}
-}
-@media(max-width:640px){
-.page-hero-inner{padding:48px 20px 44px;}
-.contact-wrap{padding:36px 20px;}
-.form-block{padding:24px 20px;}
+@media(max-width:960px){
+nav{padding:0 20px;height:60px;}
+.page-hero-inner{padding:44px 20px 44px;}
+.contact-wrap{grid-template-columns:1fr;padding:40px 20px;gap:40px;}
 .form-row{grid-template-columns:1fr;}
-img{max-width:100%;height:auto;}
-body{padding-bottom:62px;}
-.scc-btns{gap:8px;}
-.scc-btns a,.scc-btns button{flex:1 1 calc(50% - 4px);justify-content:center;}
 }
 </style>
 </head>
@@ -263,8 +242,8 @@ Our Stores <span class="drawer-sub-caret">&#9662;</span>
 .drawer-sub li a{padding:10px 28px 10px 38px;font-size:11px;letter-spacing:1.5px;display:flex;flex-direction:column;gap:2px;}
 .drawer-sub li a small{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;}
 .drawer-cta{padding:20px 28px;border-top:1px solid rgba(255,255,255,0.07);margin-top:auto;}
-.drawer-book-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:var(--dark);padding:14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;text-decoration:none;transition:all 0.3s;border-radius:6px;}
-.drawer-book-btn:hover{background:var(--gold-pale);}
+.drawer-book-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:#1A73E8;color:#fff;padding:14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;text-decoration:none;transition:all 0.3s;border-radius:6px;}
+.drawer-book-btn:hover{background:#1557B0;}
 @media(max-width:1024px){ #hamburger{display:flex;}}
 </style>
 <script>
@@ -347,7 +326,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div class="page-hero-inner">
 <div class="lbl">Get In Touch</div>
 <h1>Contact <em>Us</em></h1>
-<p>We'd love to hear from you. Find your nearest store below, send us a message, or reach out directly by phone or WhatsApp.</p>
+<p>Reach out to us — we'd love to hear from you. Find your nearest store below or send us a message.</p>
 </div>
 </div>
 
@@ -356,42 +335,42 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div>
 <div class="form-block">
 <h2>Send us a <em>message</em></h2>
-<div class="form-sub">We'll respond within 24 hours on working days.</div>
+<div class="form-sub">We'll get back to you within 24 hours.</div>
 <div class="form-row">
 <div class="form-group">
-<label for="f-name">Full Name *</label>
-<input type="text" id="f-name" placeholder="Your name" autocomplete="name" required>
+<label>Full Name *</label>
+<input type="text" id="f-name" placeholder="Your name" required>
 </div>
 <div class="form-group">
-<label for="f-phone">Mobile Number *</label>
-<input type="tel" id="f-phone" placeholder="+91 98765 43210" autocomplete="tel" required>
+<label>Mobile Number *</label>
+<input type="tel" id="f-phone" placeholder="+91 98765 43210" required>
 </div>
 </div>
 <div class="form-group">
-<label for="f-email">Email Address</label>
-<input type="email" id="f-email" placeholder="you@example.com" autocomplete="email">
+<label>Email Address</label>
+<input type="email" id="f-email" placeholder="you@example.com">
 </div>
 <div class="form-group">
-<label for="f-store">Preferred Store</label>
+<label>Preferred Store</label>
 <select id="f-store">
 <option value="">— Select a store —</option>
-<option value="JP Nagar 5th Phase">JP Nagar 5th Phase — South Bangalore</option>
-<option value="Elements Mall">Elements Mall — Nagavara</option>
-<option value="Devasandra">Devasandra — KR Puram</option>
-<option value="Frazer Town">Frazer Town — Pulikeshi Nagar</option>
-<option value="Hennur">Hennur — Hennur Cross</option>
+<option value="JP Nagar 5th Phase">JP Nagar 5th Phase</option>
+<option value="Elements Mall">Elements Mall</option>
+<option value="Devasandra">Devasandra</option>
+<option value="Frazer Town">Frazer Town</option>
+<option value="Hennur">Hennur</option>
 </select>
 </div>
 <div class="form-group">
-<label for="f-service">Service I'm Interested In</label>
+<label>Service I'm Interested In</label>
 <select id="f-service">
 <option value="">— Select a service —</option>
 <option>Hair Cut &amp; Styling</option>
 <option>Hair Colouring &amp; Highlights</option>
 <option>Hair Straightening / Smoothening</option>
-<option>Keratin Treatment</option>
+<option>Keratin Service</option>
 <option>Hair Spa</option>
-<option>Facial &amp; Skin Care</option>
+<option>Facial</option>
 <option>De-Tan / Clean Up</option>
 <option>Manicure / Pedicure</option>
 <option>Waxing &amp; Threading</option>
@@ -401,30 +380,30 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 </select>
 </div>
 <div class="form-group">
-<label for="f-message">Message</label>
-<textarea id="f-message" placeholder="Tell us how we can help, or ask us anything..."></textarea>
+<label>Message</label>
+<textarea id="f-message" placeholder="Tell us how we can help..."></textarea>
 </div>
 <p class="form-req">* Required fields</p>
-<button class="form-submit" id="form-btn" onclick="submitContactForm()">Send Message &#8594;</button>
+<button class="form-submit" onclick="submitForm()">Send Message &#8594;</button>
 <div class="form-success" id="form-success">&#10003; Thank you! We've received your message and will get back to you within 24 hours.</div>
 </div>
 </div>
 
+
 <div class="stores-col">
-<h2>Our <em>Locations</em></h2>
-<div class="form-sub">5 stores across Bangalore — walk in or book online, 7 days a week.</div>
+<h2>Our <em>stores</em></h2>
+<div class="form-sub">Walk in or book online — we're open 7 days a week.</div>
 <div class="store-contact-card">
 <div class="scc-name">JP Nagar 5th Phase</div>
 <div class="scc-area">South Bangalore &middot; 560078</div>
 <div class="scc-addr">&#128205; 1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India</div>
-<div class="scc-hours">&#128336; Mon–Fri 10am–8pm &nbsp;|&nbsp; Sat–Sun 9am–8:30pm</div>
 <div class="scc-btns">
-<a href="tel:+918792642299" class="btn-call " aria-label="Call +91 87926 42299">&#128222; +91 87926 42299</a>
+<a href="tel:" class="btn-call " aria-label="Call 918792642299">&#128222; 918792642299</a>
 
-<a href="https://wa.me/918792642299" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/918792642299" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 WhatsApp</a>
 
-<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="btn-book " aria-label="Book Now">&#128197; Book Now</a>
+<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="btn-book " aria-label="Book">&#128197; Book</a>
 
 <a href="https://g.page/Naturals_JPNagar5thPhase/" target="_blank" class="btn-maps " aria-label="Directions">
 <svg viewBox="0 0 24 24" width="15" height="15" style="flex-shrink:0" aria-hidden="true"><path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.5"/></svg>
@@ -437,14 +416,13 @@ Directions
 <div class="scc-name">Elements Mall</div>
 <div class="scc-area">Nagavara &middot; 560077</div>
 <div class="scc-addr">&#128205; Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India</div>
-<div class="scc-hours">&#128336; Mon–Fri 10am–8pm &nbsp;|&nbsp; Sat–Sun 9am–8:30pm</div>
 <div class="scc-btns">
-<a href="tel:+919901000017" class="btn-call " aria-label="Call +91 99010 00017">&#128222; +91 99010 00017</a>
+<a href="tel:" class="btn-call " aria-label="Call 919901000017">&#128222; 919901000017</a>
 
-<a href="https://wa.me/919901000017" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/919901000017" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 WhatsApp</a>
 
-<a href="https://naturals-salon-elementsmall.setmore.com/" target="_blank" class="btn-book " aria-label="Book Now">&#128197; Book Now</a>
+<a href="https://naturals-salon-elementsmall.setmore.com/" target="_blank" class="btn-book " aria-label="Book">&#128197; Book</a>
 
 <a href="https://maps.google.com/?q=Naturals+Salon+Elements+Mall" target="_blank" class="btn-maps " aria-label="Directions">
 <svg viewBox="0 0 24 24" width="15" height="15" style="flex-shrink:0" aria-hidden="true"><path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.5"/></svg>
@@ -457,14 +435,13 @@ Directions
 <div class="scc-name">Devasandra</div>
 <div class="scc-area">KR Puram &middot; 560036</div>
 <div class="scc-addr">&#128205; 2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu's Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India</div>
-<div class="scc-hours">&#128336; Mon–Fri 10am–8pm &nbsp;|&nbsp; Sat–Sun 9am–8:30pm</div>
 <div class="scc-btns">
-<a href="tel:+917259490009" class="btn-call " aria-label="Call +91 72594 90009">&#128222; +91 72594 90009</a>
+<a href="tel:" class="btn-call " aria-label="Call 917259490009">&#128222; 917259490009</a>
 
-<a href="https://wa.me/917259490009" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/917259490009" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 WhatsApp</a>
 
-<a href="https://naturals-salon-devasandra.setmore.com/" target="_blank" class="btn-book " aria-label="Book Now">&#128197; Book Now</a>
+<a href="https://naturals-salon-devasandra.setmore.com/" target="_blank" class="btn-book " aria-label="Book">&#128197; Book</a>
 
 <a href="https://maps.google.com/?q=Naturals+Salon+Devasandra" target="_blank" class="btn-maps " aria-label="Directions">
 <svg viewBox="0 0 24 24" width="15" height="15" style="flex-shrink:0" aria-hidden="true"><path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.5"/></svg>
@@ -477,14 +454,13 @@ Directions
 <div class="scc-name">Frazer Town</div>
 <div class="scc-area">Pulikeshi Nagar &middot; 560005</div>
 <div class="scc-addr">&#128205; 1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India</div>
-<div class="scc-hours">&#128336; Mon–Fri 10am–8pm &nbsp;|&nbsp; Sat–Sun 9am–8:30pm</div>
 <div class="scc-btns">
-<a href="tel:+919945488040" class="btn-call " aria-label="Call +91 99454 88040">&#128222; +91 99454 88040</a>
+<a href="tel:" class="btn-call " aria-label="Call 919945488040">&#128222; 919945488040</a>
 
-<a href="https://wa.me/919945488040" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/919945488040" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 WhatsApp</a>
 
-<a href="https://naturals-salon-frazertown.setmore.com/" target="_blank" class="btn-book " aria-label="Book Now">&#128197; Book Now</a>
+<a href="https://naturals-salon-frazertown.setmore.com/" target="_blank" class="btn-book " aria-label="Book">&#128197; Book</a>
 
 <a href="https://maps.google.com/?q=Naturals+Salon+Frazer+Town" target="_blank" class="btn-maps " aria-label="Directions">
 <svg viewBox="0 0 24 24" width="15" height="15" style="flex-shrink:0" aria-hidden="true"><path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.5"/></svg>
@@ -497,14 +473,13 @@ Directions
 <div class="scc-name">Hennur</div>
 <div class="scc-area">Hennur Cross &middot; 560043</div>
 <div class="scc-addr">&#128205; 1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India</div>
-<div class="scc-hours">&#128336; Mon–Fri 10am–8pm &nbsp;|&nbsp; Sat–Sun 9am–8:30pm</div>
 <div class="scc-btns">
-<a href="tel:+919606900069" class="btn-call " aria-label="Call +91 96069 00069">&#128222; +91 96069 00069</a>
+<a href="tel:" class="btn-call " aria-label="Call 919606900069">&#128222; 919606900069</a>
 
-<a href="https://wa.me/919606900069" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/919606900069" target="_blank" class="btn-wa " aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 WhatsApp</a>
 
-<a href="https://naturals-salon-hennur.setmore.com/" target="_blank" class="btn-book " aria-label="Book Now">&#128197; Book Now</a>
+<a href="https://naturals-salon-hennur.setmore.com/" target="_blank" class="btn-book " aria-label="Book">&#128197; Book</a>
 
 <a href="https://maps.google.com/?q=Naturals+Salon+Hennur" target="_blank" class="btn-maps " aria-label="Directions">
 <svg viewBox="0 0 24 24" width="15" height="15" style="flex-shrink:0" aria-hidden="true"><path fill="#4285F4" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle fill="#fff" cx="12" cy="9" r="2.5"/></svg>
@@ -514,7 +489,6 @@ Directions
 </div>
 </div>
 </div>
-
 </div>
 
 <footer>
@@ -530,7 +504,7 @@ Directions
 <li><a href="services.html">Services &amp; Pricing</a></li>
 <li><a href="offers.html">Offers</a></li>
 <li><a href="contact.html">Contact Us</a></li>
-<li><a href="about.html">About Us</a></li>
+<li><a href="index.html#about">About</a></li>
 </ul>
 </div>
 <div class="ft-col">
@@ -557,187 +531,6 @@ Directions
 <div class="ft-url">naturals-blr.github.io</div>
 </div>
 </footer>
-
-<script>
-window.NATURALS_STORES = [{"Active_Status": "Yes", "Address_Full": "1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India", "Appointment_URL": "https://naturals-salon-jpnagar5phase.setmore.com/", "Area": "South Bangalore", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.JPNagar5Phase", "Google_Maps_URL": "https://g.page/Naturals_JPNagar5thPhase/", "Google_Review_URL": "https://g.page/Naturals_JPNagar5thPhase/review?rc/", "Hero_Number": "1", "Instagram_URL": "https://instagram.com/Naturals.Salon.JPNagar5Phase/", "Landline": "918041304444", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 87926 42299", "Phone_Mobile": "918792642299", "Phone_Tel": "+918792642299", "Pincode": "560078", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N78", "Store_Name": "JP Nagar 5th Phase", "Store_Page_URL": "stores/jpnagar.html", "Store_Short": "N78", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "918792642299"}, {"Active_Status": "Yes", "Address_Full": "Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India", "Appointment_URL": "https://naturals-salon-elementsmall.setmore.com/", "Area": "Nagavara", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.ElementsMall/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Elements+Mall", "Google_Review_URL": "https://g.page/Naturals-ElementsMall/review?rc/", "Hero_Number": "2", "Instagram_URL": "https://instagram.com/Naturals.Salon.ElementsMall/", "Landline": "918046514422", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 99010 00017", "Phone_Mobile": "919901000017", "Phone_Tel": "+919901000017", "Pincode": "560077", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N77", "Store_Name": "Elements Mall", "Store_Page_URL": "stores/elements-mall.html", "Store_Short": "N77", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "919901000017"}, {"Active_Status": "Yes", "Address_Full": "2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu\u0027s Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India", "Appointment_URL": "https://naturals-salon-devasandra.setmore.com/", "Area": "KR Puram", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.Devasandra/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Devasandra", "Google_Review_URL": "https://g.page/r/CRJ1lK0dw1n5EAg/review", "Hero_Number": "3", "Instagram_URL": "https://instagram.com/Naturals.Salon.Devasandra/", "Landline": "", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 72594 90009", "Phone_Mobile": "917259490009", "Phone_Tel": "+917259490009", "Pincode": "560036", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N36", "Store_Name": "Devasandra", "Store_Page_URL": "stores/devasandra.html", "Store_Short": "N36", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "917259490009"}, {"Active_Status": "Yes", "Address_Full": "1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India", "Appointment_URL": "https://naturals-salon-frazertown.setmore.com/", "Area": "Pulikeshi Nagar", "Email": "", "Facebook_URL": "https://www.facebook.com/Naturals.Salon.FrazerTown/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Frazer+Town", "Google_Review_URL": "https://g.page/Naturals-FrazerTown/review?rc/", "Hero_Number": "4", "Instagram_URL": "https://instagram.com/Naturals.Salon.FrazerTown/", "Landline": "918040948040", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 99454 88040", "Phone_Mobile": "919945488040", "Phone_Tel": "+919945488040", "Pincode": "560005", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N05", "Store_Name": "Frazer Town", "Store_Page_URL": "stores/frazer-town.html", "Store_Short": "N05", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "919945488040"}, {"Active_Status": "Yes", "Address_Full": "1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India", "Appointment_URL": "https://naturals-salon-hennur.setmore.com/", "Area": "Hennur Cross", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.Hennur/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Hennur", "Google_Review_URL": "https://g.page/Naturals-Hennur/review?rc/", "Hero_Number": "5", "Instagram_URL": "https://instagram.com/Naturals.Salon.Hennur/", "Landline": "", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 96069 00069", "Phone_Mobile": "919606900069", "Phone_Tel": "+919606900069", "Pincode": "560043", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N43", "Store_Name": "Hennur", "Store_Page_URL": "stores/hennur.html", "Store_Short": "N43", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "919606900069"}];
-window.NATURALS_BASE = '';
-</script>
-
-<div id="store-modal-overlay" onclick="closeStorePicker()" style="display:none;"></div>
-<div id="store-modal" role="dialog" aria-modal="true" aria-label="Select your store" style="display:none;">
-<div id="store-modal-inner">
-<div class="spm-header">
-<div class="spm-title">Select Your <em>Store</em></div>
-<div class="spm-sub">Choose your preferred Naturals Salon &amp; Spa Bangalore location</div>
-<button class="spm-close" onclick="closeStorePicker()" aria-label="Close">&#10005;</button>
-</div>
-<div class="spm-cards">
-<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
-<div class="spm-card-num">1</div>
-<div class="spm-card-info">
-<div class="spm-card-name">JP Nagar 5th Phase</div>
-<div class="spm-card-area">South Bangalore &middot; 560078</div>
-<div class="spm-card-addr">1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India</div>
-</div>
-<div class="spm-card-cta">Select &#8594;</div>
-</div>
-<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
-<div class="spm-card-num">2</div>
-<div class="spm-card-info">
-<div class="spm-card-name">Elements Mall</div>
-<div class="spm-card-area">Nagavara &middot; 560077</div>
-<div class="spm-card-addr">Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India</div>
-</div>
-<div class="spm-card-cta">Select &#8594;</div>
-</div>
-<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
-<div class="spm-card-num">3</div>
-<div class="spm-card-info">
-<div class="spm-card-name">Devasandra</div>
-<div class="spm-card-area">KR Puram &middot; 560036</div>
-<div class="spm-card-addr">2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu's Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India</div>
-</div>
-<div class="spm-card-cta">Select &#8594;</div>
-</div>
-<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
-<div class="spm-card-num">4</div>
-<div class="spm-card-info">
-<div class="spm-card-name">Frazer Town</div>
-<div class="spm-card-area">Pulikeshi Nagar &middot; 560005</div>
-<div class="spm-card-addr">1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India</div>
-</div>
-<div class="spm-card-cta">Select &#8594;</div>
-</div>
-<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
-<div class="spm-card-num">5</div>
-<div class="spm-card-info">
-<div class="spm-card-name">Hennur</div>
-<div class="spm-card-area">Hennur Cross &middot; 560043</div>
-<div class="spm-card-addr">1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India</div>
-</div>
-<div class="spm-card-cta">Select &#8594;</div>
-</div>
-</div>
-</div>
-</div>
-<style>
-#store-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:700;backdrop-filter:blur(4px);}
-#store-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:800;width:90%;max-width:600px;max-height:88vh;overflow-y:auto;background:var(--cream);box-shadow:0 24px 80px rgba(0,0,0,0.45);}
-[data-theme="naturals"] #store-modal{background:#FAF7FF;}
-#store-modal-inner{display:flex;flex-direction:column;}
-.spm-header{background:var(--dark);padding:28px 32px;position:relative;}
-[data-theme="naturals"] .spm-header{background:#1A0533;}
-.spm-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;margin-bottom:4px;}
-.spm-title em{font-style:italic;color:var(--gold);}
-.spm-sub{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;}
-.spm-close{position:absolute;top:20px;right:24px;background:none;border:none;color:rgba(255,255,255,0.45);font-size:20px;cursor:pointer;padding:6px;transition:color 0.2s;line-height:1;}
-.spm-close:hover{color:#fff;}
-.spm-cards{padding:4px;}
-.spm-card{display:flex;align-items:center;gap:16px;padding:18px 24px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.05);cursor:pointer;transition:all 0.2s;border-left:3px solid transparent;}
-.spm-card:hover{background:#f8f6f0;border-left-color:var(--gold);}
-[data-theme="naturals"] .spm-card{background:#fff;}
-[data-theme="naturals"] .spm-card:hover{background:#f3eeff;border-left-color:var(--green-mid);}
-.spm-card:focus{outline:2px solid var(--gold);outline-offset:-2px;}
-.spm-card-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:rgba(0,0,0,0.12);font-weight:300;width:30px;flex-shrink:0;}
-.spm-card-info{flex:1;}
-.spm-card-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--text);margin-bottom:2px;}
-.spm-card-area{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
-.spm-card-addr{font-size:11px;color:var(--text-light);font-weight:300;}
-.spm-card-cta{font-size:11px;color:var(--text-light);letter-spacing:1px;text-transform:uppercase;white-space:nowrap;transition:color 0.2s;}
-.spm-card:hover .spm-card-cta{color:var(--green-mid);}
-@media(max-width:480px){
-#store-modal{top:auto;bottom:0;left:0;right:0;transform:none;width:100%;max-width:100%;max-height:90vh;border-radius:16px 16px 0 0;}
-.spm-card{padding:14px 18px;}
-}
-</style>
-
-<div id="sticky-bar">
-<button class="sb-btn sb-primary" id="sb-book" aria-label="Book appointment">&#128197; Book</button>
-<a class="sb-btn sb-secondary" id="sb-wa" aria-label="WhatsApp us"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-Chat</a>
-<a class="sb-btn sb-secondary" id="sb-call" aria-label="Call us">&#128222; Call</a>
-<a class="sb-btn sb-secondary" id="sb-maps" aria-label="Get directions">&#128205; Directions</a>
-</div>
-<style>
-#sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;height:62px;z-index:9999;background:var(--dark);border-top:1px solid rgba(255,255,255,0.1);grid-template-columns:repeat(4,1fr);}
-[data-theme="naturals"] #sticky-bar{background:#1A0533;}
-@media(max-width:992px){ #sticky-bar{display:grid;}}
-.sb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;min-height:44px;padding:0 4px;}
-.sb-primary{background:var(--gold);color:var(--dark);}
-.sb-primary:hover,.sb-primary:active{background:var(--gold-pale);}
-.sb-secondary{background:transparent;color:rgba(255,255,255,0.7);}
-.sb-secondary:hover,.sb-secondary:active{color:#fff;background:rgba(255,255,255,0.07);}
-#sb-wa{color:#25D366;}
-#sb-wa:hover,#sb-wa:active{color:#1da851;}
-</style>
-<script>
-(function(){
-/* ── Non-store page — use saved store or trigger modal ── */
-var saved = null;
-try { saved = JSON.parse(localStorage.getItem('naturals-store')); } catch(e){}
-if (saved && saved.id) {
-applyStickyStore(saved);
-} else {
-/* No store saved — all 4 buttons open store picker */
-['sb-book','sb-wa','sb-call','sb-maps'].forEach(function(id){
-var el = document.getElementById(id);
-if (!el) return;
-el.tagName === 'BUTTON'
-? el.addEventListener('click', openStorePicker)
-: (el.href='javascript:void(0)', el.addEventListener('click', openStorePicker));
-});
-}
-
-function applyStickyStore(sd) {
-var book = document.getElementById('sb-book');
-var wa = document.getElementById('sb-wa');
-var call = document.getElementById('sb-call');
-var maps = document.getElementById('sb-maps');
-if (book) { book.onclick = null; book.addEventListener('click', function(){ window.open(sd.book,'_blank'); }); }
-if (wa) { wa.href = 'https://wa.me/' + sd.wa; wa.target = '_blank'; }
-if (call) { call.href = 'tel:' + sd.call; }
-if (maps) { maps.href = sd.maps; maps.target = '_blank'; }
-/* Update indicator */
-showStoreIndicator(sd.name);
-}
-window._applyStickyStore = applyStickyStore;
-})();
-</script>
-
-<script>
-function openStorePicker(){
-document.getElementById('store-modal-overlay').style.display='block';
-document.getElementById('store-modal').style.display='block';
-document.body.style.overflow='hidden';
-}
-function closeStorePicker(){
-document.getElementById('store-modal-overlay').style.display='none';
-document.getElementById('store-modal').style.display='none';
-document.body.style.overflow='';
-}
-function selectStore(id,name,book,wa,call,maps,pageUrl){
-var sd = {id:id,name:name,book:book,wa:wa,call:call,maps:maps,pageUrl:pageUrl};
-localStorage.setItem('naturals-store',JSON.stringify(sd));
-closeStorePicker();
-if (typeof window._applyStickyStore === 'function') window._applyStickyStore(sd);
-showStoreIndicator(name);
-}
-function showStoreIndicator(name){
-var ind = document.getElementById('store-indicator');
-var nm = document.getElementById('si-name');
-if (ind && nm){ nm.textContent = name; ind.style.display = 'flex'; }
-}
-document.addEventListener('keydown',function(e){
-if(e.key==='Escape') closeStorePicker();
-});
-/* On load: restore indicator from localStorage */
-document.addEventListener('DOMContentLoaded',function(){
-try {
-var saved = JSON.parse(localStorage.getItem('naturals-store'));
-if (saved && saved.name) showStoreIndicator(saved.name);
-} catch(e){}
-});
-</script>
 
 <div id="theme-pill" title="Switch theme">
 <button id="tp-luxury" class="tp-btn active" onclick="setTheme('luxury')">&#9728; Luxury</button>
@@ -773,19 +566,16 @@ if(nt)nt.classList.toggle('active',saved==='naturals');
 </script>
 
 <script>
-function submitContactForm() {
+function submitForm() {
 var name = document.getElementById('f-name').value.trim();
 var phone = document.getElementById('f-phone').value.trim();
-if (!name || !phone) { alert('Please enter your name and mobile number.'); return; }
-var btn = document.getElementById('form-btn');
-btn.disabled = true;
-btn.textContent = 'Sending\u2026';
-setTimeout(function() {
+if (!name || !phone) { alert('Please fill in your name and mobile number.'); return; }
+// Dummy submission — shows thank you message
 document.getElementById('form-success').style.display = 'block';
-btn.textContent = 'Message Sent \u2713';
-btn.style.background = '#166534';
-window.scrollTo({top: document.getElementById('form-success').offsetTop - 20, behavior: 'smooth'});
-}, 600);
+document.querySelector('.form-submit').disabled = true;
+document.querySelector('.form-submit').textContent = 'Message Sent';
+document.querySelector('.form-submit').style.opacity = '0.6';
+window.scrollTo({top: document.querySelector('.form-success').offsetTop - 20, behavior:'smooth'});
 }
 </script>
 </body>
