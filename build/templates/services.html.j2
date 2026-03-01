@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 {% from "macros.j2" import global_mobile_css, full_footer, footer_css, wa_svg, theme_vars, theme_toggle, theme_init_script, button_css, btn_book, btn_wa, btn_call, btn_maps, store_indicator, store_picker_modal, sticky_mobile_bar, store_picker_js, hamburger_nav, tracking_head, tracking_body, stores_json, fb_svg, ig_svg, social_icons %}
+=======
+{% from "macros.j2" import full_footer, footer_css, wa_svg, theme_vars, theme_toggle, theme_init_script, button_css, btn_book, btn_wa, btn_call, btn_maps, store_indicator, store_picker_modal, sticky_mobile_bar, store_picker_js, hamburger_nav, tracking_head, tracking_body, stores_json, fb_svg, ig_svg, social_icons, social_icons_css %}
+>>>>>>> parent of e05c885 (Mobile improvements)
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,14 +18,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
 {{ theme_vars() }}
-{{ global_mobile_css() }}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;overflow-x:hidden;background:var(--cream);color:var(--text);}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 
 /* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);}
+.nav-logo{display:flex;align-items:center;gap:10px;}
+.nav-logo img{height:34px;width:auto;object-fit:contain;filter:brightness(0) invert(1);}
+.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:#fff;letter-spacing:1px;}
+.nav-logo-text span{color:var(--gold);font-style:italic;font-weight:300;}
+.nav-right{display:flex;align-items:center;gap:24px;}
+.nav-back{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}
+.nav-back:hover{color:var(--gold);}
+.nav-cta{background:var(--gold);color:var(--dark);padding:10px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all 0.3s;}
+.nav-cta:hover{background:var(--gold-pale);}
 
 /* PAGE HERO */
 .page-hero{padding-top:70px;background:var(--dark);}
@@ -32,34 +45,49 @@ img{display:block;width:100%;object-fit:cover;}
 .page-hero-inner h1 em{font-style:italic;color:var(--gold);}
 .page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.42);font-weight:300;line-height:1.8;max-width:560px;padding-bottom:40px;}
 
-/* ── FILTERS — 3 rows ── */
-.filters-wrap{background:var(--dark);padding:12px 60px 16px;position:sticky;top:70px;z-index:100;border-bottom:1px solid rgba(255,255,255,0.07);}
-.filter-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
-.filter-row:last-child{border-bottom:none;padding-bottom:2px;}
-.filter-row:first-child{padding-top:2px;}
-.filter-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:700;white-space:nowrap;width:80px;flex-shrink:0;}
+/* FILTERS */
+.filters-wrap{background:var(--dark);padding:0 60px 22px;position:sticky;top:70px;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
+.filter-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
+.filter-row:last-child{margin-bottom:0;}
+.filter-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:600;white-space:nowrap;min-width:72px;}
 
-/* Shared pill base */
-.f-pill,.f-btn-store,.f-btn-gender,.f-btn-cat{border:1px solid transparent;padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.22s;font-family:'Jost',sans-serif;font-weight:500;border-radius:3px;white-space:nowrap;line-height:1;background:none;}
-
-/* Row 1 — Location (teal) */
+/* Store buttons — green */
 .filter-lbl-store{color:#52B788;}
-.f-btn-store{background:rgba(82,183,136,0.06);border-color:rgba(82,183,136,0.2);color:rgba(255,255,255,0.5);}
-.f-btn-store:hover{border-color:#52B788;color:#52B788;background:rgba(82,183,136,0.1);}
-.f-btn-store.active{background:rgba(27,67,50,0.9);border-color:#52B788;color:#52B788;}
+.f-btn-store{background:rgba(82,183,136,0.08);border:1px solid rgba(82,183,136,0.2);color:rgba(255,255,255,0.45);padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Jost',sans-serif;font-weight:500;}
+.f-btn-store:hover{border-color:#52B788;color:#52B788;}
+.f-btn-store.active{background:#1B4332;border-color:#52B788;color:#52B788;}
 
-/* Row 2 — Gender (gold) */
+/* Gender buttons — gold */
 .filter-lbl-gender{color:var(--gold);}
-.f-btn-gender{background:rgba(201,168,76,0.06);border-color:rgba(201,168,76,0.2);color:rgba(255,255,255,0.5);}
-.f-btn-gender:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.1);}
+.f-btn-gender{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);color:rgba(255,255,255,0.45);padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Jost',sans-serif;font-weight:500;}
+.f-btn-gender:hover{border-color:var(--gold);color:var(--gold);}
 .f-btn-gender.active{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);}
 
-/* Row 3 — Category (lavender) */
-.filter-lbl-cat{color:#B39DDB;}
-.f-btn-cat{background:rgba(179,157,219,0.06);border-color:rgba(179,157,219,0.2);color:rgba(255,255,255,0.5);}
-.f-btn-cat:hover{border-color:#B39DDB;color:#B39DDB;background:rgba(179,157,219,0.1);}
-.f-btn-cat.active{background:rgba(179,157,219,0.15);border-color:#B39DDB;color:#d0c0f0;}
-.cat-filter-scroll{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex:1;}
+/* ── CATEGORY DROPDOWN ── */
+.filter-lbl-cat{color:rgba(255,255,255,0.4);}
+.cat-select-wrap{position:relative;display:inline-flex;align-items:center;}
+.cat-select-wrap::after{
+  content:'▾';
+  position:absolute;right:14px;top:50%;transform:translateY(-50%);
+  color:rgba(255,255,255,0.4);font-size:11px;pointer-events:none;
+  transition:color 0.3s;
+}
+.cat-select-wrap:focus-within::after{color:var(--gold);}
+#cat-select{
+  appearance:none;-webkit-appearance:none;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.12);
+  color:rgba(255,255,255,0.6);
+  padding:7px 38px 7px 16px;
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
+  font-family:'Jost',sans-serif;font-weight:500;
+  cursor:pointer;transition:all 0.3s;
+  min-width:200px;
+}
+#cat-select:hover{border-color:rgba(255,255,255,0.35);color:#fff;}
+#cat-select:focus{outline:none;border-color:var(--gold);color:var(--gold);}
+#cat-select.active{border-color:rgba(255,255,255,0.5);color:#fff;background:rgba(255,255,255,0.1);}
+#cat-select option{background:#1a2620;color:#fff;letter-spacing:0;text-transform:none;font-size:13px;}
 
 /* RESULTS BAR */
 .results-bar{background:var(--cream);padding:14px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,0,0,0.06);}
@@ -110,23 +138,24 @@ img{display:block;width:100%;object-fit:cover;}
 {{ footer_css() }}
 
 @media(max-width:900px){
+  nav{padding:0 20px;height:60px;}
+  .nav-cta{display:none;}
   .page-hero-inner{padding:44px 20px 0;}
-  .filters-wrap{padding:10px 20px 14px;top:60px;}
-  .filter-row{gap:6px;padding:7px 0;}
-  .filter-lbl{width:68px;font-size:8px;}
-  .f-btn-store,.f-btn-gender,.f-btn-cat{padding:6px 12px;font-size:10px;letter-spacing:1px;}
+  .filters-wrap{padding:0 20px 18px;top:60px;}
+  .filter-row{gap:6px;}
   .results-bar{padding:12px 20px;}
   .services-main{padding:32px 20px;}
   .svc-grid{grid-template-columns:1fr 1fr;}
-  #scroll-top{bottom:80px;right:16px;width:40px;height:40px;font-size:16px;}
+  #scroll-top{bottom:20px;right:20px;width:40px;height:40px;font-size:16px;}
 }
 @media(max-width:600px){
+<<<<<<< HEAD
   .filter-lbl{display:none;}
   .cat-filter-scroll{flex-wrap:wrap;}
+=======
+>>>>>>> parent of e05c885 (Mobile improvements)
   .svc-grid{grid-template-columns:1fr;}
-  img{max-width:100%;height:auto;}
-  body{padding-bottom:62px;}
-}
+  #cat-select{min-width:160px;}
 }
 </style>
 {{ theme_init_script() }}
@@ -148,29 +177,30 @@ img{display:block;width:100%;object-fit:cover;}
 
   <div class="filters-wrap">
 
-    <!-- Row 1: Location -->
+    <!-- Row 1: Store -->
     <div class="filter-row">
-      <span class="filter-lbl filter-lbl-store">Location</span>
+      <span class="filter-lbl filter-lbl-store">Store</span>
       <button class="f-btn-store active" data-filter="store" data-value="all" onclick="setFilter('store','all',this)">All Stores</button>
       {% for store in stores %}
       <button class="f-btn-store" data-filter="store" data-value="{{ store.Store_ID }}" onclick="setFilter('store','{{ store.Store_ID }}',this)">{{ store.Store_Name }}</button>
       {% endfor %}
     </div>
 
-    <!-- Row 2: Gender -->
+    <!-- Row 2: Gender + Category dropdown on same line -->
     <div class="filter-row">
       <span class="filter-lbl filter-lbl-gender">Gender</span>
       <button class="f-btn-gender active" data-filter="gender" data-value="all"    onclick="setFilter('gender','all',this)">All</button>
       <button class="f-btn-gender"        data-filter="gender" data-value="female" onclick="setFilter('gender','female',this)">Female</button>
       <button class="f-btn-gender"        data-filter="gender" data-value="male"   onclick="setFilter('gender','male',this)">Male</button>
       <button class="f-btn-gender"        data-filter="gender" data-value="unisex" onclick="setFilter('gender','unisex',this)">Unisex</button>
-    </div>
 
-    <!-- Row 3: Category (buttons, built dynamically by JS) -->
-    <div class="filter-row">
-      <span class="filter-lbl filter-lbl-cat">Category</span>
-      <div class="cat-filter-scroll" id="cat-btn-row">
-        <!-- JS will inject buttons here -->
+      <!-- Spacer + Category dropdown -->
+      <span style="width:1px;height:20px;background:rgba(255,255,255,0.08);margin:0 8px;flex-shrink:0;"></span>
+      <span class="filter-lbl filter-lbl-cat" style="min-width:auto;">Category</span>
+      <div class="cat-select-wrap">
+        <select id="cat-select" onchange="setCatDropdown(this)">
+          <option value="all">All Categories</option>
+        </select>
       </div>
     </div>
 
@@ -245,57 +275,38 @@ function getStoreGenderSubset() {
   });
 }
 
-// ── Rebuild category buttons from current store+gender subset ──
+// ── Rebuild category dropdown from current store+gender subset ──
 function rebuildCategoryDropdown(preserveValue) {
   var subset = getStoreGenderSubset();
+  // Collect unique categories in order of appearance
   var seen = [];
   subset.forEach(function(r) {
     var cat = (r['Category'] || 'Other').trim();
     if (cat && seen.indexOf(cat) === -1) seen.push(cat);
   });
 
-  var row = document.getElementById('cat-btn-row');
-  var prevVal = preserveValue ? activeFilters.category : 'all';
+  var sel = document.getElementById('cat-select');
+  var prevVal = preserveValue ? sel.value : 'all';
 
-  // Rebuild buttons
-  row.innerHTML = '';
-
-  // "All" button
-  var allBtn = document.createElement('button');
-  allBtn.className = 'f-btn-cat' + (prevVal === 'all' ? ' active' : '');
-  allBtn.dataset.filter = 'category';
-  allBtn.dataset.value  = 'all';
-  allBtn.textContent    = 'All';
-  allBtn.onclick        = function() { setCatBtn('all', this); };
-  row.appendChild(allBtn);
-
+  sel.innerHTML = '<option value="all">All Categories</option>';
   seen.forEach(function(cat) {
-    var val = ci(cat);
-    var btn = document.createElement('button');
-    btn.className = 'f-btn-cat' + (val === prevVal ? ' active' : '');
-    btn.dataset.filter = 'category';
-    btn.dataset.value  = val;
-    btn.textContent    = cat;
-    btn.onclick        = function() { setCatBtn(val, this); };
-    row.appendChild(btn);
+    var opt = document.createElement('option');
+    opt.value = ci(cat);
+    opt.textContent = cat;
+    sel.appendChild(opt);
   });
 
-  // If preserved value no longer exists, reset to all
-  var exists = seen.some(function(c) { return ci(c) === prevVal; });
-  activeFilters.category = (prevVal === 'all' || exists) ? prevVal : 'all';
-  if (activeFilters.category === 'all') {
-    row.querySelectorAll('.f-btn-cat').forEach(function(b) {
-      b.classList.toggle('active', b.dataset.value === 'all');
-    });
-  }
+  // Restore previous selection if it still exists, else reset to All
+  var stillExists = Array.from(sel.options).some(function(o) { return o.value === prevVal; });
+  sel.value = stillExists ? prevVal : 'all';
+  activeFilters.category = sel.value;
+  sel.classList.toggle('active', sel.value !== 'all');
 }
 
-// ── Category button click handler ──
-function setCatBtn(value, btn) {
-  activeFilters.category = value;
-  document.querySelectorAll('#cat-btn-row .f-btn-cat').forEach(function(b) {
-    b.classList.toggle('active', b.dataset.value === value);
-  });
+// ── Category dropdown handler ──
+function setCatDropdown(sel) {
+  activeFilters.category = sel.value;
+  sel.classList.toggle('active', sel.value !== 'all');
   renderServices();
 }
 
@@ -433,14 +444,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // Build category dropdown based on store+gender state
   rebuildCategoryDropdown(false);
 
-  // Apply category param after buttons are built
+  // Apply category param after dropdown is built
   if (catParam) {
-    var row = document.getElementById('cat-btn-row');
-    var match = row ? Array.from(row.querySelectorAll('.f-btn-cat')).find(function(b) {
-      return ci(b.dataset.value) === catParam;
-    }) : null;
+    var sel = document.getElementById('cat-select');
+    var match = Array.from(sel.options).find(function(o) { return ci(o.value) === catParam; });
     if (match) {
-      setCatBtn(match.dataset.value, match);
+      sel.value = match.value;
+      activeFilters.category = match.value;
+      sel.classList.add('active');
     }
   }
 

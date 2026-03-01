@@ -99,9 +99,15 @@ window.NATURALS_BASE   = '{{ base_path }}';
     <div class="drawer-brand">Naturals <span>Salon &amp; Spa</span></div>
   </div>
   <ul class="drawer-links">
+<<<<<<< HEAD
     <li><a href="{{ base_path }}index.html" class="{{ 'drawer-active' if active_page=='home' else '' }}" onclick="closeDrawer()">Home</a></li>
     <li><a href="{{ base_path }}services.html" class="{{ 'drawer-active' if active_page=='services' else '' }}" onclick="closeDrawer()">Services</a></li>
     <li><a href="{{ base_path }}offers.html" class="{{ 'drawer-active' if active_page=='offers' else '' }}" onclick="closeDrawer()">Offers</a></li>
+=======
+    <li><a href="{{ base_path }}index.html" {% if active_page=='home' %}class="drawer-active"{% endif %}>Home</a></li>
+    <li><a href="{{ base_path }}services.html" {% if active_page=='services' %}class="drawer-active"{% endif %}>Services</a></li>
+    <li><a href="{{ base_path }}offers.html" {% if active_page=='offers' %}class="drawer-active"{% endif %}>Offers</a></li>
+>>>>>>> parent of e05c885 (Mobile improvements)
     <li class="drawer-has-sub">
       <button class="drawer-sub-btn{% if active_page=='stores' %} drawer-active{% endif %}"
               onclick="toggleDrawerSub(this)" aria-expanded="false">
@@ -118,8 +124,12 @@ window.NATURALS_BASE   = '{{ base_path }}';
         {% endfor %}
       </ul>
     </li>
+<<<<<<< HEAD
     <li><a href="{{ base_path }}about.html" class="{{ 'drawer-active' if active_page=='about' else '' }}" onclick="closeDrawer()">About Us</a></li>
     <li><a href="{{ base_path }}contact.html" class="{{ 'drawer-active' if active_page=='contact' else '' }}" onclick="closeDrawer()">Contact Us</a></li>
+=======
+    <li><a href="{{ base_path }}contact.html" {% if active_page=='contact' %}class="drawer-active"{% endif %}>Contact Us</a></li>
+>>>>>>> parent of e05c885 (Mobile improvements)
   </ul>
   <div class="drawer-cta">
     <a href="{{ base_path }}index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
@@ -199,7 +209,7 @@ document.addEventListener('click',function(e){
     </div>
     <div class="spm-cards">
       {% for s in stores %}
-      <div class="spm-card" onclick="selectStore('{{ s.Store_ID }}','{{ s.Store_Name }}','{{ s.Appointment_URL }}','{{ s.WhatsApp_Number }}','{{ s.Phone_Tel }}','{{ s.Google_Maps_URL }}','{{ s.Store_Page_URL }}')" role="button" tabindex="0">
+      <div class="spm-card" onclick="selectStore('{{ s.Store_ID }}','{{ s.Store_Name }}','{{ s.Appointment_URL }}','{{ s.WhatsApp_Number }}','{{ s.Phone_Raw }}','{{ s.Google_Maps_URL }}','{{ s.Store_Page_URL }}')" role="button" tabindex="0">
         <div class="spm-card-num">{{ loop.index }}</div>
         <div class="spm-card-info">
           <div class="spm-card-name">{{ s.Store_Name }}</div>
@@ -273,7 +283,7 @@ document.addEventListener('click',function(e){
     name: '{{ store.Store_Name }}',
     book: '{{ store.Appointment_URL }}',
     wa:   '{{ store.WhatsApp_Number }}',
-    call: '{{ store.Phone_Tel }}',
+    call: '{{ store.Phone_Raw }}',
     maps: '{{ store.Google_Maps_URL }}'
   };
   localStorage.setItem('naturals-store', JSON.stringify(SD));
@@ -370,43 +380,24 @@ document.addEventListener('DOMContentLoaded',function(){
 
 {# Button CSS #}
 {% macro button_css() %}
-.btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-book{background:#1A73E8;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.btn-wa{background:#25D366;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-wa{background:#25D366;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-call{background:#5F6368;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
+<<<<<<< HEAD
 .btn-maps{background:#D93025;color:#fff;border:none;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-maps:hover{background:#b71c1c;transform:translateY(-1px);}
+=======
+.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:11px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps:hover{background:#f8f9fa;box-shadow:0 1px 6px rgba(60,64,67,0.2);}
+>>>>>>> parent of e05c885 (Mobile improvements)
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
-@media(max-width:480px){
-  .btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
-}
 {% endmacro %}
-
-{# ── GLOBAL MOBILE RESET — call on every page in <style> ── #}
-{% macro global_mobile_css() %}
-/* Image responsiveness */
-img{max-width:100%;height:auto;display:block;}
-/* Prevent horizontal scroll */
-html,body{max-width:100%;overflow-x:hidden;}
-/* Smooth font scaling baseline */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
-/* Tap highlight suppression */
-a,button{-webkit-tap-highlight-color:transparent;}
-/* Min tap target */
-button,a{touch-action:manipulation;}
-@media(max-width:640px){
-  /* Body bottom padding for sticky bar on all pages */
-  body{padding-bottom:62px;}
-  /* Tighten section padding globally */
-  .section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
-}
-{% endmacro %}
-
 
 {# ── FULL FOOTER ── #}
 {% macro full_footer(base_path='', stores=[]) %}
@@ -415,7 +406,14 @@ button,a{touch-action:manipulation;}
   <div class="ft-brand-col">
     <div class="ft-brand">Naturals <span>Salon &amp; Spa</span></div>
     <div class="ft-tagline">India's most trusted salon network.<br>Premium beauty services across Bangalore.</div>
+<<<<<<< HEAD
 
+=======
+    <div class="ft-socials">
+      <a href="https://instagram.com" title="Instagram" aria-label="Instagram">&#128248;</a>
+      <a href="https://facebook.com"  title="Facebook" aria-label="Facebook">&#128077;</a>
+    </div>
+>>>>>>> parent of e05c885 (Mobile improvements)
   </div>
   <div class="ft-col">
     <div class="ft-col-title">Explore</div>
@@ -423,7 +421,7 @@ button,a{touch-action:manipulation;}
       <li><a href="{{ base_path }}services.html">Services &amp; Pricing</a></li>
       <li><a href="{{ base_path }}offers.html">Offers</a></li>
       <li><a href="{{ base_path }}contact.html">Contact Us</a></li>
-      <li><a href="{{ base_path }}about.html">About Us</a></li>
+      <li><a href="{{ base_path }}index.html#about">About</a></li>
     </ul>
   </div>
   <div class="ft-col">
@@ -464,7 +462,13 @@ footer{background:#080f0b;}
 .ft-brand{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;margin-bottom:10px;}
 .ft-brand span{color:var(--gold);font-style:italic;}
 .ft-tagline{font-size:12px;color:rgba(255,255,255,0.28);font-weight:300;line-height:1.7;margin-bottom:18px;}
+<<<<<<< HEAD
 
+=======
+.ft-socials{display:flex;gap:14px;}
+.ft-socials a{font-size:18px;transition:transform 0.3s;}
+.ft-socials a:hover{transform:scale(1.2);}
+>>>>>>> parent of e05c885 (Mobile improvements)
 .ft-col-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
 .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
 .ft-col ul a{font-size:12px;color:rgba(255,255,255,0.32);font-weight:300;transition:color 0.3s;text-decoration:none;}
