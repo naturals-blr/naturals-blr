@@ -1,4 +1,4 @@
-{% from "macros.j2" import full_footer, footer_css, wa_svg, fb_svg, ig_svg, social_icons, social_icons_css, theme_vars, theme_toggle,
+{% from "macros.j2" import full_footer, footer_css, wa_svg, fb_svg, ig_svg, social_icons, global_mobile_css, social_icons_css, theme_vars, theme_toggle,
    theme_init_script, button_css, store_indicator, store_picker_modal,
    sticky_mobile_bar, store_picker_js, hamburger_nav, tracking_head, tracking_body, stores_json %}
 <!DOCTYPE html>
@@ -32,6 +32,7 @@
 {{ tracking_head(gtm_id, pixel_id) }}
 <style>
 {{ theme_vars() }}
+{{ global_mobile_css() }}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
@@ -148,25 +149,58 @@ a{text-decoration:none;color:inherit;}
 {{ footer_css() }}
 {{ social_icons_css() }}
 
-@media(max-width:992px){
-  nav{padding:0 20px;height:60px;}
-  .nav-center{display:none;}
+/* ── RESPONSIVE BREAKPOINTS ── */
+
+/* Tablet (≤1024px) */
+@media(max-width:1024px){
+  .hero-inner{padding:0 32px;}
   .st-grid{grid-template-columns:1fr 1fr;}
   .svc-cats-grid{grid-template-columns:1fr 1fr;}
-  .home-offers-grid{grid-template-columns:1fr;}
+  .home-offers-grid{grid-template-columns:1fr 1fr;}
   .rv-track{grid-template-columns:1fr 1fr;}
-  .about-strip{flex-direction:column;gap:32px;padding:40px 20px;}
-  .about-strip-stats{gap:28px;}
-  .stores-sec,.services-sec,.offers-sec,.reviews-sec{padding:60px 20px;}
+  .about-strip-inner{flex-wrap:wrap;gap:32px;}
+  .hero h1{font-size:clamp(44px,7vw,80px);}
 }
-@media(max-width:600px){
-  nav{padding:0 16px;}
-  .hero h1{font-size:clamp(40px,10vw,60px);}
-  .hero-btns{flex-direction:column;align-items:center;}
-  .st-grid{grid-template-columns:1fr;}
-  .svc-cats-grid{grid-template-columns:1fr;}
-  .rv-track{grid-template-columns:1fr;}
-  .about-strip-stats{flex-wrap:wrap;justify-content:center;}
+
+/* Mobile (≤640px) — single column everything */
+@media(max-width:640px){
+  .hero{height:calc(100svh - 0px);min-height:520px;}
+  .hero-inner{padding:0 20px;}
+  .hero h1{font-size:clamp(36px,10vw,52px);}
+  .hero-sub{font-size:12px;letter-spacing:2px;}
+  .hero-btns{flex-direction:column;align-items:stretch;gap:10px;width:100%;max-width:300px;}
+  .hero-btns a{justify-content:center;}
+
+  .section-hdr{padding:48px 20px 0;}
+  .section-hdr h2{font-size:clamp(28px,8vw,40px);}
+
+  .st-grid{grid-template-columns:1fr;padding:0 20px;}
+  .st-card{min-height:auto;}
+
+  .svc-cats-grid{grid-template-columns:1fr;padding:0 20px;}
+  .svc-cat-img{height:160px;}
+
+  .home-offers-grid{grid-template-columns:1fr;padding:0 20px;}
+  .hoc{padding:24px 20px;}
+
+  .rv-track{grid-template-columns:1fr;padding:0 20px;}
+
+  .about-strip-inner{flex-direction:column;padding:40px 20px;}
+  .about-strip-stats{flex-wrap:wrap;justify-content:space-between;gap:16px;}
+  .ast-stat{flex:0 0 48%;}
+
+  /* ensure images scale */
+  img{max-width:100%;height:auto;}
+
+  /* bottom padding for sticky bar */
+  body{padding-bottom:62px;}
+}
+
+/* Narrow mobile (≤400px) */
+@media(max-width:400px){
+  .hero h1{font-size:32px;}
+  .st-grid,.svc-cats-grid,.home-offers-grid,.rv-track{padding:0 14px;}
+  .svc-cat-body{padding:16px 16px 20px;}
 }
 </style>
 </head>
@@ -216,7 +250,7 @@ a{text-decoration:none;color:inherit;}
         <div class="st-card-area">{{ store.Area }} &middot; {{ store.Pincode }}</div>
       </div>
       <div class="st-card-body">
-        <div class="st-card-phone">&#128222; <a href="tel:{{ store.Phone_Raw }}" style="color:var(--text-mid);">{{ store.Phone_Mobile }}</a></div>
+        <div class="st-card-phone">&#128222; <a href="tel:{{ store.Phone_Tel }}" style="color:var(--text-mid);">{{ store.Phone_Display }}</a></div>
         <div class="st-card-addr">&#128205; {{ store.Address_Full }}</div>
         <div class="st-card-actions">
           <a href="{{ store.Appointment_URL }}" target="_blank" class="st-book-btn" aria-label="Book at {{ store.Store_Name }}">&#128197; Book Now</a>

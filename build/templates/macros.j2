@@ -99,9 +99,9 @@ window.NATURALS_BASE   = '{{ base_path }}';
     <div class="drawer-brand">Naturals <span>Salon &amp; Spa</span></div>
   </div>
   <ul class="drawer-links">
-    <li><a href="{{ base_path }}index.html" {% if active_page=='home' %}class="drawer-active"{% endif %}>Home</a></li>
-    <li><a href="{{ base_path }}services.html" {% if active_page=='services' %}class="drawer-active"{% endif %}>Services</a></li>
-    <li><a href="{{ base_path }}offers.html" {% if active_page=='offers' %}class="drawer-active"{% endif %}>Offers</a></li>
+    <li><a href="{{ base_path }}index.html" class="{{ 'drawer-active' if active_page=='home' else '' }}">Home</a></li>
+    <li><a href="{{ base_path }}services.html" class="{{ 'drawer-active' if active_page=='services' else '' }}">Services</a></li>
+    <li><a href="{{ base_path }}offers.html" class="{{ 'drawer-active' if active_page=='offers' else '' }}">Offers</a></li>
     <li class="drawer-has-sub">
       <button class="drawer-sub-btn{% if active_page=='stores' %} drawer-active{% endif %}"
               onclick="toggleDrawerSub(this)" aria-expanded="false">
@@ -118,7 +118,8 @@ window.NATURALS_BASE   = '{{ base_path }}';
         {% endfor %}
       </ul>
     </li>
-    <li><a href="{{ base_path }}contact.html" {% if active_page=='contact' %}class="drawer-active"{% endif %}>Contact Us</a></li>
+    <li><a href="{{ base_path }}about.html" class="{{ 'drawer-active' if active_page=='about' else '' }}">About Us</a></li>
+    <li><a href="{{ base_path }}contact.html" class="{{ 'drawer-active' if active_page=='contact' else '' }}">Contact Us</a></li>
   </ul>
   <div class="drawer-cta">
     <a href="{{ base_path }}index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
@@ -191,7 +192,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer(
     </div>
     <div class="spm-cards">
       {% for s in stores %}
-      <div class="spm-card" onclick="selectStore('{{ s.Store_ID }}','{{ s.Store_Name }}','{{ s.Appointment_URL }}','{{ s.WhatsApp_Number }}','{{ s.Phone_Raw }}','{{ s.Google_Maps_URL }}','{{ s.Store_Page_URL }}')" role="button" tabindex="0">
+      <div class="spm-card" onclick="selectStore('{{ s.Store_ID }}','{{ s.Store_Name }}','{{ s.Appointment_URL }}','{{ s.WhatsApp_Number }}','{{ s.Phone_Tel }}','{{ s.Google_Maps_URL }}','{{ s.Store_Page_URL }}')" role="button" tabindex="0">
         <div class="spm-card-num">{{ loop.index }}</div>
         <div class="spm-card-info">
           <div class="spm-card-name">{{ s.Store_Name }}</div>
@@ -265,7 +266,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer(
     name: '{{ store.Store_Name }}',
     book: '{{ store.Appointment_URL }}',
     wa:   '{{ store.WhatsApp_Number }}',
-    call: '{{ store.Phone_Raw }}',
+    call: '{{ store.Phone_Tel }}',
     maps: '{{ store.Google_Maps_URL }}'
   };
   localStorage.setItem('naturals-store', JSON.stringify(SD));
@@ -362,19 +363,43 @@ document.addEventListener('DOMContentLoaded',function(){
 
 {# Button CSS #}
 {% macro button_css() %}
-.btn-book{background:#1A73E8;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.btn-wa{background:#25D366;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-wa{background:#25D366;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.btn-call{background:#5F6368;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
-.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:11px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-maps:hover{background:#f8f9fa;box-shadow:0 1px 6px rgba(60,64,67,0.2);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:480px){
+  .btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
+}
 {% endmacro %}
+
+{# ── GLOBAL MOBILE RESET — call on every page in <style> ── #}
+{% macro global_mobile_css() %}
+/* Image responsiveness */
+img{max-width:100%;height:auto;display:block;}
+/* Prevent horizontal scroll */
+html,body{max-width:100%;overflow-x:hidden;}
+/* Smooth font scaling baseline */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+/* Tap highlight suppression */
+a,button{-webkit-tap-highlight-color:transparent;}
+/* Min tap target */
+button,a{touch-action:manipulation;}
+@media(max-width:640px){
+  /* Body bottom padding for sticky bar on all pages */
+  body{padding-bottom:62px;}
+  /* Tighten section padding globally */
+  .section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
+}
+{% endmacro %}
+
 
 {# ── FULL FOOTER ── #}
 {% macro full_footer(base_path='', stores=[]) %}
@@ -384,8 +409,14 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="ft-brand">Naturals <span>Salon &amp; Spa</span></div>
     <div class="ft-tagline">India's most trusted salon network.<br>Premium beauty services across Bangalore.</div>
     <div class="ft-socials">
-      <a href="https://instagram.com" title="Instagram" aria-label="Instagram">&#128248;</a>
-      <a href="https://facebook.com"  title="Facebook" aria-label="Facebook">&#128077;</a>
+      {% set _ig_url = stores[0].Instagram_URL if stores and stores[0].get('Instagram_URL') and stores[0].Instagram_URL | trim not in ('','https://instagram.com/','https://instagram.com') else 'https://www.instagram.com/naturals.salon.official/' %}
+      {% set _fb_url = stores[0].Facebook_URL  if stores and stores[0].get('Facebook_URL')  and stores[0].Facebook_URL  | trim not in ('','https://facebook.com/', 'https://facebook.com')  else 'https://www.facebook.com/NaturalsSalon/' %}
+      <a href="{{ _ig_url }}" target="_blank" rel="noopener" title="Instagram" aria-label="Naturals on Instagram" class="ft-soc-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+      </a>
+      <a href="{{ _fb_url }}" target="_blank" rel="noopener" title="Facebook" aria-label="Naturals on Facebook" class="ft-soc-link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.271h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+      </a>
     </div>
   </div>
   <div class="ft-col">
@@ -394,7 +425,7 @@ document.addEventListener('DOMContentLoaded',function(){
       <li><a href="{{ base_path }}services.html">Services &amp; Pricing</a></li>
       <li><a href="{{ base_path }}offers.html">Offers</a></li>
       <li><a href="{{ base_path }}contact.html">Contact Us</a></li>
-      <li><a href="{{ base_path }}index.html#about">About</a></li>
+      <li><a href="{{ base_path }}about.html">About Us</a></li>
     </ul>
   </div>
   <div class="ft-col">
@@ -435,7 +466,10 @@ footer{background:#080f0b;}
 .ft-brand{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;margin-bottom:10px;}
 .ft-brand span{color:var(--gold);font-style:italic;}
 .ft-tagline{font-size:12px;color:rgba(255,255,255,0.28);font-weight:300;line-height:1.7;margin-bottom:18px;}
-.ft-socials{display:flex;gap:14px;}
+.ft-socials{display:flex;gap:10px;margin-bottom:18px;}
+.ft-soc-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;}
+.ft-soc-link:hover{border-color:var(--gold);background:rgba(255,255,255,0.06);}
+.ft-soc-link:hover svg{fill:var(--gold)!important;}
 .ft-socials a{font-size:18px;transition:transform 0.3s;}
 .ft-socials a:hover{transform:scale(1.2);}
 .ft-col-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}

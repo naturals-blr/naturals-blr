@@ -1,0 +1,303 @@
+{% from "macros.j2" import full_footer, footer_css, wa_svg, fb_svg, ig_svg, social_icons, global_mobile_css, social_icons_css, theme_vars, theme_toggle, theme_init_script, button_css, btn_book, btn_wa, btn_call, btn_maps, store_indicator, store_picker_modal, sticky_mobile_bar, store_picker_js, hamburger_nav, tracking_head, tracking_body, stores_json %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Naturals Salon &amp; Spa Bangalore</title>
+<meta name="description" content="About Naturals Salon &amp; Spa Bangalore — India's most trusted salon network with 25+ years of expertise, now across 5 premium locations in Bangalore.">
+<link rel="canonical" href="https://naturals-blr.github.io/about.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="About Us | Naturals Salon &amp; Spa Bangalore">
+<meta property="og:site_name" content="Naturals Salon &amp; Spa Bangalore">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+{{ theme_init_script() }}
+{{ tracking_head(gtm_id, pixel_id) }}
+<style>
+{{ theme_vars() }}
+{{ global_mobile_css() }}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+a{text-decoration:none;color:inherit;}
+img{display:block;width:100%;object-fit:cover;}
+
+/* HERO */
+.page-hero{padding-top:70px;background:var(--dark);position:relative;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;opacity:0.18;}
+.page-hero-bg img{height:100%;object-fit:cover;object-position:center top;}
+.page-hero-inner{position:relative;z-index:2;padding:72px 60px 64px;max-width:1380px;margin:0 auto;}
+.lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
+.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,6vw,80px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:16px;}
+.page-hero-inner h1 em{font-style:italic;color:var(--gold);}
+.page-hero-inner p{font-size:15px;color:rgba(255,255,255,0.5);font-weight:300;line-height:1.8;max-width:580px;}
+
+/* STATS STRIP */
+.stats-strip{background:var(--dark);border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.04);}
+.stats-inner{max-width:1200px;margin:0 auto;padding:0 60px;display:grid;grid-template-columns:repeat(4,1fr);}
+.stat-cell{padding:32px 20px;text-align:center;border-right:1px solid rgba(255,255,255,0.07);}
+.stat-cell:last-child{border-right:none;}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:48px;color:var(--gold);font-weight:300;line-height:1;}
+.stat-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-top:6px;}
+
+/* MAIN CONTENT */
+.about-wrap{max-width:1200px;margin:0 auto;padding:80px 60px;}
+
+/* STORY SECTION */
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;margin-bottom:80px;}
+.story-img{height:460px;overflow:hidden;border-radius:4px;}
+.story-img img{height:100%;object-fit:cover;transition:transform 6s ease;}
+.story-img:hover img{transform:scale(1.04);}
+.story-text .lbl{margin-bottom:12px;}
+.story-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,3.5vw,46px);font-weight:300;line-height:1.05;margin-bottom:20px;}
+.story-text h2 em{font-style:italic;color:var(--green-mid);}
+.story-text p{font-size:14px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:14px;}
+
+/* VALUES */
+.values-sec{background:var(--dark);padding:80px 60px;margin:0 -60px;}
+.values-inner{max-width:1080px;margin:0 auto;}
+.values-hdr{text-align:center;margin-bottom:48px;}
+.values-hdr .lbl{justify-content:center;}
+.values-hdr h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3.5vw,44px);font-weight:300;color:#fff;}
+.values-hdr h2 em{font-style:italic;color:var(--gold);}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+.value-card{background:rgba(255,255,255,0.04);padding:32px 28px;border-top:2px solid transparent;transition:border-color 0.3s;}
+.value-card:hover{border-top-color:var(--gold);}
+.value-icon{font-size:32px;margin-bottom:16px;}
+.value-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:300;margin-bottom:10px;}
+.value-desc{font-size:13px;color:rgba(255,255,255,0.45);line-height:1.8;font-weight:300;}
+
+/* FRANCHISE */
+.franchise-sec{margin-top:80px;margin-bottom:80px;}
+.franchise-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+.franchise-img{height:400px;overflow:hidden;border-radius:4px;}
+.franchise-img img{height:100%;object-fit:cover;}
+.franchise-text h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,40px);font-weight:300;margin-bottom:16px;}
+.franchise-text h2 em{font-style:italic;color:var(--green-mid);}
+.franchise-text p{font-size:14px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:14px;}
+
+/* OUR STORES */
+.our-stores-sec{margin-bottom:80px;}
+.our-stores-sec h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,3vw,40px);font-weight:300;margin-bottom:8px;}
+.our-stores-sec h2 em{font-style:italic;color:var(--green-mid);}
+.our-stores-sec .intro{font-size:14px;color:var(--text-mid);font-weight:300;margin-bottom:32px;}
+.store-about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.store-about-card{background:#fff;padding:24px;border-radius:8px;border:1px solid rgba(0,0,0,0.08);transition:all 0.3s;}
+.store-about-card:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,0.09);border-color:var(--gold);}
+.sac-num{font-family:'Cormorant Garamond',serif;font-size:13px;color:var(--gold);letter-spacing:2px;margin-bottom:6px;}
+.sac-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:4px;}
+.sac-area{font-size:10px;color:var(--text-light);letter-spacing:2px;text-transform:uppercase;margin-bottom:10px;}
+.sac-addr{font-size:12px;color:var(--text-light);line-height:1.6;margin-bottom:12px;}
+.sac-phone{font-size:12px;color:var(--green-mid);font-weight:500;}
+.sac-links{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;}
+.sac-link{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;padding:7px 12px;border:1px solid rgba(0,0,0,0.12);color:var(--text-mid);border-radius:4px;transition:all 0.2s;}
+.sac-link:hover{border-color:var(--green-mid);color:var(--green-mid);}
+
+/* CTA BAND */
+.cta-band{background:var(--green);padding:64px 60px;text-align:center;margin:0 -60px;}
+.cta-band h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,48px);font-weight:300;color:#fff;margin-bottom:12px;}
+.cta-band h2 em{font-style:italic;}
+.cta-band p{font-size:14px;color:rgba(255,255,255,0.65);font-weight:300;margin-bottom:28px;}
+.cta-band-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.cta-primary{background:#fff;color:var(--green);padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;border-radius:6px;transition:all 0.3s;}
+.cta-primary:hover{background:var(--gold);color:var(--dark);}
+.cta-ghost{border:1px solid rgba(255,255,255,0.4);color:#fff;padding:14px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;border-radius:6px;transition:all 0.3s;}
+.cta-ghost:hover{background:rgba(255,255,255,0.1);}
+
+{{ button_css() }}
+{{ footer_css() }}
+{{ social_icons_css() }}
+
+@media(max-width:1024px){
+  .story-grid,.franchise-grid{grid-template-columns:1fr;gap:40px;}
+  .story-img,.franchise-img{height:320px;order:1;}
+  .story-text,.franchise-text{order:2;}
+  .store-about-grid{grid-template-columns:1fr 1fr;}
+  .values-grid{grid-template-columns:1fr 1fr;}
+  .stats-inner{grid-template-columns:1fr 1fr;}
+  .stat-cell:nth-child(2n){border-right:none;}
+}
+@media(max-width:640px){
+  .page-hero-inner{padding:48px 20px 44px;}
+  .about-wrap{padding:48px 20px;}
+  .stats-inner{padding:0 16px;grid-template-columns:1fr 1fr;}
+  .stat-num{font-size:36px;}
+  .values-sec{padding:56px 20px;margin:0 -20px;}
+  .values-grid{grid-template-columns:1fr;}
+  .cta-band{padding:48px 20px;margin:0 -20px;}
+  .cta-band-btns{flex-direction:column;align-items:center;}
+  .cta-primary,.cta-ghost{width:100%;max-width:300px;text-align:center;justify-content:center;}
+  .store-about-grid{grid-template-columns:1fr;}
+  .story-img,.franchise-img{height:240px;}
+  img{max-width:100%;height:auto;}
+  body{padding-bottom:62px;}
+}
+@media(max-width:400px){
+  .stat-cell{padding:20px 10px;}
+  .stat-num{font-size:30px;}
+}
+</style>
+</head>
+<body>
+{{ tracking_body(gtm_id) }}
+
+{% set base_path = '' %}
+{% set active_page = 'home' %}
+{% include "header.j2" %}
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg">
+    <img src="images/heroes/about-hero.jpg" alt="" loading="lazy"
+         onerror="this.parentElement.style.display='none'">
+  </div>
+  <div class="page-hero-inner">
+    <div class="lbl">Our Story</div>
+    <h1>Beauty that <em>moves</em> you.</h1>
+    <p>Naturals Salon &amp; Spa is part of India's most trusted salon network — bringing 25 years of expertise, premium products, and genuinely personalised care to Bangalore.</p>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-cell">
+      <div class="stat-num">25+</div>
+      <div class="stat-lbl">Years of Excellence</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">1,500+</div>
+      <div class="stat-lbl">Salons Across India</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">5</div>
+      <div class="stat-lbl">Bangalore Locations</div>
+    </div>
+    <div class="stat-cell">
+      <div class="stat-num">4.8&#9733;</div>
+      <div class="stat-lbl">Average Rating</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="about-wrap">
+
+  <!-- STORY -->
+  <div class="story-grid">
+    <div class="story-img">
+      <img src="images/about/salon-interior.jpg" alt="Inside Naturals Salon Bangalore" loading="lazy"
+           onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=900&q=80'">
+    </div>
+    <div class="story-text">
+      <div class="lbl">Who We Are</div>
+      <h2>India's most <em>trusted</em> salon network</h2>
+      <p>Founded in 1999, Naturals Salon &amp; Spa began with a single vision: to make luxury hair and beauty care accessible to every Indian woman and man. Today, with over 1,500 salons across India and a presence in every major city, Naturals has become a household name synonymous with quality, trust and style.</p>
+      <p>Our Bangalore locations bring that same ethos to life — combining world-class training, premium international products, and a team that genuinely cares about making you look and feel your best. Every visit is designed to be an experience, not just a service.</p>
+      <p>We believe beauty is personal. That's why we listen before we act, consult before we create, and always put your preferences first.</p>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="values-sec">
+    <div class="values-inner">
+      <div class="values-hdr">
+        <div class="lbl">What We Stand For</div>
+        <h2>Our <em>values</em></h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card">
+          <div class="value-icon">&#9889;</div>
+          <div class="value-title">Expert Craft</div>
+          <div class="value-desc">Every Naturals stylist completes rigorous training through the Naturals Academy, ensuring consistent, professional results on every visit — regardless of which store you visit.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#127807;</div>
+          <div class="value-title">Premium Products</div>
+          <div class="value-desc">We use and recommend only leading professional brands — Loreal, Wella, Schwarzkopf, Kerastase and more — because your hair deserves nothing less than the best.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#10024;</div>
+          <div class="value-title">Personalised Care</div>
+          <div class="value-desc">No two people are the same. Every consultation begins by understanding you — your hair type, skin, lifestyle and preferences — so every service is tailored specifically to you.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128202;</div>
+          <div class="value-title">Transparent Pricing</div>
+          <div class="value-desc">We publish all our service prices upfront with no hidden costs. What you see on our services menu is exactly what you pay — no surprises at checkout.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#127760;</div>
+          <div class="value-title">Inclusive Beauty</div>
+          <div class="value-desc">Beauty has no gender, age or hair type. Our services are designed for women, men and everyone in between. Every client who walks in is welcomed equally and served with the same care.</div>
+        </div>
+        <div class="value-card">
+          <div class="value-icon">&#128155;</div>
+          <div class="value-title">Community First</div>
+          <div class="value-desc">We are proud members of the Bangalore community. Our stores employ local talent, support local suppliers where possible, and are deeply committed to the neighbourhoods we serve.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FRANCHISE INFO -->
+  <div class="franchise-sec">
+    <div class="franchise-grid">
+      <div class="franchise-text">
+        <div class="lbl">The Naturals Network</div>
+        <h2>Part of something <em>bigger</em></h2>
+        <p>Our Bangalore stores are proud franchise partners of Naturals Salon &amp; Spa — one of India's largest and most respected salon chains, headquartered in Chennai and operating since 1999.</p>
+        <p>Being part of the Naturals network means our clients benefit from centralised training programmes, access to exclusive products, national brand promotions, and a consistently high standard of service that has been perfected over 25 years and more than 1,500 locations.</p>
+        <p>When you visit any of our 5 Bangalore stores, you're getting the full Naturals experience — backed by decades of expertise and a commitment to quality that has earned the trust of millions of customers across India.</p>
+      </div>
+      <div class="franchise-img">
+        <img src="images/about/naturals-brand.jpg" alt="Naturals Salon India brand" loading="lazy"
+             onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=80'">
+      </div>
+    </div>
+  </div>
+
+  <!-- OUR BANGALORE STORES -->
+  <div class="our-stores-sec">
+    <div class="lbl">Find Us</div>
+    <h2>Our Bangalore <em>locations</em></h2>
+    <div class="intro">Five premium stores, each staffed by trained professionals and stocked with the finest products. Find yours below.</div>
+    <div class="store-about-grid">
+      {% for s in stores %}
+      <a href="{{ s.Store_Page_URL }}" class="store-about-card" aria-label="Learn more about {{ s.Store_Name }}">
+        <div class="sac-num">Location {{ loop.index }} of {{ stores|length }}</div>
+        <div class="sac-name">{{ s.Store_Name }}</div>
+        <div class="sac-area">{{ s.Area }} &middot; {{ s.Pincode }}</div>
+        <div class="sac-addr">{{ s.Address_Full }}</div>
+        <div class="sac-phone">{{ s.Phone_Display }}</div>
+        <div class="sac-links">
+          <span class="sac-link">View Store</span>
+          <span class="sac-link">Book Now</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- CTA BAND -->
+  <div class="cta-band">
+    <h2>Ready for your <em>next visit?</em></h2>
+    <p>Book online in seconds, walk in at any of our 5 Bangalore locations, or reach out by WhatsApp — we'd love to see you.</p>
+    <div class="cta-band-btns">
+      <a href="index.html#our-stores" class="cta-primary">Book an Appointment</a>
+      <a href="contact.html" class="cta-ghost">Contact Us</a>
+    </div>
+  </div>
+
+</div>
+
+{{ full_footer('', stores) }}
+{{ stores_json(stores, '') }}
+{{ store_picker_modal(stores, '') }}
+{{ sticky_mobile_bar('other') }}
+{{ store_picker_js() }}
+{{ theme_toggle() }}
+</body>
+</html>

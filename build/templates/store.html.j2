@@ -1,15 +1,15 @@
-{% from "macros.j2" import full_footer, footer_css, wa_svg, fb_svg, ig_svg, social_icons, social_icons_css, theme_vars, theme_toggle, theme_init_script, button_css, btn_book, btn_wa, btn_call, btn_maps, store_indicator, store_picker_modal, sticky_mobile_bar, store_picker_js, hamburger_nav, tracking_head, tracking_body, stores_json %}
+{% from "macros.j2" import full_footer, footer_css, wa_svg, fb_svg, ig_svg, social_icons, global_mobile_css, social_icons_css, theme_vars, theme_toggle, theme_init_script, button_css, btn_book, btn_wa, btn_call, btn_maps, store_indicator, store_picker_modal, sticky_mobile_bar, store_picker_js, hamburger_nav, tracking_head, tracking_body, stores_json %}
 {% set s = store %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Visit Naturals Salon in {{ s.Area }} for hair spa, skin care, bridal and beauty services. Book online or call {{ s.Phone_Mobile }}.">
+<meta name="description" content="Visit Naturals Salon in {{ s.Area }} for hair spa, skin care, bridal and beauty services. Book online or call {{ s.Phone_Display }}.">
 <title>{{ s.Store_Name }} | Salon in {{ s.Area }} | Book Online</title>
 <link rel="canonical" href="https://naturals-blr.github.io/{{ s.Store_Page_URL }}">
 <meta property="og:title" content="{{ s.Store_Name }} | Naturals Salon &amp; Spa Bangalore">
-<meta property="og:description" content="Visit Naturals Salon in {{ s.Area }} for hair spa, skin care, bridal and beauty services. Book online or call {{ s.Phone_Mobile }}.">
+<meta property="og:description" content="Visit Naturals Salon in {{ s.Area }} for hair spa, skin care, bridal and beauty services. Book online or call {{ s.Phone_Display }}.">
 <meta property="og:type" content="business.business">
 <meta property="og:url" content="https://naturals-blr.github.io/{{ s.Store_Page_URL }}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
   "@type": "BeautySalon",
   "name": "Naturals Salon & Spa {{ s.Store_Name }}",
   "image": "https://naturals-blr.github.io/assets/stores/{{ s.Store_Page_URL | replace('stores/','') | replace('.html','') }}.jpg",
-  "telephone": "{{ s.Phone_Mobile }}",
+  "telephone": "{{ s.Phone_Tel }}",
   "url": "https://naturals-blr.github.io/{{ s.Store_Page_URL }}",
   "priceRange": "₹₹",
   "address": {
@@ -42,6 +42,7 @@
 </script>
 <style>
 {{ theme_vars() }}
+{{ global_mobile_css() }}
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
@@ -200,7 +201,10 @@ a.contact-val:hover{color:var(--green);}
   .svc-promo-body{padding:28px 24px;}
 }
 @media(max-width:480px){
-  .info-bar{grid-template-columns:1fr 1fr;}
+  .info-bar{grid-template-columns:1fr 1fr;
+  img{max-width:100%;height:auto;}
+  body{padding-bottom:62px;}
+}
   .action-bar{flex-direction:column;}
   .stylists-grid{grid-template-columns:1fr;}
   .sb-quick{grid-template-columns:1fr 1fr 1fr 1fr;}
