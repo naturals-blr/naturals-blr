@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://naturals-blr.github.io/booking-policy.html">
-<meta name="description" content="Booking Policy — Naturals Salon &amp; Spa Bangalore.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Booking Policy | Naturals Salon &amp; Spa Bangalore</title>
+<meta name="description" content="Learn how to book, reschedule or cancel an appointment at Naturals Salon &amp; Spa Bangalore. Online, WhatsApp and walk-in options available across 5 locations.">
+<link rel="canonical" href="https://naturals-blr.github.io/booking-policy.html">
 <meta property="og:type" content="website">
+<meta property="og:title" content="Booking Policy | Naturals Salon &amp; Spa Bangalore">
 <meta property="og:site_name" content="Naturals Salon &amp; Spa Bangalore">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <script>(function(){var t=localStorage.getItem('naturals-theme')||'luxury';document.documentElement.setAttribute('data-theme',t);})();</script>
 
@@ -30,62 +31,73 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);}
+/* Image responsiveness */
+img{max-width:100%;height:auto;display:block;}
+/* Prevent horizontal scroll */
+html,body{max-width:100%;overflow-x:hidden;}
+/* Smooth font scaling baseline */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+/* Tap highlight suppression */
+a,button{-webkit-tap-highlight-color:transparent;}
+/* Min tap target */
+button,a{touch-action:manipulation;}
+@media(max-width:640px){
+/* Body bottom padding for sticky bar on all pages */
+body{padding-bottom:62px;}
+/* Tighten section padding globally */
+.section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
 a{text-decoration:none;color:inherit;}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);}
-.nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo img{height:34px;width:auto;filter:brightness(0) invert(1);}
-.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;letter-spacing:1px;}
-.nav-logo-text span{color:var(--gold);font-style:italic;font-weight:300;}
-.nav-right{display:flex;align-items:center;gap:24px;}
-.nav-back{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}
-.nav-back:hover{color:var(--gold);}
-.nav-cta{background:var(--gold);color:var(--dark);padding:10px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;}
 .page-hero{padding-top:70px;background:var(--dark);}
-.page-hero-inner{padding:60px 60px 60px;}
+.page-hero-inner{padding:64px 60px 56px;max-width:1380px;margin:0 auto;}
 .lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
 .lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
-.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:14px;}
+.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,68px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:14px;}
 .page-hero-inner h1 em{font-style:italic;color:var(--gold);}
-.page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.42);font-weight:300;max-width:560px;}
-/* CONTENT */
-.policy-wrap{max-width:800px;margin:0 auto;padding:64px 60px;}
-.policy-section{margin-bottom:48px;}
-.policy-section h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:16px;}
+.page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.45);font-weight:300;line-height:1.8;max-width:600px;}
+.policy-wrap{max-width:820px;margin:0 auto;padding:64px 60px;}
+.policy-section{margin-bottom:52px;}
+.policy-section h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;margin-bottom:16px;color:var(--text);}
 .policy-section h2 em{font-style:italic;color:var(--green-mid);}
 .policy-section p{font-size:14px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:12px;}
-.policy-highlight{background:#fff;border-left:3px solid var(--gold);padding:20px 24px;margin:20px 0;}
-.policy-highlight p{margin:0;font-size:14px;color:var(--text);font-weight:400;}
-/* HOW TO BOOK CARDS */
-.book-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:20px;}
-.book-method{background:#fff;padding:24px 20px;text-align:center;}
-.book-method-icon{font-size:32px;margin-bottom:10px;}
-.book-method-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;margin-bottom:6px;}
-.book-method-desc{font-size:12px;color:var(--text-light);line-height:1.6;font-weight:300;margin-bottom:14px;}
-/* STEPS */
-.steps{display:flex;flex-direction:column;gap:3px;margin-top:20px;}
-.step{background:#fff;padding:20px 24px;display:flex;gap:20px;align-items:flex-start;}
-.step-num{font-family:'Cormorant Garamond',serif;font-size:36px;color:var(--gold);font-weight:300;line-height:1;flex-shrink:0;width:36px;}
-.step-body h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;margin-bottom:4px;}
+.policy-section ul{padding-left:22px;margin-bottom:14px;}
+.policy-section ul li{font-size:14px;color:var(--text-mid);line-height:1.9;font-weight:300;margin-bottom:4px;}
+.policy-highlight{background:#fff;border-left:3px solid var(--gold);padding:20px 24px;margin:20px 0;border-radius:0 4px 4px 0;}
+.policy-highlight p{margin:0;font-size:14px;color:var(--text);font-weight:400;line-height:1.8;}
+.book-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px;}
+.book-method{background:#fff;padding:28px 20px;text-align:center;border-radius:8px;border:1px solid rgba(0,0,0,0.07);}
+.book-method-icon{font-size:34px;margin-bottom:12px;}
+.book-method-title{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;margin-bottom:8px;}
+.book-method-desc{font-size:12px;color:var(--text-light);line-height:1.7;font-weight:300;margin-bottom:16px;}
+.steps{display:flex;flex-direction:column;gap:8px;margin-top:20px;}
+.step{background:#fff;padding:22px 24px;display:flex;gap:20px;align-items:flex-start;border-radius:6px;border:1px solid rgba(0,0,0,0.07);}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--gold);font-weight:300;line-height:1;flex-shrink:0;width:38px;}
+.step-body h3{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;margin-bottom:5px;}
 .step-body p{font-size:13px;color:var(--text-mid);line-height:1.7;font-weight:300;}
-/* FAQ */
 .faq-item{border-bottom:1px solid rgba(0,0,0,0.07);padding:18px 0;}
+.faq-item:last-child{border-bottom:none;}
 .faq-q{font-size:14px;font-weight:600;color:var(--text);margin-bottom:8px;}
 .faq-a{font-size:13px;color:var(--text-mid);line-height:1.8;font-weight:300;}
 .last-updated{font-size:11px;color:var(--text-light);margin-top:40px;padding-top:20px;border-top:1px solid rgba(0,0,0,0.08);}
-.btn-book{background:#1A73E8;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.btn-wa{background:#25D366;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-wa{background:#25D366;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.btn-call{background:#5F6368;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
-.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:11px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-maps:hover{background:#f8f9fa;box-shadow:0 1px 6px rgba(60,64,67,0.2);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:480px){
+.btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
+}
 
 footer{background:#080f0b;}
 [data-theme="naturals"] footer{background:#0D0120;}
@@ -93,7 +105,10 @@ footer{background:#080f0b;}
 .ft-brand{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;margin-bottom:10px;}
 .ft-brand span{color:var(--gold);font-style:italic;}
 .ft-tagline{font-size:12px;color:rgba(255,255,255,0.28);font-weight:300;line-height:1.7;margin-bottom:18px;}
-.ft-socials{display:flex;gap:14px;}
+.ft-socials{display:flex;gap:10px;margin-bottom:18px;}
+.ft-soc-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;}
+.ft-soc-link:hover{border-color:var(--gold);background:rgba(255,255,255,0.06);}
+.ft-soc-link:hover svg{fill:var(--gold)!important;}
 .ft-socials a{font-size:18px;transition:transform 0.3s;}
 .ft-socials a:hover{transform:scale(1.2);}
 .ft-col-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
@@ -106,11 +121,24 @@ footer{background:#080f0b;}
 @media(max-width:960px){.ft-top{grid-template-columns:1fr 1fr;gap:28px;padding:36px 20px 24px;}.ft-bottom{padding:14px 20px;flex-direction:column;text-align:center;}}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
 
-@media(max-width:768px){
-nav{padding:0 20px;height:60px;}
-.page-hero-inner{padding:44px 20px 44px;}
+.social-icons{display:flex;gap:10px;align-items:center;}
+.soc-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;text-decoration:none;}
+.soc-icon:hover{transform:translateY(-2px);background:rgba(255,255,255,0.12);}
+.soc-wa:hover{border-color:#25D366;box-shadow:0 4px 12px rgba(37,211,102,0.25);}
+.soc-fb:hover{border-color:#1877F2;box-shadow:0 4px 12px rgba(24,119,242,0.25);}
+.soc-ig:hover{border-color:#C13584;box-shadow:0 4px 12px rgba(193,53,132,0.25);}
+
+@media(max-width:960px){
+.page-hero-inner{padding:48px 20px 44px;}
 .policy-wrap{padding:40px 20px;}
 .book-methods{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+img{max-width:100%;height:auto;}
+body{padding-bottom:62px;}
+.book-method{padding:20px 16px;}
+.step{flex-direction:column;gap:10px;}
+.step-num{width:auto;}
 }
 </style>
 </head>
@@ -191,8 +219,8 @@ class="hdr-link">Contact Us</a>
 </div>
 <ul class="drawer-links">
 <li><a href="index.html" class="drawer-active">Home</a></li>
-<li><a href="services.html" >Services</a></li>
-<li><a href="offers.html" >Offers</a></li>
+<li><a href="services.html" class="">Services</a></li>
+<li><a href="offers.html" class="">Offers</a></li>
 <li class="drawer-has-sub">
 <button class="drawer-sub-btn"
 onclick="toggleDrawerSub(this)" aria-expanded="false">
@@ -201,7 +229,8 @@ Our Stores <span class="drawer-sub-caret">&#9662;</span>
 <ul class="drawer-sub">
 </ul>
 </li>
-<li><a href="contact.html" >Contact Us</a></li>
+<li><a href="about.html" class="">About Us</a></li>
+<li><a href="contact.html" class="">Contact Us</a></li>
 </ul>
 <div class="drawer-cta">
 <a href="index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
@@ -311,7 +340,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div class="page-hero-inner">
 <div class="lbl">Our Policies</div>
 <h1>Booking <em>Policy</em></h1>
-<p>Everything you need to know about booking, confirming, rescheduling, and walk-in appointments at Naturals Salon &amp; Spa Bangalore.</p>
+<p>Everything you need to know about booking, confirming and rescheduling appointments at Naturals Salon &amp; Spa Bangalore.</p>
 </div>
 </div>
 
@@ -319,92 +348,117 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 
 <div class="policy-section">
 <h2>How to <em>Book</em></h2>
-<p>We offer multiple convenient ways to book your appointment. Choose whichever works best for you:</p>
+<p>We offer multiple convenient ways to secure your appointment. Choose whichever works best for you:</p>
 <div class="book-methods">
 <div class="book-method">
 <div class="book-method-icon">&#128197;</div>
 <div class="book-method-title">Book Online</div>
-<div class="book-method-desc">Available 24/7 through our booking portal. Select your store, service, stylist, and preferred time slot.</div>
-<a href="index.html#stores" class="btn-book" style="font-size:10px;padding:10px 16px;">Book Now</a>
+<div class="book-method-desc">Available 24/7 through our booking portal. Select your store, service, stylist and preferred time slot.</div>
+<a href="index.html#our-stores" class="btn-book" style="font-size:10px;padding:10px 16px;">Book Now</a>
 </div>
 <div class="book-method">
 <div class="book-method-icon">&#128172;</div>
 <div class="book-method-title">WhatsApp</div>
-<div class="book-method-desc">Message your preferred store directly on WhatsApp. We'll confirm your slot within a few hours.</div>
+<div class="book-method-desc">Message your preferred store directly. We'll confirm your slot within a few hours during store hours.</div>
 <a href="contact.html" class="btn-wa" style="font-size:10px;padding:10px 16px;">Find Store</a>
 </div>
 <div class="book-method">
 <div class="book-method-icon">&#128222;</div>
 <div class="book-method-title">Call Us</div>
-<div class="book-method-desc">Speak directly with our team. We're available during store hours, 7 days a week.</div>
+<div class="book-method-desc">Speak directly with our team, 7 days a week during store hours. We're happy to help you find the right slot.</div>
 <a href="contact.html" class="btn-call" style="font-size:10px;padding:10px 16px;">Find Number</a>
 </div>
 </div>
 </div>
 
 <div class="policy-section">
-<h2>Booking <em>Process</em></h2>
+<h2>Booking <em>Steps</em></h2>
 <div class="steps">
-<div class="step"><div class="step-num">1</div><div class="step-body"><h3>Choose Your Store &amp; Service</h3><p>Browse our services page to explore treatments and pricing. Select the store nearest to you.</p></div></div>
-<div class="step"><div class="step-num">2</div><div class="step-body"><h3>Select Date, Time &amp; Stylist</h3><p>Pick an available time slot that suits you. You may request a preferred stylist, subject to availability.</p></div></div>
-<div class="step"><div class="step-num">3</div><div class="step-body"><h3>Receive Confirmation</h3><p>You will receive a confirmation via SMS or WhatsApp with your appointment details. Please save this for reference.</p></div></div>
-<div class="step"><div class="step-num">4</div><div class="step-body"><h3>Arrive &amp; Enjoy</h3><p>Please arrive 5–10 minutes before your scheduled time. Our team will be ready to welcome you.</p></div></div>
+<div class="step">
+<div class="step-num">1</div>
+<div class="step-body">
+<h3>Choose Your Store &amp; Service</h3>
+<p>Browse our <a href="services.html" style="color:var(--green-mid);">services page</a> to explore treatments and pricing. Select the Naturals location nearest to you.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<div class="step-body">
+<h3>Select Date, Time &amp; Stylist</h3>
+<p>Pick an available time slot that suits you. You may request a preferred stylist — subject to their availability on that day.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<div class="step-body">
+<h3>Receive Confirmation</h3>
+<p>You'll receive a confirmation via SMS or WhatsApp with your full appointment details. Please keep this for reference.</p>
+</div>
+</div>
+<div class="step">
+<div class="step-num">4</div>
+<div class="step-body">
+<h3>Arrive &amp; Enjoy</h3>
+<p>Please arrive 5–10 minutes before your scheduled time. Our team will be ready and waiting to take care of you.</p>
+</div>
+</div>
 </div>
 </div>
 
 <div class="policy-section">
 <h2>Confirmation &amp; <em>Reminders</em></h2>
 <div class="policy-highlight">
-<p>&#9989; All appointments are confirmed upon booking. You will receive an automated reminder 24 hours before your scheduled time.</p>
+<p>&#9989;&nbsp; All appointments are confirmed at the time of booking. You will receive an automated reminder 24 hours before your scheduled visit.</p>
 </div>
-<p>If you do not receive a confirmation message within 2 hours of booking, please contact the store directly to verify your appointment.</p>
+<p>If you do not receive a confirmation message within 2 hours of booking, please contact your store directly to verify the appointment.</p>
 </div>
 
 <div class="policy-section">
 <h2>Rescheduling <em>Policy</em></h2>
-<p>We understand schedules change. You may reschedule your appointment at no charge provided you give us at least <strong>24 hours' notice</strong>. To reschedule, use the same channel through which you originally booked — online portal, WhatsApp, or phone call.</p>
-<p>Rescheduling requests made with less than 24 hours' notice are subject to availability and may not always be accommodated on the same day.</p>
+<p>We understand that schedules change. You may reschedule at no charge with at least <strong>24 hours' notice</strong>. To reschedule, use the same channel through which you originally booked — online portal, WhatsApp, or phone.</p>
+<p>Rescheduling requests with less than 24 hours' notice are subject to stylist availability and may not always be accommodated on the same day.</p>
 </div>
 
 <div class="policy-section">
 <h2>Walk-in <em>Appointments</em></h2>
-<p>Walk-ins are always welcome at all our Bangalore locations, subject to stylist availability. During peak hours (weekends and evenings), wait times may be longer. We recommend booking in advance to guarantee your preferred time and stylist.</p>
+<p>Walk-ins are always welcome at all our Bangalore locations, subject to stylist availability. During peak hours — weekends and evenings — wait times may be longer. We recommend booking in advance to guarantee your preferred slot and stylist.</p>
 <div class="policy-highlight">
-<p>&#128336; Store hours: Monday–Friday 10:00 AM – 8:00 PM &nbsp;|&nbsp; Saturday–Sunday 9:00 AM – 8:00 PM</p>
+<p>&#128336;&nbsp; Store hours: Monday–Friday 10:00 AM – 8:00 PM &nbsp;|&nbsp; Saturday–Sunday 9:00 AM – 8:30 PM</p>
 </div>
 </div>
 
 <div class="policy-section">
 <h2>Group &amp; <em>Bridal Bookings</em></h2>
-<p>For group bookings (3 or more people) or bridal packages, we request a minimum of <strong>48 hours' advance notice</strong> to ensure adequate staffing and preparation. Please contact your preferred store directly to discuss requirements and availability.</p>
-<p>Bridal packages are subject to a separate booking agreement. A consultation appointment is recommended before finalising your bridal booking.</p>
+<p>For group bookings (3 or more people) or bridal packages, we request at least <strong>48 hours' advance notice</strong> to ensure adequate staffing and preparation. Please contact your preferred store directly to discuss requirements.</p>
+<p>Bridal packages are subject to a separate booking agreement and consultation appointment. We strongly recommend a trial session well ahead of your wedding date.</p>
 </div>
 
 <div class="policy-section">
 <h2>Frequently Asked <em>Questions</em></h2>
 <div class="faq-item">
 <div class="faq-q">Can I request a specific stylist?</div>
-<div class="faq-a">Yes, you may request a preferred stylist when booking. This is subject to their availability on your chosen date and time. We recommend booking in advance for popular stylists.</div>
+<div class="faq-a">Yes — request your preferred stylist when booking, subject to their availability on your chosen date. Booking in advance gives the best chance of getting your favourite stylist.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q">What if I arrive late?</div>
-<div class="faq-a">If you arrive more than 15 minutes late, we may need to shorten your service or reschedule to avoid impacting other clients' appointments. Please call ahead if you are running late.</div>
+<div class="faq-a">If you arrive more than 15 minutes late, we may need to shorten your service or reschedule to avoid affecting other clients. Please call the store if you're running late.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q">Is there a charge for cancellation?</div>
-<div class="faq-a">Cancellations made with at least 24 hours' notice are free of charge. Please refer to our Cancellation Policy for full details.</div>
+<div class="faq-a">Cancellations with at least 24 hours' notice are free. See our <a href="cancellation-policy.html" style="color:var(--green-mid);">Cancellation Policy</a> for full details.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q">Can I book for someone else?</div>
-<div class="faq-a">Yes, you may book on behalf of a friend or family member. Please provide their name and contact number at the time of booking.</div>
+<div class="faq-a">Yes — please provide the other person's name and contact number when booking so our team can reach them if needed.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q">How do I know my booking is confirmed?</div>
-<div class="faq-a">You will receive a confirmation message via SMS or WhatsApp within a short time of booking. If you don't receive one, please contact the store directly.</div>
+<div class="faq-a">You'll receive a confirmation SMS or WhatsApp message shortly after booking. If you don't receive one within 2 hours, contact the store directly to verify.</div>
 </div>
 </div>
 
-<div class="last-updated">Last updated: February 2026 &nbsp;&middot;&nbsp; Questions? <a href="contact.html" style="color:var(--green-mid);">Contact us here</a> or see our <a href="cancellation-policy.html" style="color:var(--green-mid);">Cancellation Policy</a>.</div>
+<div class="last-updated">Last updated: February 2026 &nbsp;&middot;&nbsp; Questions? <a href="contact.html" style="color:var(--green-mid);">Contact us</a> or see our <a href="cancellation-policy.html" style="color:var(--green-mid);">Cancellation Policy</a>.</div>
+
 </div>
 
 <footer>
@@ -413,8 +467,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div class="ft-brand">Naturals <span>Salon &amp; Spa</span></div>
 <div class="ft-tagline">India's most trusted salon network.<br>Premium beauty services across Bangalore.</div>
 <div class="ft-socials">
-<a href="https://instagram.com" title="Instagram" aria-label="Instagram">&#128248;</a>
-<a href="https://facebook.com" title="Facebook" aria-label="Facebook">&#128077;</a>
+<a href="https://instagram.com/Naturals.Salon.JPNagar5Phase/" target="_blank" rel="noopener" title="Instagram" aria-label="Naturals on Instagram" class="ft-soc-link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+</a>
+<a href="https://facebook.com/Naturals.Salon.JPNagar5Phase" target="_blank" rel="noopener" title="Facebook" aria-label="Naturals on Facebook" class="ft-soc-link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.271h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+</a>
 </div>
 </div>
 <div class="ft-col">
@@ -423,7 +481,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <li><a href="services.html">Services &amp; Pricing</a></li>
 <li><a href="offers.html">Offers</a></li>
 <li><a href="contact.html">Contact Us</a></li>
-<li><a href="index.html#about">About</a></li>
+<li><a href="about.html">About Us</a></li>
 </ul>
 </div>
 <div class="ft-col">
@@ -465,7 +523,7 @@ window.NATURALS_BASE = '';
 <button class="spm-close" onclick="closeStorePicker()" aria-label="Close">&#10005;</button>
 </div>
 <div class="spm-cards">
-<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
 <div class="spm-card-num">1</div>
 <div class="spm-card-info">
 <div class="spm-card-name">JP Nagar 5th Phase</div>
@@ -474,7 +532,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
 <div class="spm-card-num">2</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Elements Mall</div>
@@ -483,7 +541,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
 <div class="spm-card-num">3</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Devasandra</div>
@@ -492,7 +550,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
 <div class="spm-card-num">4</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Frazer Town</div>
@@ -501,7 +559,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
 <div class="spm-card-num">5</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Hennur</div>

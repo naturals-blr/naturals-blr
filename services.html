@@ -29,23 +29,30 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
+/* Image responsiveness */
+img{max-width:100%;height:auto;display:block;}
+/* Prevent horizontal scroll */
+html,body{max-width:100%;overflow-x:hidden;}
+/* Smooth font scaling baseline */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+/* Tap highlight suppression */
+a,button{-webkit-tap-highlight-color:transparent;}
+/* Min tap target */
+button,a{touch-action:manipulation;}
+@media(max-width:640px){
+/* Body bottom padding for sticky bar on all pages */
+body{padding-bottom:62px;}
+/* Tighten section padding globally */
+.section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
+}
+
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);}
+body{font-family:'Jost',sans-serif;overflow-x:hidden;background:var(--cream);color:var(--text);}
 a{text-decoration:none;color:inherit;}
 img{display:block;width:100%;object-fit:cover;}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);}
-.nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo img{height:34px;width:auto;object-fit:contain;filter:brightness(0) invert(1);}
-.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:500;color:#fff;letter-spacing:1px;}
-.nav-logo-text span{color:var(--gold);font-style:italic;font-weight:300;}
-.nav-right{display:flex;align-items:center;gap:24px;}
-.nav-back{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}
-.nav-back:hover{color:var(--gold);}
-.nav-cta{background:var(--gold);color:var(--dark);padding:10px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all 0.3s;}
-.nav-cta:hover{background:var(--gold-pale);}
 
 /* PAGE HERO */
 .page-hero{padding-top:70px;background:var(--dark);}
@@ -56,49 +63,34 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;d
 .page-hero-inner h1 em{font-style:italic;color:var(--gold);}
 .page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.42);font-weight:300;line-height:1.8;max-width:560px;padding-bottom:40px;}
 
-/* FILTERS */
-.filters-wrap{background:var(--dark);padding:0 60px 22px;position:sticky;top:70px;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
-.filter-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;}
-.filter-row:last-child{margin-bottom:0;}
-.filter-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:600;white-space:nowrap;min-width:72px;}
+/* ── FILTERS — 3 rows ── */
+.filters-wrap{background:var(--dark);padding:12px 60px 16px;position:sticky;top:70px;z-index:100;border-bottom:1px solid rgba(255,255,255,0.07);}
+.filter-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;padding:9px 0;border-bottom:1px solid rgba(255,255,255,0.05);}
+.filter-row:last-child{border-bottom:none;padding-bottom:2px;}
+.filter-row:first-child{padding-top:2px;}
+.filter-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:700;white-space:nowrap;width:80px;flex-shrink:0;}
 
-/* Store buttons — green */
+/* Shared pill base */
+.f-pill,.f-btn-store,.f-btn-gender,.f-btn-cat{border:1px solid transparent;padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.22s;font-family:'Jost',sans-serif;font-weight:500;border-radius:3px;white-space:nowrap;line-height:1;background:none;}
+
+/* Row 1 — Location (teal) */
 .filter-lbl-store{color:#52B788;}
-.f-btn-store{background:rgba(82,183,136,0.08);border:1px solid rgba(82,183,136,0.2);color:rgba(255,255,255,0.45);padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Jost',sans-serif;font-weight:500;}
-.f-btn-store:hover{border-color:#52B788;color:#52B788;}
-.f-btn-store.active{background:#1B4332;border-color:#52B788;color:#52B788;}
+.f-btn-store{background:rgba(82,183,136,0.06);border-color:rgba(82,183,136,0.2);color:rgba(255,255,255,0.5);}
+.f-btn-store:hover{border-color:#52B788;color:#52B788;background:rgba(82,183,136,0.1);}
+.f-btn-store.active{background:rgba(27,67,50,0.9);border-color:#52B788;color:#52B788;}
 
-/* Gender buttons — gold */
+/* Row 2 — Gender (gold) */
 .filter-lbl-gender{color:var(--gold);}
-.f-btn-gender{background:rgba(201,168,76,0.07);border:1px solid rgba(201,168,76,0.2);color:rgba(255,255,255,0.45);padding:7px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.3s;font-family:'Jost',sans-serif;font-weight:500;}
-.f-btn-gender:hover{border-color:var(--gold);color:var(--gold);}
+.f-btn-gender{background:rgba(201,168,76,0.06);border-color:rgba(201,168,76,0.2);color:rgba(255,255,255,0.5);}
+.f-btn-gender:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.1);}
 .f-btn-gender.active{background:rgba(201,168,76,0.15);border-color:var(--gold);color:var(--gold);}
 
-/* ── CATEGORY DROPDOWN ── */
-.filter-lbl-cat{color:rgba(255,255,255,0.4);}
-.cat-select-wrap{position:relative;display:inline-flex;align-items:center;}
-.cat-select-wrap::after{
-content:'▾';
-position:absolute;right:14px;top:50%;transform:translateY(-50%);
-color:rgba(255,255,255,0.4);font-size:11px;pointer-events:none;
-transition:color 0.3s;
-}
-.cat-select-wrap:focus-within::after{color:var(--gold);}
-#cat-select{
-appearance:none;-webkit-appearance:none;
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.12);
-color:rgba(255,255,255,0.6);
-padding:7px 38px 7px 16px;
-font-size:11px;letter-spacing:1.5px;text-transform:uppercase;
-font-family:'Jost',sans-serif;font-weight:500;
-cursor:pointer;transition:all 0.3s;
-min-width:200px;
-}
-#cat-select:hover{border-color:rgba(255,255,255,0.35);color:#fff;}
-#cat-select:focus{outline:none;border-color:var(--gold);color:var(--gold);}
-#cat-select.active{border-color:rgba(255,255,255,0.5);color:#fff;background:rgba(255,255,255,0.1);}
-#cat-select option{background:#1a2620;color:#fff;letter-spacing:0;text-transform:none;font-size:13px;}
+/* Row 3 — Category (lavender) */
+.filter-lbl-cat{color:#B39DDB;}
+.f-btn-cat{background:rgba(179,157,219,0.06);border-color:rgba(179,157,219,0.2);color:rgba(255,255,255,0.5);}
+.f-btn-cat:hover{border-color:#B39DDB;color:#B39DDB;background:rgba(179,157,219,0.1);}
+.f-btn-cat.active{background:rgba(179,157,219,0.15);border-color:#B39DDB;color:#d0c0f0;}
+.cat-filter-scroll{display:flex;gap:8px;flex-wrap:wrap;align-items:center;flex:1;}
 
 /* RESULTS BAR */
 .results-bar{background:var(--cream);padding:14px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,0,0,0.06);}
@@ -145,18 +137,21 @@ transition:opacity 0.3s ease,transform 0.3s ease,background 0.2s,border-color 0.
 #scroll-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
 #scroll-top:hover{background:var(--green);border-color:var(--green-soft);color:#fff;}
 
-.btn-book{background:#1A73E8;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.btn-wa{background:#25D366;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-wa{background:#25D366;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.btn-call{background:#5F6368;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
-.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:11px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-maps:hover{background:#f8f9fa;box-shadow:0 1px 6px rgba(60,64,67,0.2);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:480px){
+.btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
+}
 
 footer{background:#080f0b;}
 [data-theme="naturals"] footer{background:#0D0120;}
@@ -164,7 +159,10 @@ footer{background:#080f0b;}
 .ft-brand{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;margin-bottom:10px;}
 .ft-brand span{color:var(--gold);font-style:italic;}
 .ft-tagline{font-size:12px;color:rgba(255,255,255,0.28);font-weight:300;line-height:1.7;margin-bottom:18px;}
-.ft-socials{display:flex;gap:14px;}
+.ft-socials{display:flex;gap:10px;margin-bottom:18px;}
+.ft-soc-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;}
+.ft-soc-link:hover{border-color:var(--gold);background:rgba(255,255,255,0.06);}
+.ft-soc-link:hover svg{fill:var(--gold)!important;}
 .ft-socials a{font-size:18px;transition:transform 0.3s;}
 .ft-socials a:hover{transform:scale(1.2);}
 .ft-col-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
@@ -178,19 +176,25 @@ footer{background:#080f0b;}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
 
 @media(max-width:900px){
-nav{padding:0 20px;height:60px;}
-.nav-cta{display:none;}
 .page-hero-inner{padding:44px 20px 0;}
-.filters-wrap{padding:0 20px 18px;top:60px;}
-.filter-row{gap:6px;}
+.filters-wrap{padding:10px 20px 14px;top:60px;}
+.filter-row{gap:6px;padding:7px 0;}
+.filter-lbl{width:68px;font-size:8px;}
+.f-btn-store,.f-btn-gender,.f-btn-cat{padding:6px 12px;font-size:10px;letter-spacing:1px;}
 .results-bar{padding:12px 20px;}
 .services-main{padding:32px 20px;}
 .svc-grid{grid-template-columns:1fr 1fr;}
-#scroll-top{bottom:20px;right:20px;width:40px;height:40px;font-size:16px;}
+#scroll-top{bottom:80px;right:16px;width:40px;height:40px;font-size:16px;}
 }
 @media(max-width:600px){
+.filter-lbl{display:none;}
+.cat-filter-scroll{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;}
+.cat-filter-scroll::-webkit-scrollbar{height:2px;}
+.cat-filter-scroll::-webkit-scrollbar-thumb{background:rgba(255,255,255,0.15);border-radius:1px;}
 .svc-grid{grid-template-columns:1fr;}
-#cat-select{min-width:160px;}
+img{max-width:100%;height:auto;}
+body{padding-bottom:62px;}
+}
 }
 </style>
 <script>(function(){var t=localStorage.getItem('naturals-theme')||'luxury';document.documentElement.setAttribute('data-theme',t);})();</script>
@@ -272,9 +276,9 @@ class="hdr-link">Contact Us</a>
 <div class="drawer-brand">Naturals <span>Salon &amp; Spa</span></div>
 </div>
 <ul class="drawer-links">
-<li><a href="index.html" >Home</a></li>
+<li><a href="index.html" class="">Home</a></li>
 <li><a href="services.html" class="drawer-active">Services</a></li>
-<li><a href="offers.html" >Offers</a></li>
+<li><a href="offers.html" class="">Offers</a></li>
 <li class="drawer-has-sub">
 <button class="drawer-sub-btn"
 onclick="toggleDrawerSub(this)" aria-expanded="false">
@@ -283,7 +287,8 @@ Our Stores <span class="drawer-sub-caret">&#9662;</span>
 <ul class="drawer-sub">
 </ul>
 </li>
-<li><a href="contact.html" >Contact Us</a></li>
+<li><a href="about.html" class="">About Us</a></li>
+<li><a href="contact.html" class="">Contact Us</a></li>
 </ul>
 <div class="drawer-cta">
 <a href="index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
@@ -400,7 +405,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 
 
 <div class="filter-row">
-<span class="filter-lbl filter-lbl-store">Store</span>
+<span class="filter-lbl filter-lbl-store">Location</span>
 <button class="f-btn-store active" data-filter="store" data-value="all" onclick="setFilter('store','all',this)">All Stores</button>
 <button class="f-btn-store" data-filter="store" data-value="Store_N78" onclick="setFilter('store','Store_N78',this)">JP Nagar 5th Phase</button>
 <button class="f-btn-store" data-filter="store" data-value="Store_N77" onclick="setFilter('store','Store_N77',this)">Elements Mall</button>
@@ -416,14 +421,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <button class="f-btn-gender" data-filter="gender" data-value="female" onclick="setFilter('gender','female',this)">Female</button>
 <button class="f-btn-gender" data-filter="gender" data-value="male" onclick="setFilter('gender','male',this)">Male</button>
 <button class="f-btn-gender" data-filter="gender" data-value="unisex" onclick="setFilter('gender','unisex',this)">Unisex</button>
+</div>
 
 
-<span style="width:1px;height:20px;background:rgba(255,255,255,0.08);margin:0 8px;flex-shrink:0;"></span>
-<span class="filter-lbl filter-lbl-cat" style="min-width:auto;">Category</span>
-<div class="cat-select-wrap">
-<select id="cat-select" onchange="setCatDropdown(this)">
-<option value="all">All Categories</option>
-</select>
+<div class="filter-row">
+<span class="filter-lbl filter-lbl-cat">Category</span>
+<div class="cat-filter-scroll" id="cat-btn-row">
+
 </div>
 </div>
 
@@ -451,8 +455,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div class="ft-brand">Naturals <span>Salon &amp; Spa</span></div>
 <div class="ft-tagline">India's most trusted salon network.<br>Premium beauty services across Bangalore.</div>
 <div class="ft-socials">
-<a href="https://instagram.com" title="Instagram" aria-label="Instagram">&#128248;</a>
-<a href="https://facebook.com" title="Facebook" aria-label="Facebook">&#128077;</a>
+<a href="https://instagram.com/Naturals.Salon.JPNagar5Phase/" target="_blank" rel="noopener" title="Instagram" aria-label="Naturals on Instagram" class="ft-soc-link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+</a>
+<a href="https://facebook.com/Naturals.Salon.JPNagar5Phase" target="_blank" rel="noopener" title="Facebook" aria-label="Naturals on Facebook" class="ft-soc-link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.271h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+</a>
 </div>
 </div>
 <div class="ft-col">
@@ -461,7 +469,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <li><a href="services.html">Services &amp; Pricing</a></li>
 <li><a href="offers.html">Offers</a></li>
 <li><a href="contact.html">Contact Us</a></li>
-<li><a href="index.html#about">About</a></li>
+<li><a href="about.html">About Us</a></li>
 </ul>
 </div>
 <div class="ft-col">
@@ -539,38 +547,57 @@ return true;
 });
 }
 
-// ── Rebuild category dropdown from current store+gender subset ──
+// ── Rebuild category buttons from current store+gender subset ──
 function rebuildCategoryDropdown(preserveValue) {
 var subset = getStoreGenderSubset();
-// Collect unique categories in order of appearance
 var seen = [];
 subset.forEach(function(r) {
 var cat = (r['Category'] || 'Other').trim();
 if (cat && seen.indexOf(cat) === -1) seen.push(cat);
 });
 
-var sel = document.getElementById('cat-select');
-var prevVal = preserveValue ? sel.value : 'all';
+var row = document.getElementById('cat-btn-row');
+var prevVal = preserveValue ? activeFilters.category : 'all';
 
-sel.innerHTML = '<option value="all">All Categories</option>';
+// Rebuild buttons
+row.innerHTML = '';
+
+// "All" button
+var allBtn = document.createElement('button');
+allBtn.className = 'f-btn-cat' + (prevVal === 'all' ? ' active' : '');
+allBtn.dataset.filter = 'category';
+allBtn.dataset.value = 'all';
+allBtn.textContent = 'All';
+allBtn.onclick = function() { setCatBtn('all', this); };
+row.appendChild(allBtn);
+
 seen.forEach(function(cat) {
-var opt = document.createElement('option');
-opt.value = ci(cat);
-opt.textContent = cat;
-sel.appendChild(opt);
+var val = ci(cat);
+var btn = document.createElement('button');
+btn.className = 'f-btn-cat' + (val === prevVal ? ' active' : '');
+btn.dataset.filter = 'category';
+btn.dataset.value = val;
+btn.textContent = cat;
+btn.onclick = function() { setCatBtn(val, this); };
+row.appendChild(btn);
 });
 
-// Restore previous selection if it still exists, else reset to All
-var stillExists = Array.from(sel.options).some(function(o) { return o.value === prevVal; });
-sel.value = stillExists ? prevVal : 'all';
-activeFilters.category = sel.value;
-sel.classList.toggle('active', sel.value !== 'all');
+// If preserved value no longer exists, reset to all
+var exists = seen.some(function(c) { return ci(c) === prevVal; });
+activeFilters.category = (prevVal === 'all' || exists) ? prevVal : 'all';
+if (activeFilters.category === 'all') {
+row.querySelectorAll('.f-btn-cat').forEach(function(b) {
+b.classList.toggle('active', b.dataset.value === 'all');
+});
+}
 }
 
-// ── Category dropdown handler ──
-function setCatDropdown(sel) {
-activeFilters.category = sel.value;
-sel.classList.toggle('active', sel.value !== 'all');
+// ── Category button click handler ──
+function setCatBtn(value, btn) {
+activeFilters.category = value;
+document.querySelectorAll('#cat-btn-row .f-btn-cat').forEach(function(b) {
+b.classList.toggle('active', b.dataset.value === value);
+});
 renderServices();
 }
 
@@ -708,14 +735,14 @@ b.classList.toggle('active', b.dataset.value === genderParam);
 // Build category dropdown based on store+gender state
 rebuildCategoryDropdown(false);
 
-// Apply category param after dropdown is built
+// Apply category param after buttons are built
 if (catParam) {
-var sel = document.getElementById('cat-select');
-var match = Array.from(sel.options).find(function(o) { return ci(o.value) === catParam; });
+var row = document.getElementById('cat-btn-row');
+var match = row ? Array.from(row.querySelectorAll('.f-btn-cat')).find(function(b) {
+return ci(b.dataset.value) === catParam;
+}) : null;
 if (match) {
-sel.value = match.value;
-activeFilters.category = match.value;
-sel.classList.add('active');
+setCatBtn(match.dataset.value, match);
 }
 }
 
@@ -736,7 +763,7 @@ window.NATURALS_BASE = '';
 <button class="spm-close" onclick="closeStorePicker()" aria-label="Close">&#10005;</button>
 </div>
 <div class="spm-cards">
-<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
 <div class="spm-card-num">1</div>
 <div class="spm-card-info">
 <div class="spm-card-name">JP Nagar 5th Phase</div>
@@ -745,7 +772,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
 <div class="spm-card-num">2</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Elements Mall</div>
@@ -754,7 +781,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
 <div class="spm-card-num">3</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Devasandra</div>
@@ -763,7 +790,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
 <div class="spm-card-num">4</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Frazer Town</div>
@@ -772,7 +799,7 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
+<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
 <div class="spm-card-num">5</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Hennur</div>

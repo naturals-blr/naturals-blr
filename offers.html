@@ -31,19 +31,26 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+/* Image responsiveness */
+img{max-width:100%;height:auto;display:block;}
+/* Prevent horizontal scroll */
+html,body{max-width:100%;overflow-x:hidden;}
+/* Smooth font scaling baseline */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+/* Tap highlight suppression */
+a,button{-webkit-tap-highlight-color:transparent;}
+/* Min tap target */
+button,a{touch-action:manipulation;}
+@media(max-width:640px){
+/* Body bottom padding for sticky bar on all pages */
+body{padding-bottom:62px;}
+/* Tighten section padding globally */
+.section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}html,body{overflow-x:hidden;}html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);}
 a{text-decoration:none;color:inherit;}img{display:block;width:100%;object-fit:cover;}
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;display:flex;justify-content:space-between;align-items:center;background:var(--nav-bg);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06);}
-.nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo img{height:34px;width:auto;filter:brightness(0) invert(1);}
-.nav-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;letter-spacing:1px;}
-.nav-logo-text span{color:var(--gold);font-style:italic;font-weight:300;}
-.nav-right{display:flex;align-items:center;gap:24px;}
-.nav-back{color:rgba(255,255,255,0.5);font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;}
-.nav-back:hover{color:var(--gold);}
-.nav-cta{background:var(--gold);color:var(--dark);padding:10px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;transition:all 0.3s;}
-.nav-cta:hover{background:var(--gold-pale);}
 .page-hero{padding-top:70px;background:var(--dark);}
 .page-hero-inner{padding:60px 60px 0;}
 .lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
@@ -86,18 +93,21 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 60px;height:70px;d
 #scroll-top{position:fixed;bottom:32px;right:32px;z-index:500;width:44px;height:44px;background:var(--dark);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,background 0.2s;}
 #scroll-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
 #scroll-top:hover{background:var(--green);}
-.btn-book{background:#1A73E8;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.btn-wa{background:#25D366;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-wa{background:#25D366;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.btn-call{background:#5F6368;color:#fff;padding:12px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
-.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:11px 18px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-maps:hover{background:#f8f9fa;box-shadow:0 1px 6px rgba(60,64,67,0.2);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+@media(max-width:480px){
+.btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
+}
 
 footer{background:#080f0b;}
 [data-theme="naturals"] footer{background:#0D0120;}
@@ -105,7 +115,10 @@ footer{background:#080f0b;}
 .ft-brand{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;margin-bottom:10px;}
 .ft-brand span{color:var(--gold);font-style:italic;}
 .ft-tagline{font-size:12px;color:rgba(255,255,255,0.28);font-weight:300;line-height:1.7;margin-bottom:18px;}
-.ft-socials{display:flex;gap:14px;}
+.ft-socials{display:flex;gap:10px;margin-bottom:18px;}
+.ft-soc-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;}
+.ft-soc-link:hover{border-color:var(--gold);background:rgba(255,255,255,0.06);}
+.ft-soc-link:hover svg{fill:var(--gold)!important;}
 .ft-socials a{font-size:18px;transition:transform 0.3s;}
 .ft-socials a:hover{transform:scale(1.2);}
 .ft-col-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
@@ -119,7 +132,6 @@ footer{background:#080f0b;}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
 
 @media(max-width:900px){
-nav{padding:0 20px;height:60px;}
 .page-hero-inner{padding:44px 20px 0;}
 .filter-bar{padding:0 20px 18px;top:60px;}
 .results-bar{padding:12px 20px;}
@@ -127,7 +139,10 @@ nav{padding:0 20px;height:60px;}
 .offers-grid{grid-template-columns:1fr 1fr;}
 #scroll-top{bottom:20px;right:20px;}
 }
-@media(max-width:600px){.offers-grid{grid-template-columns:1fr;}}
+@media(max-width:600px){.offers-grid{grid-template-columns:1fr;
+img{max-width:100%;height:auto;}
+body{padding-bottom:62px;}
+}}
 </style>
 </head>
 <body>
@@ -206,8 +221,8 @@ class="hdr-link">Contact Us</a>
 <div class="drawer-brand">Naturals <span>Salon &amp; Spa</span></div>
 </div>
 <ul class="drawer-links">
-<li><a href="index.html" >Home</a></li>
-<li><a href="services.html" >Services</a></li>
+<li><a href="index.html" class="">Home</a></li>
+<li><a href="services.html" class="">Services</a></li>
 <li><a href="offers.html" class="drawer-active">Offers</a></li>
 <li class="drawer-has-sub">
 <button class="drawer-sub-btn"
@@ -217,7 +232,8 @@ Our Stores <span class="drawer-sub-caret">&#9662;</span>
 <ul class="drawer-sub">
 </ul>
 </li>
-<li><a href="contact.html" >Contact Us</a></li>
+<li><a href="about.html" class="">About Us</a></li>
+<li><a href="contact.html" class="">Contact Us</a></li>
 </ul>
 <div class="drawer-cta">
 <a href="index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
@@ -464,8 +480,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div class="ft-brand">Naturals <span>Salon &amp; Spa</span></div>
 <div class="ft-tagline">India's most trusted salon network.<br>Premium beauty services across Bangalore.</div>
 <div class="ft-socials">
-<a href="https://instagram.com" title="Instagram" aria-label="Instagram">&#128248;</a>
-<a href="https://facebook.com" title="Facebook" aria-label="Facebook">&#128077;</a>
+<a href="https://instagram.com/Naturals.Salon.JPNagar5Phase/" target="_blank" rel="noopener" title="Instagram" aria-label="Naturals on Instagram" class="ft-soc-link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+</a>
+<a href="https://facebook.com/Naturals.Salon.JPNagar5Phase" target="_blank" rel="noopener" title="Facebook" aria-label="Naturals on Facebook" class="ft-soc-link">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.271h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+</a>
 </div>
 </div>
 <div class="ft-col">
@@ -474,7 +494,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <li><a href="services.html">Services &amp; Pricing</a></li>
 <li><a href="offers.html">Offers</a></li>
 <li><a href="contact.html">Contact Us</a></li>
-<li><a href="index.html#about">About</a></li>
+<li><a href="about.html">About Us</a></li>
 </ul>
 </div>
 <div class="ft-col">
@@ -501,6 +521,187 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classLis
 <div class="ft-url">naturals-blr.github.io</div>
 </div>
 </footer>
+
+<script>
+window.NATURALS_STORES = [{"Active_Status": "Yes", "Address_Full": "1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India", "Appointment_URL": "https://naturals-salon-jpnagar5phase.setmore.com/", "Area": "South Bangalore", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.JPNagar5Phase", "Google_Maps_URL": "https://g.page/Naturals_JPNagar5thPhase/", "Google_Review_URL": "https://g.page/Naturals_JPNagar5thPhase/review?rc/", "Hero_Number": "1", "Instagram_URL": "https://instagram.com/Naturals.Salon.JPNagar5Phase/", "Landline": "918041304444", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 87926 42299", "Phone_Mobile": "918792642299", "Phone_Tel": "+918792642299", "Pincode": "560078", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N78", "Store_Name": "JP Nagar 5th Phase", "Store_Page_URL": "stores/jpnagar.html", "Store_Short": "N78", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "918792642299"}, {"Active_Status": "Yes", "Address_Full": "Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India", "Appointment_URL": "https://naturals-salon-elementsmall.setmore.com/", "Area": "Nagavara", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.ElementsMall/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Elements+Mall", "Google_Review_URL": "https://g.page/Naturals-ElementsMall/review?rc/", "Hero_Number": "2", "Instagram_URL": "https://instagram.com/Naturals.Salon.ElementsMall/", "Landline": "918046514422", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 99010 00017", "Phone_Mobile": "919901000017", "Phone_Tel": "+919901000017", "Pincode": "560077", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N77", "Store_Name": "Elements Mall", "Store_Page_URL": "stores/elements-mall.html", "Store_Short": "N77", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "919901000017"}, {"Active_Status": "Yes", "Address_Full": "2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu\u0027s Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India", "Appointment_URL": "https://naturals-salon-devasandra.setmore.com/", "Area": "KR Puram", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.Devasandra/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Devasandra", "Google_Review_URL": "https://g.page/r/CRJ1lK0dw1n5EAg/review", "Hero_Number": "3", "Instagram_URL": "https://instagram.com/Naturals.Salon.Devasandra/", "Landline": "", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 72594 90009", "Phone_Mobile": "917259490009", "Phone_Tel": "+917259490009", "Pincode": "560036", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N36", "Store_Name": "Devasandra", "Store_Page_URL": "stores/devasandra.html", "Store_Short": "N36", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "917259490009"}, {"Active_Status": "Yes", "Address_Full": "1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India", "Appointment_URL": "https://naturals-salon-frazertown.setmore.com/", "Area": "Pulikeshi Nagar", "Email": "", "Facebook_URL": "https://www.facebook.com/Naturals.Salon.FrazerTown/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Frazer+Town", "Google_Review_URL": "https://g.page/Naturals-FrazerTown/review?rc/", "Hero_Number": "4", "Instagram_URL": "https://instagram.com/Naturals.Salon.FrazerTown/", "Landline": "918040948040", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 99454 88040", "Phone_Mobile": "919945488040", "Phone_Tel": "+919945488040", "Pincode": "560005", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N05", "Store_Name": "Frazer Town", "Store_Page_URL": "stores/frazer-town.html", "Store_Short": "N05", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "919945488040"}, {"Active_Status": "Yes", "Address_Full": "1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India", "Appointment_URL": "https://naturals-salon-hennur.setmore.com/", "Area": "Hennur Cross", "Email": "", "Facebook_URL": "https://facebook.com/Naturals.Salon.Hennur/", "Google_Maps_URL": "https://maps.google.com/?q=Naturals+Salon+Hennur", "Google_Review_URL": "https://g.page/Naturals-Hennur/review?rc/", "Hero_Number": "5", "Instagram_URL": "https://instagram.com/Naturals.Salon.Hennur/", "Landline": "", "Mon_Fri_Hours": "10:00 AM \u2013 8:00 PM", "Phone_Display": "+91 96069 00069", "Phone_Mobile": "919606900069", "Phone_Tel": "+919606900069", "Pincode": "560043", "Saturday_Hours": "10:00 AM \u2013 8:00 PM", "Store_ID": "Store_N43", "Store_Name": "Hennur", "Store_Page_URL": "stores/hennur.html", "Store_Short": "N43", "Sunday_Hours": "10:00 AM \u2013 8:00 PM", "WhatsApp_Number": "919606900069"}];
+window.NATURALS_BASE = '';
+</script>
+
+<div id="store-modal-overlay" onclick="closeStorePicker()" style="display:none;"></div>
+<div id="store-modal" role="dialog" aria-modal="true" aria-label="Select your store" style="display:none;">
+<div id="store-modal-inner">
+<div class="spm-header">
+<div class="spm-title">Select Your <em>Store</em></div>
+<div class="spm-sub">Choose your preferred Naturals Salon &amp; Spa Bangalore location</div>
+<button class="spm-close" onclick="closeStorePicker()" aria-label="Close">&#10005;</button>
+</div>
+<div class="spm-cards">
+<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
+<div class="spm-card-num">1</div>
+<div class="spm-card-info">
+<div class="spm-card-name">JP Nagar 5th Phase</div>
+<div class="spm-card-area">South Bangalore &middot; 560078</div>
+<div class="spm-card-addr">1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
+<div class="spm-card-num">2</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Elements Mall</div>
+<div class="spm-card-area">Nagavara &middot; 560077</div>
+<div class="spm-card-addr">Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
+<div class="spm-card-num">3</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Devasandra</div>
+<div class="spm-card-area">KR Puram &middot; 560036</div>
+<div class="spm-card-addr">2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu's Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
+<div class="spm-card-num">4</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Frazer Town</div>
+<div class="spm-card-area">Pulikeshi Nagar &middot; 560005</div>
+<div class="spm-card-addr">1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
+<div class="spm-card-num">5</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Hennur</div>
+<div class="spm-card-area">Hennur Cross &middot; 560043</div>
+<div class="spm-card-addr">1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+</div>
+</div>
+</div>
+<style>
+#store-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:700;backdrop-filter:blur(4px);}
+#store-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:800;width:90%;max-width:600px;max-height:88vh;overflow-y:auto;background:var(--cream);box-shadow:0 24px 80px rgba(0,0,0,0.45);}
+[data-theme="naturals"] #store-modal{background:#FAF7FF;}
+#store-modal-inner{display:flex;flex-direction:column;}
+.spm-header{background:var(--dark);padding:28px 32px;position:relative;}
+[data-theme="naturals"] .spm-header{background:#1A0533;}
+.spm-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;margin-bottom:4px;}
+.spm-title em{font-style:italic;color:var(--gold);}
+.spm-sub{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;}
+.spm-close{position:absolute;top:20px;right:24px;background:none;border:none;color:rgba(255,255,255,0.45);font-size:20px;cursor:pointer;padding:6px;transition:color 0.2s;line-height:1;}
+.spm-close:hover{color:#fff;}
+.spm-cards{padding:4px;}
+.spm-card{display:flex;align-items:center;gap:16px;padding:18px 24px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.05);cursor:pointer;transition:all 0.2s;border-left:3px solid transparent;}
+.spm-card:hover{background:#f8f6f0;border-left-color:var(--gold);}
+[data-theme="naturals"] .spm-card{background:#fff;}
+[data-theme="naturals"] .spm-card:hover{background:#f3eeff;border-left-color:var(--green-mid);}
+.spm-card:focus{outline:2px solid var(--gold);outline-offset:-2px;}
+.spm-card-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:rgba(0,0,0,0.12);font-weight:300;width:30px;flex-shrink:0;}
+.spm-card-info{flex:1;}
+.spm-card-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--text);margin-bottom:2px;}
+.spm-card-area{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.spm-card-addr{font-size:11px;color:var(--text-light);font-weight:300;}
+.spm-card-cta{font-size:11px;color:var(--text-light);letter-spacing:1px;text-transform:uppercase;white-space:nowrap;transition:color 0.2s;}
+.spm-card:hover .spm-card-cta{color:var(--green-mid);}
+@media(max-width:480px){
+#store-modal{top:auto;bottom:0;left:0;right:0;transform:none;width:100%;max-width:100%;max-height:90vh;border-radius:16px 16px 0 0;}
+.spm-card{padding:14px 18px;}
+}
+</style>
+
+<div id="sticky-bar">
+<button class="sb-btn sb-primary" id="sb-book" aria-label="Book appointment">&#128197; Book</button>
+<a class="sb-btn sb-secondary" id="sb-wa" aria-label="WhatsApp us"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+Chat</a>
+<a class="sb-btn sb-secondary" id="sb-call" aria-label="Call us">&#128222; Call</a>
+<a class="sb-btn sb-secondary" id="sb-maps" aria-label="Get directions">&#128205; Directions</a>
+</div>
+<style>
+#sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;height:62px;z-index:9999;background:var(--dark);border-top:1px solid rgba(255,255,255,0.1);grid-template-columns:repeat(4,1fr);}
+[data-theme="naturals"] #sticky-bar{background:#1A0533;}
+@media(max-width:992px){ #sticky-bar{display:grid;}}
+.sb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-family:'Jost',sans-serif;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;min-height:44px;padding:0 4px;}
+.sb-primary{background:var(--gold);color:var(--dark);}
+.sb-primary:hover,.sb-primary:active{background:var(--gold-pale);}
+.sb-secondary{background:transparent;color:rgba(255,255,255,0.7);}
+.sb-secondary:hover,.sb-secondary:active{color:#fff;background:rgba(255,255,255,0.07);}
+#sb-wa{color:#25D366;}
+#sb-wa:hover,#sb-wa:active{color:#1da851;}
+</style>
+<script>
+(function(){
+/* ── Non-store page — use saved store or trigger modal ── */
+var saved = null;
+try { saved = JSON.parse(localStorage.getItem('naturals-store')); } catch(e){}
+if (saved && saved.id) {
+applyStickyStore(saved);
+} else {
+/* No store saved — all 4 buttons open store picker */
+['sb-book','sb-wa','sb-call','sb-maps'].forEach(function(id){
+var el = document.getElementById(id);
+if (!el) return;
+el.tagName === 'BUTTON'
+? el.addEventListener('click', openStorePicker)
+: (el.href='javascript:void(0)', el.addEventListener('click', openStorePicker));
+});
+}
+
+function applyStickyStore(sd) {
+var book = document.getElementById('sb-book');
+var wa = document.getElementById('sb-wa');
+var call = document.getElementById('sb-call');
+var maps = document.getElementById('sb-maps');
+if (book) { book.onclick = null; book.addEventListener('click', function(){ window.open(sd.book,'_blank'); }); }
+if (wa) { wa.href = 'https://wa.me/' + sd.wa; wa.target = '_blank'; }
+if (call) { call.href = 'tel:' + sd.call; }
+if (maps) { maps.href = sd.maps; maps.target = '_blank'; }
+/* Update indicator */
+showStoreIndicator(sd.name);
+}
+window._applyStickyStore = applyStickyStore;
+})();
+</script>
+
+<script>
+function openStorePicker(){
+document.getElementById('store-modal-overlay').style.display='block';
+document.getElementById('store-modal').style.display='block';
+document.body.style.overflow='hidden';
+}
+function closeStorePicker(){
+document.getElementById('store-modal-overlay').style.display='none';
+document.getElementById('store-modal').style.display='none';
+document.body.style.overflow='';
+}
+function selectStore(id,name,book,wa,call,maps,pageUrl){
+var sd = {id:id,name:name,book:book,wa:wa,call:call,maps:maps,pageUrl:pageUrl};
+localStorage.setItem('naturals-store',JSON.stringify(sd));
+closeStorePicker();
+if (typeof window._applyStickyStore === 'function') window._applyStickyStore(sd);
+showStoreIndicator(name);
+}
+function showStoreIndicator(name){
+var ind = document.getElementById('store-indicator');
+var nm = document.getElementById('si-name');
+if (ind && nm){ nm.textContent = name; ind.style.display = 'flex'; }
+}
+document.addEventListener('keydown',function(e){
+if(e.key==='Escape') closeStorePicker();
+});
+/* On load: restore indicator from localStorage */
+document.addEventListener('DOMContentLoaded',function(){
+try {
+var saved = JSON.parse(localStorage.getItem('naturals-store'));
+if (saved && saved.name) showStoreIndicator(saved.name);
+} catch(e){}
+});
+</script>
 
 <div id="theme-pill" title="Switch theme">
 <button id="tp-luxury" class="tp-btn active" onclick="setTheme('luxury')">&#9728; Luxury</button>
