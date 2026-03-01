@@ -93,10 +93,6 @@ img{display:block;width:100%;object-fit:cover;}
 
 /* ── ACTION BAR — single row of 3 clean buttons ── */
 .action-bar{display:flex;gap:10px;flex-wrap:wrap;}
-.ab-primary{background:var(--gold);color:var(--dark);padding:13px 26px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;}
-.ab-primary:hover{background:var(--gold-pale);transform:translateY(-1px);}
-.ab-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:13px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;}
-.ab-ghost:hover{border-color:var(--gold);color:var(--gold);}
 
 /* INFO BAR — 4 cells */
 .info-bar{display:grid;grid-template-columns:repeat(4,1fr);background:var(--dark);border-top:1px solid rgba(255,255,255,0.06);}
@@ -182,8 +178,6 @@ a.contact-val:hover{color:var(--green);}
 .sb-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--text);font-weight:400;margin-bottom:3px;}
 .sb-area{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;}
 /* Single prominent book button */
-.sb-book-main{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--gold);color:var(--dark);padding:14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;transition:all 0.3s;width:100%;margin-bottom:8px;}
-.sb-book-main:hover{background:var(--gold-pale);}
 /* Compact secondary links row */
 .sb-quick{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:20px;}
 .sb-ql{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:10px 6px;border:1px solid rgba(0,0,0,0.09);color:var(--text-mid);font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;transition:all 0.3s;text-align:center;}
@@ -211,8 +205,8 @@ a.contact-val:hover{color:var(--green);}
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
 .btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
-.btn-maps{background:#fff;color:#3C4043;border:1px solid #dadce0;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
-.btn-maps:hover{background:#f8f9fa;box-shadow:0 1px 6px rgba(60,64,67,0.2);}
+.btn-maps{background:#D93025;color:#fff;border:none;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps:hover{background:#b71c1c;transform:translateY(-1px);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
@@ -227,12 +221,7 @@ footer{background:#080f0b;}
 .ft-brand{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:300;margin-bottom:10px;}
 .ft-brand span{color:var(--gold);font-style:italic;}
 .ft-tagline{font-size:12px;color:rgba(255,255,255,0.28);font-weight:300;line-height:1.7;margin-bottom:18px;}
-.ft-socials{display:flex;gap:10px;margin-bottom:18px;}
-.ft-soc-link{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;}
-.ft-soc-link:hover{border-color:var(--gold);background:rgba(255,255,255,0.06);}
-.ft-soc-link:hover svg{fill:var(--gold)!important;}
-.ft-socials a{font-size:18px;transition:transform 0.3s;}
-.ft-socials a:hover{transform:scale(1.2);}
+
 .ft-col-title{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;}
 .ft-col ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
 .ft-col ul a{font-size:12px;color:rgba(255,255,255,0.32);font-weight:300;transition:color 0.3s;text-decoration:none;}
@@ -242,13 +231,6 @@ footer{background:#080f0b;}
 .ft-url{font-size:11px;color:rgba(255,255,255,0.18);letter-spacing:1px;}
 @media(max-width:960px){.ft-top{grid-template-columns:1fr 1fr;gap:28px;padding:36px 20px 24px;}.ft-bottom{padding:14px 20px;flex-direction:column;text-align:center;}}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
-
-.social-icons{display:flex;gap:10px;align-items:center;}
-.soc-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;text-decoration:none;}
-.soc-icon:hover{transform:translateY(-2px);background:rgba(255,255,255,0.12);}
-.soc-wa:hover{border-color:#25D366;box-shadow:0 4px 12px rgba(37,211,102,0.25);}
-.soc-fb:hover{border-color:#1877F2;box-shadow:0 4px 12px rgba(24,119,242,0.25);}
-.soc-ig:hover{border-color:#C13584;box-shadow:0 4px 12px rgba(193,53,132,0.25);}
 
 @media(max-width:1100px){
 .page-wrap{grid-template-columns:1fr;padding:40px 40px;}
@@ -359,9 +341,9 @@ class="hdr-link">Contact Us</a>
 <div class="drawer-brand">Naturals <span>Salon &amp; Spa</span></div>
 </div>
 <ul class="drawer-links">
-<li><a href="../index.html" class="">Home</a></li>
-<li><a href="../services.html" class="">Services</a></li>
-<li><a href="../offers.html" class="">Offers</a></li>
+<li><a href="../index.html" class="" onclick="closeDrawer()">Home</a></li>
+<li><a href="../services.html" class="" onclick="closeDrawer()">Services</a></li>
+<li><a href="../offers.html" class="" onclick="closeDrawer()">Offers</a></li>
 <li class="drawer-has-sub">
 <button class="drawer-sub-btn drawer-active"
 onclick="toggleDrawerSub(this)" aria-expanded="false">
@@ -370,8 +352,8 @@ Our Stores <span class="drawer-sub-caret">&#9662;</span>
 <ul class="drawer-sub">
 </ul>
 </li>
-<li><a href="../about.html" class="">About Us</a></li>
-<li><a href="../contact.html" class="">Contact Us</a></li>
+<li><a href="../about.html" class="" onclick="closeDrawer()">About Us</a></li>
+<li><a href="../contact.html" class="" onclick="closeDrawer()">Contact Us</a></li>
 </ul>
 <div class="drawer-cta">
 <a href="../index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
@@ -409,11 +391,18 @@ Our Stores <span class="drawer-sub-caret">&#9662;</span>
 @media(max-width:1024px){ #hamburger{display:flex;}}
 </style>
 <script>
-function openDrawer(){document.getElementById('nav-drawer').classList.add('open');document.getElementById('nav-overlay').classList.add('show');document.getElementById('hamburger').classList.add('open');document.getElementById('hamburger').setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
-function closeDrawer(){document.getElementById('nav-drawer').classList.remove('open');document.getElementById('nav-overlay').classList.remove('show');document.getElementById('hamburger').classList.remove('open');document.getElementById('hamburger').setAttribute('aria-expanded','false');document.body.style.overflow='';}
+function openDrawer(){var d=document.getElementById('nav-drawer'),o=document.getElementById('nav-overlay'),h=document.getElementById('hamburger');if(!d||!o||!h)return;d.classList.add('open');o.classList.add('show');h.classList.add('open');h.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';}
+function closeDrawer(){var d=document.getElementById('nav-drawer'),o=document.getElementById('nav-overlay'),h=document.getElementById('hamburger');if(!d||!o||!h)return;d.classList.remove('open');o.classList.remove('show');h.classList.remove('open');h.setAttribute('aria-expanded','false');document.body.style.overflow='';}
 function toggleDrawerSub(btn){var sub=btn.nextElementSibling;var isOpen=sub.classList.contains('open');sub.classList.toggle('open',!isOpen);btn.classList.toggle('open',!isOpen);btn.setAttribute('aria-expanded',!isOpen?'true':'false');}
-document.getElementById('hamburger').addEventListener('click',function(){this.classList.contains('open')?closeDrawer():openDrawer();});
+(function(){var h=document.getElementById('hamburger');if(h)h.addEventListener('click',function(){this.classList.contains('open')?closeDrawer():openDrawer();});})();
 document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});
+/* Close drawer when any internal link is tapped (handles same-page anchors too) */
+document.addEventListener('click',function(e){
+var a=e.target.closest('a[href]');
+if(a&&document.getElementById('nav-drawer')&&document.getElementById('nav-drawer').classList.contains('open')){
+closeDrawer();
+}
+});
 </script>
 
 </div>
@@ -491,10 +480,10 @@ onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?
 <div class="hero-sub">South Bangalore &middot; 560078 &middot; <a href="tel:+918792642299" style="color:rgba(255,255,255,0.55);">+91 87926 42299</a></div>
 
 <div class="action-bar">
-<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="ab-primary">&#128197; Book Appointment</a>
-<a href="https://wa.me/918792642299" target="_blank" class="ab-ghost"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="btn-book">&#128197; Book Appointment</a>
+<a href="https://wa.me/918792642299" target="_blank" class="btn-wa"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 WhatsApp</a>
-<a href="https://g.page/Naturals_JPNagar5thPhase/" target="_blank" class="ab-ghost">&#128205; Directions</a>
+<a href="https://g.page/Naturals_JPNagar5thPhase/" target="_blank" class="btn-maps">&#128205; Directions</a>
 </div>
 </div>
 </section>
@@ -547,7 +536,7 @@ onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=9
 <h2 class="sec-title">A premium experience<br>in <em>JP Nagar 5th Phase.</em></h2>
 <p class="about-p">Welcome to Naturals Salon &amp; Spa JP Nagar 5th Phase — your neighbourhood destination for premium hair, skin and beauty services in South Bangalore, Bangalore. Part of India's most trusted salon network with over 25 years of expertise.</p>
 <p class="about-p">Our expert stylists and therapists deliver world-class results in a relaxed, luxurious setting. Every visit is personalised to you — from precision haircuts and vibrant colour to rejuvenating facials and bridal packages.</p>
-<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="btn-gold" style="margin-top:18px;font-size:11px;">Book Your Visit &#8594;</a>
+<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="btn-book" style="margin-top:18px;font-size:11px;">Book Your Visit &#8594;</a>
 </div>
 </div>
 
@@ -587,8 +576,9 @@ onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=1
 <div class="stylists-grid">
 <div class="stylist-card">
 <div class="stylist-photo">
-<img src="../images/stylists/default_stylist.jpg" alt="Cherry"
-onerror="this.src='https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=400&q=80'">
+<img src="../images/stylists/cherry.png"
+alt="Cherry"
+onerror="this.onerror=null;this.src='../images/stylists/stylist_default.png'">
 </div>
 <div class="stylist-info">
 <div class="stylist-name">Cherry</div>
@@ -643,25 +633,7 @@ onerror="this.src='https://images.unsplash.com/photo-1605497788044-5a32c7078486?
 <div class="sb-name">Naturals JP Nagar 5th Phase</div>
 <div class="sb-area">South Bangalore &middot; 560078</div>
 
-<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="sb-book-main">&#128197; Book Appointment</a>
-
-<div class="social-icons">
-<a href="https://wa.me/918792642299" target="_blank" rel="noopener"
-class="soc-icon soc-wa" aria-label="WhatsApp JP Nagar 5th Phase">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
-</a>
-<a href="https://facebook.com/Naturals.Salon.JPNagar5Phase" target="_blank" rel="noopener"
-class="soc-icon soc-fb" aria-label="JP Nagar 5th Phase on Facebook">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="#1877F2" aria-hidden="true" style="flex-shrink:0"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.271h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-
-</a>
-<a href="https://instagram.com/Naturals.Salon.JPNagar5Phase/" target="_blank" rel="noopener"
-class="soc-icon soc-ig" aria-label="JP Nagar 5th Phase on Instagram">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" style="flex-shrink:0"><defs><linearGradient id="ig-grad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0%" stop-color="#FFDC80"/><stop offset="25%" stop-color="#FCAF45"/><stop offset="50%" stop-color="#F77737"/><stop offset="75%" stop-color="#C13584"/><stop offset="100%" stop-color="#833AB4"/></linearGradient></defs><path fill="url(#ig-grad)" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-
-</a>
-</div>
+<a href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" class="btn-book" style="width:100%;justify-content:center;margin-bottom:12px;">&#128197; Book Appointment</a>
 
 
 <div class="sb-quick">
@@ -686,12 +658,6 @@ class="soc-icon soc-ig" aria-label="JP Nagar 5th Phase on Instagram">
 <div class="h-row"><span class="h-day">Saturday</span><span>10:00 AM – 8:00 PM</span></div>
 <div class="h-row"><span class="h-day">Sunday</span><span>10:00 AM – 8:00 PM</span></div>
 
-<div class="sb-divider"></div>
-<div class="sb-sec">Follow Us</div>
-<div class="sb-social">
-<a href="https://instagram.com/Naturals.Salon.JPNagar5Phase/" target="_blank" class="sb-soc sb-insta">&#128248; Instagram</a>
-<a href="https://facebook.com/Naturals.Salon.JPNagar5Phase" target="_blank" class="sb-soc sb-fb">&#128077; Facebook</a>
-</div>
 </div>
 </div>
 </div>
@@ -707,14 +673,7 @@ class="soc-icon soc-ig" aria-label="JP Nagar 5th Phase on Instagram">
 <div class="ft-brand-col">
 <div class="ft-brand">Naturals <span>Salon &amp; Spa</span></div>
 <div class="ft-tagline">India's most trusted salon network.<br>Premium beauty services across Bangalore.</div>
-<div class="ft-socials">
-<a href="https://instagram.com/Naturals.Salon.JPNagar5Phase/" target="_blank" rel="noopener" title="Instagram" aria-label="Naturals on Instagram" class="ft-soc-link">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-</a>
-<a href="https://facebook.com/Naturals.Salon.JPNagar5Phase" target="_blank" rel="noopener" title="Facebook" aria-label="Naturals on Facebook" class="ft-soc-link">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="rgba(255,255,255,0.5)" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.883v2.271h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-</a>
-</div>
+
 </div>
 <div class="ft-col">
 <div class="ft-col-title">Explore</div>
