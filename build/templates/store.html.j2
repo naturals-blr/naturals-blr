@@ -235,18 +235,10 @@ a.contact-val:hover{color:var(--green);}
     <div class="hero-badge">Store {{ s.Hero_Number }} of {{ all_stores | length }} &middot; Bangalore</div>
     <h1>Naturals Salon &amp; Spa &ndash;<br><em>{{ s.Store_Name }}, {{ s.Area }}</em></h1>
     <div class="hero-sub">Premium hair, skin &amp; beauty services near {{ s.Area }} &middot; <a href="tel:{{ s.Phone_Tel }}" style="color:rgba(255,255,255,0.55);">{{ s.Phone_Display }}</a></div>
-    
-    <div class="store-reviews" style="margin-bottom: 24px; display: inline-flex; flex-direction: column; gap: 4px;">
-      <div style="color: var(--gold); font-size: 14px; letter-spacing: 2px;">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color: white; font-weight: 600; font-family: 'Jost', sans-serif;">4.3</span></div>
-      <p style="color: rgba(255,255,255,0.85); font-size: 13px; font-style: italic; margin: 0;">"Amazing hair spa and service! &ndash; Priya"</p>
-      {% if s.Google_Review_URL %}
-      <a href="{{ s.Google_Review_URL }}" target="_blank" style="color: var(--gold); font-size: 11px; text-transform: uppercase; letter-spacing: 1px; text-decoration: underline;">Read all reviews</a>
-      {% endif %}
-    </div>
 
     <!-- Actions -->
     <div class="action-bar" style="max-width: 400px; display: flex; flex-direction: column; gap: 8px;">
-      <a href="{{ s.Appointment_URL }}" target="_blank" class="btn-book" style="width: 100%; justify-content: center; font-size: 13px; padding: 16px;">&#128197; Book Appointment</a>
+      <a href="{{ s.Appointment_URL }}" target="_blank" class="btn-book" style="width: 100%; justify-content: center; font-size: 13px; padding: 16px;">&#128197; Book Now</a>
       <div class="secondary-actions" style="display: flex; gap: 8px; width: 100%;">
         <a href="https://wa.me/{{ s.WhatsApp_Number }}" target="_blank" class="btn-wa" style="flex: 1; justify-content: center; font-size: 10px; padding: 10px;">{{ wa_svg(14) }} WhatsApp</a>
         <a href="tel:{{ s.Phone_Tel }}" class="btn-call" style="flex: 1; justify-content: center; font-size: 10px; padding: 10px;">&#128222; Call</a>
@@ -292,7 +284,7 @@ a.contact-val:hover{color:var(--green);}
 <div class="page-wrap">
 <div class="main-col">
 
-  <!-- ABOUT -->
+  <!-- 1. LOCAL SEO / ABOUT -->
   <div class="about-grid reveal">
     <div class="about-img-wrap">
       <img src="../images/heroes/{{ s.Store_Page_URL | replace('stores/','') | replace('.html','') }}.jpg"
@@ -383,7 +375,48 @@ a.contact-val:hover{color:var(--green);}
   </div>
   {% endif %}
 
-  <!-- CONTACTS -->
+  <!-- 6. REVIEWS / SOCIAL PROOF -->
+  <div class="reviews-block reveal" style="background:#fff; padding:36px; margin-bottom:3px;">
+    <div class="lbl">Client Love</div>
+    <h2 class="sec-title">What clients <em>say about us</em></h2>
+    <div style="display:flex; flex-direction:column; gap:16px; margin-bottom:24px;">
+      <div style="border-left:3px solid var(--gold); padding:14px 20px; background:var(--cream);">
+        <div style="color:var(--gold); font-size:13px; letter-spacing:1px; margin-bottom:6px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:17px; font-style:italic; color:var(--text); line-height:1.6; margin-bottom:6px;">&ldquo;Amazing hair spa &mdash; left feeling completely refreshed. The stylists really listen to you.&rdquo;</p>
+        <span style="font-size:11px; color:var(--text-light); letter-spacing:1px; text-transform:uppercase;">&#8212; Priya S., {{ s.Area }}</span>
+      </div>
+      <div style="border-left:3px solid var(--gold); padding:14px 20px; background:var(--cream);">
+        <div style="color:var(--gold); font-size:13px; letter-spacing:1px; margin-bottom:6px;">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:17px; font-style:italic; color:var(--text); line-height:1.6; margin-bottom:6px;">&ldquo;Best salon I&rsquo;ve visited in Bangalore. Friendly staff, premium products and great results every time.&rdquo;</p>
+        <span style="font-size:11px; color:var(--text-light); letter-spacing:1px; text-transform:uppercase;">&#8212; Rahul M., Bangalore</span>
+      </div>
+    </div>
+    {% if s.Google_Review_URL %}
+    <a href="{{ s.Google_Review_URL }}" target="_blank" class="bl-btn-review">
+      <span style="font-size:16px;line-height:1;">&#11088;</span> Rate Us on Google
+    </a>
+    {% endif %}
+  </div>
+
+  <!-- 7. FOLLOW US -->
+  <div class="follow-block reveal" style="padding:36px 0; text-align:center;">
+    <div class="lbl" style="justify-content:center;">Follow Us</div>
+    <h2 class="sec-title" style="text-align:center;">Stay connected <em>with us</em></h2>
+    <div class="bl-social-row" style="margin-top:12px;">
+      {% if s.get('Instagram_URL') and s.Instagram_URL not in ('', 'https://instagram.com/', 'https://instagram.com') %}
+      <a href="{{ s.Instagram_URL }}" target="_blank" class="bl-soc-link bl-soc-ig">
+        {{ ig_svg(20) }} Instagram
+      </a>
+      {% endif %}
+      {% if s.get('Facebook_URL') and s.Facebook_URL not in ('', 'https://facebook.com/', 'https://facebook.com') %}
+      <a href="{{ s.Facebook_URL }}" target="_blank" class="bl-soc-link bl-soc-fb">
+        {{ fb_svg(20) }} Facebook
+      </a>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- 8. CONTACTS -->
   <div class="contact-block reveal">
     <div class="lbl">Get In Touch</div>
     <h2 class="sec-title">Contact <em>us</em></h2>
@@ -457,38 +490,6 @@ a.contact-val:hover{color:var(--green);}
 
   </div>
 </div>
-</div>
-
-<!-- ── BOTTOM SOCIAL & REVIEW COMPONENT ── -->
-<div class="bottom-links-wrap page-wrap" style="padding-top:20px; padding-bottom:60px; grid-template-columns:1fr;">
-  
-  <div class="bl-section reveal">
-    <div class="bl-hdr">Follow <em>us</em></div>
-    <div class="bl-social-row">
-      {% if s.get('Instagram_URL') and s.Instagram_URL not in ('', 'https://instagram.com/', 'https://instagram.com') %}
-      <a href="{{ s.Instagram_URL }}" target="_blank" class="bl-soc-link bl-soc-ig">
-        {{ ig_svg(20) }} Instagram
-      </a>
-      {% endif %}
-      {% if s.get('Facebook_URL') and s.Facebook_URL not in ('', 'https://facebook.com/', 'https://facebook.com') %}
-      <a href="{{ s.Facebook_URL }}" target="_blank" class="bl-soc-link bl-soc-fb">
-        {{ fb_svg(20) }} Facebook
-      </a>
-      {% endif %}
-    </div>
-  </div>
-
-  {% if s.Google_Review_URL %}
-  <div class="bl-section reveal">
-    <div class="bl-hdr">Rate &amp; <em>Review</em></div>
-    <div class="bl-review-wrap">
-      <a href="{{ s.Google_Review_URL }}" target="_blank" class="bl-btn-review">
-        <span style="font-size:16px;line-height:1;">&#11088;</span> Rate Us on Google
-      </a>
-    </div>
-  </div>
-  {% endif %}
-
 </div>
 
 <div class="store-nav">
