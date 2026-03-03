@@ -8,9 +8,6 @@
 <title>Offers &amp; Deals | Naturals Salon &amp; Spa Bangalore</title>
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Naturals Salon &amp; Spa Bangalore">
-<meta property="og:title" content="Offers &amp; Deals | Naturals Salon &amp; Spa Bangalore">
-<meta property="og:description" content="Exclusive discounts across all 5 locations. Filter by store to find offers near you.">
-<meta property="og:image" content="https://naturals-blr.github.io/images/heroes/offers.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -21,8 +18,8 @@
 "@context":"https://schema.org",
 "@type":"CollectionPage",
 "name":"Offers & Deals | Naturals Salon & Spa Bangalore",
-"url":"https://naturals-blr.github.io/offers.html",
-"description":"Current offers and deals across Naturals Salon & Spa Bangalore stores."
+"description":"Current offers and deals at Naturals Salon & Spa Bangalore — exclusive discounts across all 5 locations.",
+"url":"https://naturals-blr.github.io/offers.html"
 }
 </script>
 
@@ -48,90 +45,166 @@
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);}
 a{text-decoration:none;color:inherit;}img{display:block;width:100%;object-fit:cover;}
 
-/* HERO with image */
-.page-hero{padding-top:70px;background:var(--dark);position:relative;overflow:hidden;}
-.page-hero-media{position:absolute;inset:0;}
-.page-hero-media img{width:100%;height:100%;object-fit:cover;filter:saturate(0.95);}
-.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,var(--hero-tint) 0%,var(--hero-tint2) 60%,rgba(0,0,0,0.10) 100%);}
-.page-hero-inner{position:relative;z-index:2;padding:60px 60px 56px;max-width:1100px;margin:0 auto;}
-
-.lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+/* HERO (with image) */
+.page-hero{background:var(--dark);position:relative;overflow:hidden;}
+.page-hero-bg{position:absolute;inset:0;}
+.page-hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05);}
+.page-hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,var(--hero-tint) 0%,var(--hero-tint2) 60%,rgba(0,0,0,0.12) 100%);}
+.page-hero-inner{position:relative;z-index:2;padding:86px 60px 46px;max-width:1200px;margin:0 auto;}
+.lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:12px;}
 .lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
-.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,80px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:14px;}
+.page-hero-inner h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,6vw,80px);font-weight:300;color:#fff;line-height:0.95;margin-bottom:12px;}
 .page-hero-inner h1 em{font-style:italic;color:var(--gold);}
-.page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.44);font-weight:300;line-height:1.8;max-width:620px;}
+.page-hero-inner p{font-size:14px;color:rgba(255,255,255,0.42);font-weight:300;line-height:1.8;max-width:640px;}
 
-/* FILTER */
+/* FILTER BAR */
 .filter-bar{background:var(--filter-bg);padding:0 60px 18px;position:sticky;top:70px;z-index:100;border-bottom:1px solid rgba(255,255,255,0.06);}
-.filter-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:14px;}
+.filter-row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding-top:16px;}
 .filter-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:#52B788;white-space:nowrap;min-width:60px;}
 .f-btn{background:rgba(82,183,136,0.08);border:1px solid rgba(82,183,136,0.2);color:rgba(255,255,255,0.45);padding:7px 14px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all 0.25s;font-family:'Jost',sans-serif;font-weight:500;border-radius:999px;}
 .f-btn:hover{border-color:#52B788;color:#52B788;}
 .f-btn.active{background:#1B4332;border-color:#52B788;color:#52B788;}
 [data-theme="naturals"] .f-btn.active{background:rgba(37,150,190,0.2);border-color:var(--green);color:var(--green);}
 
+.sort-wrap{margin-left:auto;display:flex;align-items:center;gap:10px;}
+.sort-lbl{font-size:9px;letter-spacing:3px;text-transform:uppercase;font-weight:600;color:rgba(255,255,255,0.35);}
+.sort-sel{
+appearance:none;
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,255,255,0.14);
+color:rgba(255,255,255,0.82);
+padding:8px 34px 8px 12px;
+font-size:11px;
+letter-spacing:1.2px;
+border-radius:10px;
+cursor:pointer;
+}
+.sort-sel:disabled{opacity:0.35;cursor:not-allowed;}
+.sort-wrap .chev{margin-left:-30px;color:rgba(255,255,255,0.45);pointer-events:none;font-size:12px;}
+
 /* RESULTS */
 .results-bar{background:var(--cream);padding:14px 60px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:13px;color:var(--text-light);}
 
 /* MAIN */
-.offers-main{padding:48px 60px;}
+.offers-main{padding:42px 60px;}
 .store-group{margin-bottom:52px;}
 .store-group-hdr{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid rgba(0,0,0,0.06);}
 .store-group-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--text);}
 .store-group-count{font-size:11px;color:var(--text-light);letter-spacing:2px;text-transform:uppercase;}
 
+/* GRID: 3 desktop / 2 tablet / 1 mobile */
 .offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
-.offer-card{background:#fff;overflow:hidden;transition:box-shadow 0.25s, transform 0.25s;display:flex;flex-direction:column;min-height:360px;}
-.offer-card:hover{box-shadow:0 10px 42px rgba(0,0,0,0.12);transform:translateY(-2px);}
+@media(max-width:900px){ .offers-grid{grid-template-columns:1fr 1fr;} }
+@media(max-width:600px){ .offers-grid{grid-template-columns:1fr;} }
 
-.offer-img{height:190px;overflow:hidden;position:relative;background:#0b0f0d;}
-.offer-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
-.offer-card:hover .offer-img img{transform:scale(1.04);}
+.offer-card{
+background:#fff;overflow:hidden;transition:box-shadow 0.25s,transform 0.25s;
+border:1px solid rgba(0,0,0,0.06);
+min-height:360px;display:flex;flex-direction:column;
+}
+.offer-card:hover{box-shadow:0 10px 34px rgba(0,0,0,0.10);transform:translateY(-2px);}
 
-.offer-faux{
-height:190px;
-background:linear-gradient(135deg,var(--dark) 0%,var(--green-mid) 60%,var(--gold) 120%);
-display:flex;align-items:flex-end;padding:16px;
+.offer-media{height:200px;position:relative;background:linear-gradient(135deg,var(--dark) 0%,var(--green) 100%);overflow:hidden;}
+.offer-media img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s ease;cursor:zoom-in;}
+.offer-card:hover .offer-media img{transform:scale(1.04);}
+
+.ribbon{
+position:absolute;top:14px;left:14px;z-index:2;
+background:rgba(201,168,76,0.92);color:var(--dark);
+font-size:9px;letter-spacing:2px;text-transform:uppercase;font-weight:700;
+padding:7px 10px;border-radius:999px;
+box-shadow:0 8px 18px rgba(0,0,0,0.18);
 }
-.offer-faux .faux-title{
-font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:#fff;line-height:1.15;
-text-shadow:0 10px 28px rgba(0,0,0,0.35);
-}
+.ribbon.urgent{background:rgba(217,48,37,0.92);color:#fff;}
+.ribbon.new{background:rgba(26,115,232,0.92);color:#fff;}
 
 .offer-body{padding:18px 18px 16px;display:flex;flex-direction:column;flex:1;}
 .offer-badge{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:8px;}
-.offer-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:6px;color:var(--text);line-height:1.2;}
-.offer-details{
-font-size:12px;color:var(--text-mid);line-height:1.7;font-weight:300;margin-bottom:10px;
-display:-webkit-box;-webkit-box-orient:vertical;overflow:hidden;-webkit-line-clamp:1;
+.offer-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;margin-bottom:8px;color:var(--text);line-height:1.2;}
+.offer-details{font-size:12px;color:var(--text-mid);line-height:1.7;font-weight:300;margin-bottom:12px;}
+.offer-details.clamp{
+display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;
 }
-.offer-details.expanded{-webkit-line-clamp:unset;display:block;}
-.offer-more{font-size:11px;color:var(--green-mid);cursor:pointer;background:none;border:none;padding:0;margin:0 0 12px;text-align:left;}
+.offer-more{
+display:inline-flex;gap:6px;align-items:center;
+font-size:11px;color:var(--green-mid);cursor:pointer;
+margin-top:-6px;margin-bottom:12px;
+}
 .offer-more:hover{text-decoration:underline;}
 
-.offer-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding-top:12px;border-top:1px solid rgba(0,0,0,0.06);margin-top:auto;}
-.offer-valid{font-size:11px;color:var(--green-soft);font-weight:600;letter-spacing:0.2px;}
+.offer-footer{
+margin-top:auto;
+display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+padding-top:12px;border-top:1px solid rgba(0,0,0,0.06);
+}
+.offer-valid{font-size:11px;color:var(--green-soft);font-weight:600;letter-spacing:0.2px;white-space:nowrap;}
+.offer-ctas{display:flex;gap:8px;align-items:center;}
+
+.offer-icon-btn{
+width:40px;height:40px;border-radius:10px;
+display:inline-flex;align-items:center;justify-content:center;
+border:1px solid rgba(0,0,0,0.10);
+transition:transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+text-decoration:none;
+}
+.offer-icon-btn:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,0.12);}
+.offer-icon-book{background:#1A73E8;border-color:rgba(26,115,232,0.45);}
+.offer-icon-book svg, .offer-icon-book span{color:#fff;fill:#fff;}
+.offer-icon-wa{background:#25D366;border-color:rgba(37,211,102,0.45);}
+.offer-icon-call{background:#5F6368;border-color:rgba(95,99,104,0.45);}
+.offer-icon-btn svg{width:18px;height:18px;display:block;}
+.offer-icon-call span{color:#fff;}
+.offer-icon-call svg{fill:#fff;}
+.offer-icon-wa svg{fill:#fff;}
 
 .no-offers{text-align:center;padding:80px 32px;color:var(--text-light);}
 .no-offers h3{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;margin-bottom:10px;}
+
+/* LIGHTBOX (image-only) */
+#img-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.75);backdrop-filter:blur(6px);z-index:12000;display:none;}
+#img-modal{
+position:fixed;inset:0;z-index:12001;display:none;
+align-items:center;justify-content:center;padding:18px;
+}
+#img-modal-inner{
+position:relative;max-width:min(980px, 96vw);max-height:86vh;
+background:#000;border-radius:14px;overflow:hidden;box-shadow:0 24px 90px rgba(0,0,0,0.55);
+}
+#img-modal-inner img{width:100%;height:100%;max-height:86vh;object-fit:contain;background:#000;}
+#img-close{
+position:absolute;top:10px;right:10px;
+width:40px;height:40px;border-radius:10px;
+background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);
+color:#fff;font-size:20px;cursor:pointer;
+}
+#img-close:hover{background:rgba(255,255,255,0.22);}
+
+/* DETAILS MODAL */
+#details-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);z-index:11000;display:none;}
+#details-modal{
+position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+width:92%;max-width:620px;max-height:84vh;overflow:auto;
+background:var(--cream);z-index:11001;display:none;
+border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,0.45);
+}
+[data-theme="naturals"] #details-modal{background:#FAF7FF;}
+.dm-head{background:var(--dark);padding:20px 22px;position:sticky;top:0;}
+[data-theme="naturals"] .dm-head{background:#1A0533;}
+.dm-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:#fff;line-height:1.1;margin-bottom:4px;}
+.dm-meta{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.38);}
+.dm-close{
+position:absolute;top:14px;right:14px;width:40px;height:40px;border-radius:10px;
+background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.18);
+color:#fff;font-size:20px;cursor:pointer;
+}
+.dm-close:hover{background:rgba(255,255,255,0.20);}
+.dm-body{padding:18px 22px;}
+.dm-body p{font-size:13px;color:var(--text-mid);line-height:1.85;font-weight:300;white-space:pre-wrap;}
 
 /* SCROLL TOP */
 #scroll-top{position:fixed;bottom:32px;right:32px;z-index:500;width:44px;height:44px;background:var(--dark);border:1px solid rgba(255,255,255,0.15);color:rgba(255,255,255,0.7);font-size:18px;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:opacity 0.3s,transform 0.3s,background 0.2s;}
 #scroll-top.visible{opacity:1;pointer-events:auto;transform:translateY(0);}
 #scroll-top:hover{background:var(--green);}
-
-.off-cta{display:flex;gap:10px;align-items:center;}
-.off-ic{
-width:38px;height:38px;border-radius:10px;display:inline-flex;align-items:center;justify-content:center;
-text-decoration:none;border:1px solid rgba(0,0,0,0.10);transition:transform .2s, box-shadow .2s, background .2s;position:relative;
-}
-.off-ic:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(0,0,0,0.10);}
-.off-ic:active{transform:translateY(0);}
-.off-ic-book{background:#1A73E8;}
-.off-ic-wa{background:#25D366;}
-.off-ic-call{background:#5F6368;}
-.off-ic svg{display:block}
-.off-ic span{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;}
 
 .btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
@@ -139,11 +212,15 @@ text-decoration:none;border:1px solid rgba(0,0,0,0.10);transition:transform .2s,
 .btn-wa:hover{background:#1da851;transform:translateY(-1px);}
 .btn-call{background:#5F6368;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-call:hover{background:#474c52;transform:translateY(-1px);}
+.btn-maps{background:#D93025;color:#fff;border:none;padding:13px 18px;min-height:48px;font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
+.btn-maps:hover{background:#b71c1c;transform:translateY(-1px);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
 .btn-ghost{border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.75);padding:12px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
-@media(max-width:480px){.btn-book,.btn-wa,.btn-call{font-size:10px;padding:13px 14px;}}
+@media(max-width:480px){
+.btn-book,.btn-wa,.btn-call,.btn-maps{font-size:10px;padding:13px 14px;}
+}
 
 footer{background:#080f0b;}
 [data-theme="naturals"] footer{background:#0D0120;}
@@ -163,15 +240,12 @@ footer{background:#080f0b;}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
 
 @media(max-width:900px){
-.page-hero-inner{padding:44px 20px 44px;}
-.filter-bar{padding:0 20px 14px;top:60px;}
+.page-hero-inner{padding:76px 20px 40px;}
+.filter-bar{padding:0 20px 16px;top:60px;}
 .results-bar{padding:12px 20px;}
-.offers-main{padding:32px 20px;}
-.offers-grid{grid-template-columns:1fr 1fr;}
+.offers-main{padding:28px 20px;}
 #scroll-top{bottom:20px;right:20px;}
-}
-@media(max-width:600px){
-.offers-grid{grid-template-columns:1fr;}
+.sort-wrap{width:100%;margin-left:0;justify-content:flex-end;}
 }
 </style>
 </head>
@@ -220,35 +294,118 @@ onerror="this.style.display='none'">
 </nav>
 
 <style>
-.hb-line{display:block;width:22px;height:2px;background:#fff;margin:5px 0;transition:0.3s;}
-#drawer-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.55);backdrop-filter:blur(4px);opacity:0;pointer-events:none;transition:opacity 0.25s ease;z-index:10000;}
+/* Hamburger icon */
+.hb-line{
+display:block;
+width:22px;
+height:2px;
+background:#fff;
+margin:5px 0;
+transition:0.3s;
+}
+
+/* Overlay */
+#drawer-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.55);
+backdrop-filter:blur(4px);
+opacity:0;
+pointer-events:none;
+transition:opacity 0.25s ease;
+z-index:10000;
+}
+
+/* Drawer (mobile-first compact) */
 #drawer{
-position:fixed;top:0;right:-340px;width:min(320px, 92vw);height:100%;
-background:var(--dark);padding:86px 16px 16px;display:flex;flex-direction:column;
-gap:10px;transition:right 0.35s ease;z-index:10001;overflow-y:auto;
+position:fixed;
+top:0;
+right:-340px;
+width:min(320px, 92vw);
+height:100%;
+background:var(--dark);
+padding:86px 16px 16px; /* compact, still clears header */
+display:flex;
+flex-direction:column;
+gap:10px;
+transition:right 0.35s ease;
+z-index:10001;
+overflow-y:auto; /* will only scroll if absolutely needed */
 }
-.drawer-section{display:flex;flex-direction:column;gap:8px;}
-.drawer-divider{height:1px;background:rgba(255,255,255,0.08);margin:2px 0;}
-.drawer-title{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,0.38);margin:4px 0 2px;}
 
-.drawer-link,.store-link{
-display:block;color:rgba(255,255,255,0.92);text-decoration:none;font-size:12px;letter-spacing:1.4px;
-text-transform:uppercase;padding:9px 10px;border-radius:10px;background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.06);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.1;
+.drawer-section{
+display:flex;
+flex-direction:column;
+gap:8px; /* tighter */
 }
-.drawer-link:hover,.store-link:hover{background:rgba(255,255,255,0.07);border-color:rgba(255,255,255,0.12);}
-.drawer-link.is-active{border-color:rgba(201,168,76,0.60);box-shadow:0 0 0 1px rgba(201,168,76,0.18) inset;}
 
+.drawer-divider{
+height:1px;
+background:rgba(255,255,255,0.08);
+margin:2px 0;
+}
+
+.drawer-title{
+font-size:10px;
+letter-spacing:2.5px;
+text-transform:uppercase;
+color:rgba(255,255,255,0.38);
+margin:4px 0 2px;
+}
+
+/* One-line simple links */
+.drawer-link,
+.store-link{
+display:block;
+color:rgba(255,255,255,0.92);
+text-decoration:none;
+font-size:12px;
+letter-spacing:1.4px;
+text-transform:uppercase;
+padding:9px 10px;
+border-radius:10px;
+background:rgba(255,255,255,0.04);
+border:1px solid rgba(255,255,255,0.06);
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+line-height:1.1;
+}
+
+.drawer-link:hover,
+.store-link:hover{
+background:rgba(255,255,255,0.07);
+border-color:rgba(255,255,255,0.12);
+}
+
+.drawer-link.is-active{
+border-color:rgba(201,168,76,0.60);
+box-shadow:0 0 0 1px rgba(201,168,76,0.18) inset;
+}
+
+/* Desktop/tablet can breathe a bit */
 @media (min-width: 992px){
-#drawer{width:360px;padding:100px 22px 22px;gap:14px;}
-.drawer-section{gap:10px;}
-.drawer-link,.store-link{font-size:13px;padding:10px 12px;}
+#drawer{
+width:360px;
+padding:100px 22px 22px;
+gap:14px;
 }
-.drawer-open #drawer{right:0;}
-.drawer-open #drawer-overlay{opacity:1;pointer-events:auto;}
-.drawer-open #hamburger .hb-line:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
-.drawer-open #hamburger .hb-line:nth-child(2){opacity:0;}
-.drawer-open #hamburger .hb-line:nth-child(3){transform:rotate(-45deg) translate(6px,-6px);}
+.drawer-section{ gap:10px; }
+.drawer-link,.store-link{ font-size:13px; padding:10px 12px; }
+}
+
+/* Open state */
+.drawer-open #drawer{ right:0; }
+.drawer-open #drawer-overlay{ opacity:1; pointer-events:auto; }
+
+/* Animate hamburger */
+.drawer-open #hamburger .hb-line:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+.drawer-open #hamburger .hb-line:nth-child(2){ opacity:0; }
+.drawer-open #hamburger .hb-line:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
 </style>
 
 <script>
@@ -258,19 +415,40 @@ var hamburger = document.getElementById('hamburger');
 var overlay = document.getElementById('drawer-overlay');
 var drawer = document.getElementById('drawer');
 
-function openDrawer(){ body.classList.add('drawer-open'); if(hamburger) hamburger.setAttribute('aria-expanded','true'); }
-function closeDrawer(){ body.classList.remove('drawer-open'); if(hamburger) hamburger.setAttribute('aria-expanded','false'); }
-function toggle(){ body.classList.contains('drawer-open') ? closeDrawer() : openDrawer(); }
+function openDrawer(){
+body.classList.add('drawer-open');
+if(hamburger) hamburger.setAttribute('aria-expanded','true');
+}
+function closeDrawer(){
+body.classList.remove('drawer-open');
+if(hamburger) hamburger.setAttribute('aria-expanded','false');
+}
+function toggle(){
+body.classList.contains('drawer-open') ? closeDrawer() : openDrawer();
+}
 
-if(hamburger){ hamburger.addEventListener('click', function(e){ e.stopPropagation(); toggle(); }); }
-if(overlay){ overlay.addEventListener('click', closeDrawer); }
+if(hamburger){
+hamburger.addEventListener('click', function(e){
+e.stopPropagation();
+toggle();
+});
+}
+
+if(overlay){
+overlay.addEventListener('click', closeDrawer);
+}
+
+/* Close when clicking any link in drawer */
 if(drawer){
 drawer.addEventListener('click', function(e){
 var a = e.target.closest('a');
 if(a) closeDrawer();
 });
 }
-document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeDrawer(); });
+
+document.addEventListener('keydown', function(e){
+if(e.key === 'Escape') closeDrawer();
+});
 })();
 </script>
 
@@ -327,17 +505,18 @@ padding-top:78px;
 }
 </style>
 <div class="page-hero">
-<div class="page-hero-media" aria-hidden="true">
-<img src="images/heroes/offers.jpg"
+<div class="page-hero-bg">
+<img
+src="images/heroes/offers.jpg"
 alt="Naturals Salon & Spa Bangalore offers"
 loading="eager"
-onerror="this.onerror=null;this.src='https://source.unsplash.com/1600x900/?spa,salon'">
+onerror="this.onerror=null;this.src='https://source.unsplash.com/1800x900/?spa,salon,beauty';">
 </div>
 <div class="page-hero-ov" aria-hidden="true"></div>
 <div class="page-hero-inner">
 <div class="lbl">Exclusive Deals</div>
 <h1>Offers &amp;<br><em>Promotions</em></h1>
-<p>Current deals across all our Bangalore locations. Filter by store to find offers near you.</p>
+<p>Current deals across all our Bangalore locations. Filter by store, or view all offers sorted by expiry.</p>
 </div>
 </div>
 
@@ -350,216 +529,538 @@ onerror="this.onerror=null;this.src='https://source.unsplash.com/1600x900/?spa,s
 <button class="f-btn" data-store="Store_N36" onclick="filterOffers('Store_N36',this)">Devasandra</button>
 <button class="f-btn" data-store="Store_N05" onclick="filterOffers('Store_N05',this)">Frazer Town</button>
 <button class="f-btn" data-store="Store_N43" onclick="filterOffers('Store_N43',this)">Hennur</button>
+
+<div class="sort-wrap">
+<span class="sort-lbl">Sort</span>
+<select id="sort-mode" class="sort-sel" disabled>
+<option value="store">By Store</option>
+<option value="offer">By Offer (Expiry)</option>
+</select>
+<span class="chev">▾</span>
+</div>
 </div>
 </div>
 
-<div class="results-bar" id="results-bar">Showing all active offers</div>
+<div class="results-bar" id="results-bar">Showing 5 offers (All stores)</div>
 
 <main class="offers-main" id="offers-main">
-<section class="store-group" data-store-group="Store_N78" aria-label="Offers for JP Nagar 5th Phase">
+
+<section id="view-by-store">
+<div class="store-group" data-store-group="Store_N78">
 <div class="store-group-hdr">
 <div class="store-group-name">JP Nagar 5th Phase</div>
 <div class="store-group-count">1 offer</div>
 </div>
 
 <div class="offers-grid">
-<article class="offer-card">
-<div class="offer-faux" aria-hidden="true">
-<div class="faux-title">Pay 20000, Get 30000</div>
+<article class="offer-card"
+data-store="Store_N78"
+data-store-name="JP Nagar 5th Phase"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N78_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-jpnagar5phase.setmore.com/"
+data-wa="918792642299"
+data-call="+918792642299"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N78_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
 </div>
 
 <div class="offer-body">
-<div class="offer-badge">Special Offer</div>
+<div class="offer-badge">JP Nagar 5th Phase</div>
 <div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
 
 <div class="offer-footer">
 <span class="offer-valid">Valid till 13-Mar-2026</span>
-<div class="off-cta">
-<a class="off-ic off-ic-book" href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" aria-label="Book Appointment">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10zm-3 3v2h-2v-2h2zm0 4v2h-2v-2h2zM8 13v2H6v-2h2zm0 4v2H6v-2z"/>
-</svg>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (JP Nagar 5th Phase)" title="Book (JP Nagar 5th Phase)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
 </a>
-
-<a class="off-ic off-ic-wa" href="https://wa.me/918792642299" target="_blank" aria-label="WhatsApp">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/918792642299" target="_blank" rel="noopener" aria-label="WhatsApp (JP Nagar 5th Phase)" title="WhatsApp (JP Nagar 5th Phase)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
-<a class="off-ic off-ic-call" href="tel:+918792642299" aria-label="Call">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2 1.8z"/>
-</svg>
+<a class="offer-icon-btn offer-icon-call" href="tel:+918792642299" aria-label="Call (JP Nagar 5th Phase)" title="Call (JP Nagar 5th Phase)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
 </a>
-
 </div>
 </div>
 </div>
 </article>
 </div>
-</section>
-<section class="store-group" data-store-group="Store_N77" aria-label="Offers for Elements Mall">
+</div>
+<div class="store-group" data-store-group="Store_N77">
 <div class="store-group-hdr">
 <div class="store-group-name">Elements Mall</div>
 <div class="store-group-count">1 offer</div>
 </div>
 
 <div class="offers-grid">
-<article class="offer-card">
-<div class="offer-faux" aria-hidden="true">
-<div class="faux-title">Pay 20000, Get 30000</div>
+<article class="offer-card"
+data-store="Store_N77"
+data-store-name="Elements Mall"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N77_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-elementsmall.setmore.com/"
+data-wa="919901000017"
+data-call="+919901000017"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N77_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
 </div>
 
 <div class="offer-body">
-<div class="offer-badge">Special Offer</div>
+<div class="offer-badge">Elements Mall</div>
 <div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
 
 <div class="offer-footer">
 <span class="offer-valid">Valid till 13-Mar-2026</span>
-<div class="off-cta">
-<a class="off-ic off-ic-book" href="https://naturals-salon-elementsmall.setmore.com/" target="_blank" aria-label="Book Appointment">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10zm-3 3v2h-2v-2h2zm0 4v2h-2v-2h2zM8 13v2H6v-2h2zm0 4v2H6v-2z"/>
-</svg>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-elementsmall.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Elements Mall)" title="Book (Elements Mall)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
 </a>
-
-<a class="off-ic off-ic-wa" href="https://wa.me/919901000017" target="_blank" aria-label="WhatsApp">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/919901000017" target="_blank" rel="noopener" aria-label="WhatsApp (Elements Mall)" title="WhatsApp (Elements Mall)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
-<a class="off-ic off-ic-call" href="tel:+919901000017" aria-label="Call">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2 1.8z"/>
-</svg>
+<a class="offer-icon-btn offer-icon-call" href="tel:+919901000017" aria-label="Call (Elements Mall)" title="Call (Elements Mall)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
 </a>
-
 </div>
 </div>
 </div>
 </article>
 </div>
-</section>
-<section class="store-group" data-store-group="Store_N36" aria-label="Offers for Devasandra">
+</div>
+<div class="store-group" data-store-group="Store_N36">
 <div class="store-group-hdr">
 <div class="store-group-name">Devasandra</div>
 <div class="store-group-count">1 offer</div>
 </div>
 
 <div class="offers-grid">
-<article class="offer-card">
-<div class="offer-faux" aria-hidden="true">
-<div class="faux-title">Pay 20000, Get 30000</div>
+<article class="offer-card"
+data-store="Store_N36"
+data-store-name="Devasandra"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N36_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-devasandra.setmore.com/"
+data-wa="917259490009"
+data-call="+917259490009"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N36_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
 </div>
 
 <div class="offer-body">
-<div class="offer-badge">Special Offer</div>
+<div class="offer-badge">Devasandra</div>
 <div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
 
 <div class="offer-footer">
 <span class="offer-valid">Valid till 13-Mar-2026</span>
-<div class="off-cta">
-<a class="off-ic off-ic-book" href="https://naturals-salon-devasandra.setmore.com/" target="_blank" aria-label="Book Appointment">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10zm-3 3v2h-2v-2h2zm0 4v2h-2v-2h2zM8 13v2H6v-2h2zm0 4v2H6v-2z"/>
-</svg>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-devasandra.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Devasandra)" title="Book (Devasandra)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
 </a>
-
-<a class="off-ic off-ic-wa" href="https://wa.me/917259490009" target="_blank" aria-label="WhatsApp">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/917259490009" target="_blank" rel="noopener" aria-label="WhatsApp (Devasandra)" title="WhatsApp (Devasandra)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
-<a class="off-ic off-ic-call" href="tel:+917259490009" aria-label="Call">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2 1.8z"/>
-</svg>
+<a class="offer-icon-btn offer-icon-call" href="tel:+917259490009" aria-label="Call (Devasandra)" title="Call (Devasandra)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
 </a>
-
 </div>
 </div>
 </div>
 </article>
 </div>
-</section>
-<section class="store-group" data-store-group="Store_N05" aria-label="Offers for Frazer Town">
+</div>
+<div class="store-group" data-store-group="Store_N05">
 <div class="store-group-hdr">
 <div class="store-group-name">Frazer Town</div>
 <div class="store-group-count">1 offer</div>
 </div>
 
 <div class="offers-grid">
-<article class="offer-card">
-<div class="offer-faux" aria-hidden="true">
-<div class="faux-title">Pay 20000, Get 30000</div>
+<article class="offer-card"
+data-store="Store_N05"
+data-store-name="Frazer Town"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N05_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-frazertown.setmore.com/"
+data-wa="919945488040"
+data-call="+919945488040"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N05_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
 </div>
 
 <div class="offer-body">
-<div class="offer-badge">Special Offer</div>
+<div class="offer-badge">Frazer Town</div>
 <div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
 
 <div class="offer-footer">
 <span class="offer-valid">Valid till 13-Mar-2026</span>
-<div class="off-cta">
-<a class="off-ic off-ic-book" href="https://naturals-salon-frazertown.setmore.com/" target="_blank" aria-label="Book Appointment">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10zm-3 3v2h-2v-2h2zm0 4v2h-2v-2h2zM8 13v2H6v-2h2zm0 4v2H6v-2z"/>
-</svg>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-frazertown.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Frazer Town)" title="Book (Frazer Town)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
 </a>
-
-<a class="off-ic off-ic-wa" href="https://wa.me/919945488040" target="_blank" aria-label="WhatsApp">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/919945488040" target="_blank" rel="noopener" aria-label="WhatsApp (Frazer Town)" title="WhatsApp (Frazer Town)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
-<a class="off-ic off-ic-call" href="tel:+919945488040" aria-label="Call">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2 1.8z"/>
-</svg>
+<a class="offer-icon-btn offer-icon-call" href="tel:+919945488040" aria-label="Call (Frazer Town)" title="Call (Frazer Town)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
 </a>
-
 </div>
 </div>
 </div>
 </article>
 </div>
-</section>
-<section class="store-group" data-store-group="Store_N43" aria-label="Offers for Hennur">
+</div>
+<div class="store-group" data-store-group="Store_N43">
 <div class="store-group-hdr">
 <div class="store-group-name">Hennur</div>
 <div class="store-group-count">1 offer</div>
 </div>
 
 <div class="offers-grid">
-<article class="offer-card">
-<div class="offer-faux" aria-hidden="true">
-<div class="faux-title">Pay 20000, Get 30000</div>
+<article class="offer-card"
+data-store="Store_N43"
+data-store-name="Hennur"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N43_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-hennur.setmore.com/"
+data-wa="919606900069"
+data-call="+919606900069"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N43_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
 </div>
 
 <div class="offer-body">
-<div class="offer-badge">Special Offer</div>
+<div class="offer-badge">Hennur</div>
 <div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
 
 <div class="offer-footer">
 <span class="offer-valid">Valid till 13-Mar-2026</span>
-<div class="off-cta">
-<a class="off-ic off-ic-book" href="https://naturals-salon-hennur.setmore.com/" target="_blank" aria-label="Book Appointment">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M7 2v2H5a2 2 0 0 0-2 2v2h18V6a2 2 0 0 0-2-2h-2V2h-2v2H9V2H7zm14 8H3v10a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V10zm-3 3v2h-2v-2h2zm0 4v2h-2v-2h2zM8 13v2H6v-2h2zm0 4v2H6v-2z"/>
-</svg>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-hennur.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Hennur)" title="Book (Hennur)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
 </a>
-
-<a class="off-ic off-ic-wa" href="https://wa.me/919606900069" target="_blank" aria-label="WhatsApp">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="18" height="18" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/919606900069" target="_blank" rel="noopener" aria-label="WhatsApp (Hennur)" title="WhatsApp (Hennur)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
-
-<a class="off-ic off-ic-call" href="tel:+919606900069" aria-label="Call">
-<svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true">
-<path fill="#fff" d="M6.6 10.8c1.6 3.1 3.5 5 6.6 6.6l2.2-2.2c.3-.3.7-.4 1.1-.3 1.2.4 2.6.6 3.9.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.1 21 3 13.9 3 5c0-.6.4-1 1-1h3.3c.6 0 1 .4 1 1 0 1.3.2 2.7.6 3.9.1.4 0 .8-.3 1.1l-2 1.8z"/>
-</svg>
+<a class="offer-icon-btn offer-icon-call" href="tel:+919606900069" aria-label="Call (Hennur)" title="Call (Hennur)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
 </a>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
 
+<section id="view-by-offer" style="display:none;">
+<div class="offers-grid" id="offers-grid-all">
+<article class="offer-card"
+data-store="Store_N78"
+data-store-name="JP Nagar 5th Phase"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N78_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-jpnagar5phase.setmore.com/"
+data-wa="918792642299"
+data-call="+918792642299"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N78_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
+</div>
+
+<div class="offer-body">
+<div class="offer-badge">JP Nagar 5th Phase</div>
+<div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
+
+<div class="offer-footer">
+<span class="offer-valid">Valid till 13-Mar-2026</span>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-jpnagar5phase.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (JP Nagar 5th Phase)" title="Book (JP Nagar 5th Phase)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/918792642299" target="_blank" rel="noopener" aria-label="WhatsApp (JP Nagar 5th Phase)" title="WhatsApp (JP Nagar 5th Phase)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-call" href="tel:+918792642299" aria-label="Call (JP Nagar 5th Phase)" title="Call (JP Nagar 5th Phase)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</article>
+<article class="offer-card"
+data-store="Store_N77"
+data-store-name="Elements Mall"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N77_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-elementsmall.setmore.com/"
+data-wa="919901000017"
+data-call="+919901000017"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N77_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
+</div>
+
+<div class="offer-body">
+<div class="offer-badge">Elements Mall</div>
+<div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
+
+<div class="offer-footer">
+<span class="offer-valid">Valid till 13-Mar-2026</span>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-elementsmall.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Elements Mall)" title="Book (Elements Mall)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/919901000017" target="_blank" rel="noopener" aria-label="WhatsApp (Elements Mall)" title="WhatsApp (Elements Mall)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-call" href="tel:+919901000017" aria-label="Call (Elements Mall)" title="Call (Elements Mall)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</article>
+<article class="offer-card"
+data-store="Store_N36"
+data-store-name="Devasandra"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N36_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-devasandra.setmore.com/"
+data-wa="917259490009"
+data-call="+917259490009"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N36_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
+</div>
+
+<div class="offer-body">
+<div class="offer-badge">Devasandra</div>
+<div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
+
+<div class="offer-footer">
+<span class="offer-valid">Valid till 13-Mar-2026</span>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-devasandra.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Devasandra)" title="Book (Devasandra)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/917259490009" target="_blank" rel="noopener" aria-label="WhatsApp (Devasandra)" title="WhatsApp (Devasandra)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-call" href="tel:+917259490009" aria-label="Call (Devasandra)" title="Call (Devasandra)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</article>
+<article class="offer-card"
+data-store="Store_N05"
+data-store-name="Frazer Town"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N05_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-frazertown.setmore.com/"
+data-wa="919945488040"
+data-call="+919945488040"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N05_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
+</div>
+
+<div class="offer-body">
+<div class="offer-badge">Frazer Town</div>
+<div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
+
+<div class="offer-footer">
+<span class="offer-valid">Valid till 13-Mar-2026</span>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-frazertown.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Frazer Town)" title="Book (Frazer Town)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/919945488040" target="_blank" rel="noopener" aria-label="WhatsApp (Frazer Town)" title="WhatsApp (Frazer Town)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-call" href="tel:+919945488040" aria-label="Call (Frazer Town)" title="Call (Frazer Town)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+</a>
+</div>
+</div>
+</div>
+</article>
+<article class="offer-card"
+data-store="Store_N43"
+data-store-name="Hennur"
+data-valid="13-Mar-2026"
+data-expiry-iso="2026-03-13T20:00:00+05:30"
+data-days-left="9"
+data-valid-from="26-Feb-2026"
+data-valid-from-iso="2026-02-26T00:00:00"
+data-image-available="Yes"
+data-image-name="Store_N43_20260226_Pay_20000,_Get_30000"
+data-book="https://naturals-salon-hennur.setmore.com/"
+data-wa="919606900069"
+data-call="+919606900069"
+>
+<div class="offer-media">
+<div class="ribbon" style="display:none;"></div>
+
+<img
+class="offer-img"
+data-img-base="images/offers/Store_N43_20260226_Pay_20000,_Get_30000"
+alt="Pay 20000, Get 30000"
+loading="lazy">
+</div>
+
+<div class="offer-body">
+<div class="offer-badge">Hennur</div>
+<div class="offer-title">Pay 20000, Get 30000</div>
+
+<div class="offer-details clamp"></div>
+<div style="height:24px;"></div>
+
+<div class="offer-footer">
+<span class="offer-valid">Valid till 13-Mar-2026</span>
+<div class="offer-ctas">
+<a class="offer-icon-btn offer-icon-book" href="https://naturals-salon-hennur.setmore.com/" target="_blank" rel="noopener" aria-label="Book appointment (Hennur)" title="Book (Hennur)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2a1 1 0 0 1 1 1v1h8V3a1 1 0 1 1 2 0v1h1.5A2.5 2.5 0 0 1 22 6.5v14A2.5 2.5 0 0 1 19.5 23h-15A2.5 2.5 0 0 1 2 20.5v-14A2.5 2.5 0 0 1 4.5 4H6V3a1 1 0 0 1 1-1zm13 8H4v10.5c0 .276.224.5.5.5h15a.5.5 0 0 0 .5-.5V10zM6 6H4.5a.5.5 0 0 0-.5.5V8h16V6.5a.5.5 0 0 0-.5-.5H18v1a1 1 0 1 1-2 0V6H8v1a1 1 0 1 1-2 0V6z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-wa" href="https://wa.me/919606900069" target="_blank" rel="noopener" aria-label="WhatsApp (Hennur)" title="WhatsApp (Hennur)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+<a class="offer-icon-btn offer-icon-call" href="tel:+919606900069" aria-label="Call (Hennur)" title="Call (Hennur)">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V21a1 1 0 0 1-1 1C10.85 22 2 13.15 2 2a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.24 1.01l-2.2 2.2z"/></svg>
+</a>
 </div>
 </div>
 </div>
@@ -571,9 +1072,216 @@ onerror="this.onerror=null;this.src='https://source.unsplash.com/1600x900/?spa,s
 <h3>No active offers</h3>
 <p>Check back soon — new deals are added regularly.</p>
 </div>
+
 </main>
 
 <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">&#8593;</button>
+
+<div id="img-modal-overlay" onclick="closeImgModal()"></div>
+<div id="img-modal" role="dialog" aria-modal="true" aria-label="Offer image">
+<div id="img-modal-inner">
+<button id="img-close" onclick="closeImgModal()" aria-label="Close">×</button>
+<img id="img-modal-src" alt="Offer image">
+</div>
+</div>
+
+<div id="details-overlay" onclick="closeDetailsModal()"></div>
+<div id="details-modal" role="dialog" aria-modal="true" aria-label="Offer details">
+<div class="dm-head">
+<div class="dm-title" id="dm-title"></div>
+<div class="dm-meta" id="dm-meta"></div>
+<button class="dm-close" onclick="closeDetailsModal()" aria-label="Close">×</button>
+</div>
+<div class="dm-body">
+<p id="dm-body"></p>
+</div>
+</div>
+
+<div id="store-modal-overlay" onclick="closeStorePicker()" style="display:none;"></div>
+<div id="store-modal" role="dialog" aria-modal="true" aria-label="Select your store" style="display:none;">
+<div id="store-modal-inner">
+<div class="spm-header">
+<div class="spm-title">Select Your <em>Store</em></div>
+<div class="spm-sub">Choose your preferred Naturals Salon &amp; Spa Bangalore location</div>
+<button class="spm-close" onclick="closeStorePicker()" aria-label="Close">&#10005;</button>
+</div>
+<div class="spm-cards">
+<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
+<div class="spm-card-num">1</div>
+<div class="spm-card-info">
+<div class="spm-card-name">JP Nagar 5th Phase</div>
+<div class="spm-card-area">South Bangalore &middot; 560078</div>
+<div class="spm-card-addr">1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
+<div class="spm-card-num">2</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Elements Mall</div>
+<div class="spm-card-area">Nagavara &middot; 560077</div>
+<div class="spm-card-addr">Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
+<div class="spm-card-num">3</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Devasandra</div>
+<div class="spm-card-area">KR Puram &middot; 560036</div>
+<div class="spm-card-addr">2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu's Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
+<div class="spm-card-num">4</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Frazer Town</div>
+<div class="spm-card-area">Pulikeshi Nagar &middot; 560005</div>
+<div class="spm-card-addr">1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
+<div class="spm-card-num">5</div>
+<div class="spm-card-info">
+<div class="spm-card-name">Hennur</div>
+<div class="spm-card-area">Hennur Cross &middot; 560043</div>
+<div class="spm-card-addr">1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India</div>
+</div>
+<div class="spm-card-cta">Select &#8594;</div>
+</div>
+</div>
+</div>
+</div>
+<style>
+#store-modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:700;backdrop-filter:blur(4px);}
+#store-modal{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);z-index:800;width:90%;max-width:600px;max-height:88vh;overflow-y:auto;background:var(--cream);box-shadow:0 24px 80px rgba(0,0,0,0.45);}
+[data-theme="naturals"] #store-modal{background:#FAF7FF;}
+#store-modal-inner{display:flex;flex-direction:column;}
+.spm-header{background:var(--dark);padding:28px 32px;position:relative;}
+[data-theme="naturals"] .spm-header{background:#1A0533;}
+.spm-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:#fff;margin-bottom:4px;}
+.spm-title em{font-style:italic;color:var(--gold);}
+.spm-sub{font-size:11px;color:rgba(255,255,255,0.4);letter-spacing:1px;}
+.spm-close{position:absolute;top:20px;right:24px;background:none;border:none;color:rgba(255,255,255,0.45);font-size:20px;cursor:pointer;padding:6px;transition:color 0.2s;line-height:1;}
+.spm-close:hover{color:#fff;}
+.spm-cards{padding:4px;}
+.spm-card{display:flex;align-items:center;gap:16px;padding:18px 24px;background:#fff;border-bottom:1px solid rgba(0,0,0,0.05);cursor:pointer;transition:all 0.2s;border-left:3px solid transparent;}
+.spm-card:hover{background:#f8f6f0;border-left-color:var(--gold);}
+[data-theme="naturals"] .spm-card{background:#fff;}
+[data-theme="naturals"] .spm-card:hover{background:#f3eeff;border-left-color:var(--green-mid);}
+.spm-card:focus{outline:2px solid var(--gold);outline-offset:-2px;}
+.spm-card-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:rgba(0,0,0,0.12);font-weight:300;width:30px;flex-shrink:0;}
+.spm-card-info{flex:1;}
+.spm-card-name{font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:400;color:var(--text);margin-bottom:2px;}
+.spm-card-area{font-size:10px;color:var(--gold);letter-spacing:2px;text-transform:uppercase;margin-bottom:3px;}
+.spm-card-addr{font-size:11px;color:var(--text-light);font-weight:300;}
+.spm-card-cta{font-size:11px;color:var(--text-light);letter-spacing:1px;text-transform:uppercase;white-space:nowrap;transition:color 0.2s;}
+.spm-card:hover .spm-card-cta{color:var(--green-mid);}
+@media(max-width:480px){
+#store-modal{top:auto;bottom:0;left:0;right:0;transform:none;width:100%;max-width:100%;max-height:90vh;border-radius:16px 16px 0 0;}
+.spm-card{padding:14px 18px;}
+}
+</style>
+
+<script>
+function openStorePicker(){
+document.getElementById('store-modal-overlay').style.display='block';
+document.getElementById('store-modal').style.display='block';
+document.body.style.overflow='hidden';
+}
+function closeStorePicker(){
+document.getElementById('store-modal-overlay').style.display='none';
+document.getElementById('store-modal').style.display='none';
+document.body.style.overflow='';
+}
+function selectStore(id,name,book,wa,call,maps,pageUrl){
+var sd = {id:id,name:name,book:book,wa:wa,call:call,maps:maps,pageUrl:pageUrl};
+localStorage.setItem('naturals-store',JSON.stringify(sd));
+closeStorePicker();
+if (typeof window._applyStickyStore === 'function') window._applyStickyStore(sd);
+
+// If sticky bar asked for a specific action, perform it now.
+if (typeof window._naturalsPerformPendingAction === 'function') {
+window._naturalsPerformPendingAction(sd);
+}
+}
+document.addEventListener('keydown',function(e){
+if(e.key==='Escape') closeStorePicker();
+});
+
+/* Restore indicator on load */
+document.addEventListener('DOMContentLoaded',function(){
+try {
+var saved = JSON.parse(localStorage.getItem('naturals-store'));
+if (saved && saved.name) {
+// show indicator if present
+var ind = document.getElementById('store-indicator');
+var nm = document.getElementById('si-name');
+if (ind && nm){ nm.textContent = saved.name; ind.style.display = 'flex'; }
+// apply sticky bar on non-store pages (if function exists)
+if (typeof window._applyStickyStore === 'function') window._applyStickyStore(saved);
+}
+} catch(e){}
+});
+</script>
+
+<div id="sticky-bar">
+<button class="sb-btn sb-primary" id="sb-book" aria-label="Book appointment" title="Book">&#128197;</button>
+<button class="sb-btn sb-secondary" id="sb-wa" aria-label="WhatsApp us" title="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" width="16" height="16" style="flex-shrink:0" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</button>
+<button class="sb-btn sb-secondary" id="sb-call" aria-label="Call us" title="Call">&#128222;</button>
+<button class="sb-btn sb-secondary" id="sb-maps" aria-label="Get directions" title="Directions">&#128205;</button>
+</div>
+<style>
+#sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;height:62px;z-index:9999;background:var(--dark);border-top:1px solid rgba(255,255,255,0.1);grid-template-columns:repeat(4,1fr);}
+[data-theme="naturals"] #sticky-bar{background:#1A0533;}
+@media(max-width:992px){ #sticky-bar{display:grid;}}
+.sb-btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;min-height:44px;padding:0 4px;}
+.sb-primary{background:var(--gold);color:var(--dark);}
+.sb-primary:hover,.sb-primary:active{background:var(--gold-pale);}
+.sb-secondary{background:transparent;color:rgba(255,255,255,0.75);}
+.sb-secondary:hover,.sb-secondary:active{color:#fff;background:rgba(255,255,255,0.07);}
+</style>
+
+<script>
+(function(){
+function performAction(sd, action){
+if(!sd) return;
+if(action === 'book' && sd.book) window.open(sd.book, '_blank');
+if(action === 'wa' && sd.wa) window.open('https://wa.me/' + sd.wa, '_blank');
+if(action === 'call' && sd.call) window.location.href = 'tel:' + sd.call;
+if(action === 'maps' && sd.maps) window.open(sd.maps, '_blank');
+}
+
+// Expose: store_picker_js will call this after selecting store (if pending)
+window._naturalsPendingAction = null;
+window._naturalsPerformPendingAction = function(sd){
+if(!window._naturalsPendingAction) return;
+var act = window._naturalsPendingAction;
+window._naturalsPendingAction = null;
+performAction(sd, act);
+};
+
+var bookBtn = document.getElementById('sb-book');
+var waBtn = document.getElementById('sb-wa');
+var callBtn = document.getElementById('sb-call');
+var mapsBtn = document.getElementById('sb-maps');
+
+// Non-store pages: ALWAYS show picker, then perform selected action.
+function openPickerFor(action){
+window._naturalsPendingAction = action;
+if(typeof openStorePicker === 'function') openStorePicker();
+}
+
+if(bookBtn) bookBtn.addEventListener('click', function(){ openPickerFor('book'); });
+if(waBtn) waBtn.addEventListener('click', function(){ openPickerFor('wa'); });
+if(callBtn) callBtn.addEventListener('click', function(){ openPickerFor('call'); });
+if(mapsBtn) mapsBtn.addEventListener('click', function(){ openPickerFor('maps'); });
+})();
+</script>
+
 <footer>
 <div class="ft-top">
 <div class="ft-brand-col">
@@ -649,45 +1357,247 @@ if(nt)nt.classList.toggle('active',saved==='naturals');
 </script>
 
 <script>
-function filterOffers(storeId, btn) {
-document.querySelectorAll('.f-btn').forEach(function(b){ b.classList.remove('active'); });
-btn.classList.add('active');
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Image resolution (.jpg → .jpeg → .png) + fallback */
+(function(){
+var EXT = ['.jpg','.jpeg','.png'];
 
-var groups = document.querySelectorAll('.store-group');
-var visible = 0;
-groups.forEach(function(g) {
-var show = storeId === 'all' || g.dataset.storeGroup === storeId;
-g.style.display = show ? '' : 'none';
-if (show) visible++;
-});
+function hasExt(path){
+return /\.[a-zA-Z0-9]{2,5}(\?.*)?$/.test(path);
+}
 
-var bar = document.getElementById('results-bar');
-var noOffers = document.getElementById('no-offers');
+function attachImageResolvers(){
+document.querySelectorAll('img.offer-img').forEach(function(img){
+var base = img.getAttribute('data-img-base') || '';
+if(!base) return;
 
-if (visible === 0) {
-noOffers.style.display = '';
-bar.textContent = 'No active offers for this store';
+// if sheet already includes extension, use as-is
+if(hasExt(base)){
+img.src = base;
+img.addEventListener('click', function(){ openImgModal(img.src); });
+return;
+}
+
+var i = 0;
+img.src = base + EXT[i];
+
+img.onerror = function(){
+i++;
+if(i < EXT.length){
+img.src = base + EXT[i];
 } else {
-noOffers.style.display = 'none';
-bar.textContent = storeId === 'all' ? 'Showing all active offers' : 'Showing offers for selected store';
+// ultimate fallback: remove img, keep background gradient
+img.style.display = 'none';
 }
+};
+
+img.addEventListener('click', function(){
+openImgModal(img.src);
+});
+});
 }
 
-/* Expand/collapse one-liner details */
-document.addEventListener('click', function(e){
-var btn = e.target.closest('.offer-more');
-if(!btn) return;
-var id = btn.getAttribute('data-target');
-var el = document.getElementById(id);
-if(!el) return;
-var expanded = el.classList.toggle('expanded');
-btn.textContent = expanded ? 'Less' : 'More';
+if(document.readyState === 'loading'){
+document.addEventListener('DOMContentLoaded', attachImageResolvers);
+} else {
+attachImageResolvers();
+}
+})();
+</script>
+
+<script>
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Ribbons: Urgent (<7 days), NEW (Valid_From within 7 days) */
+(function(){
+var NOW_ISO = "2026-03-04T00:13:36.828740+05:30"; // IST
+var now = NOW_ISO ? new Date(NOW_ISO) : new Date();
+var NEW_DAYS = 7;
+
+function daysBetween(a,b){
+var ms = b.getTime() - a.getTime();
+return Math.floor(ms / 86400000);
+}
+
+document.querySelectorAll('.offer-card').forEach(function(card){
+var rib = card.querySelector('.ribbon');
+if(!rib) return;
+
+var expIso = card.getAttribute('data-expiry-iso') || '';
+var vfIso = card.getAttribute('data-valid-from-iso') || '';
+
+var urgentDays = null;
+if(expIso){
+var exp = new Date(expIso);
+urgentDays = daysBetween(now, exp); // can be negative if expired; but expired offers are filtered out
+}
+
+var isUrgent = (urgentDays !== null && urgentDays >= 0 && urgentDays < 7);
+var isNew = false;
+if(vfIso){
+var vf = new Date(vfIso);
+var age = daysBetween(vf, now);
+isNew = (age >= 0 && age < NEW_DAYS);
+}
+
+if(isUrgent){
+rib.style.display = 'inline-flex';
+rib.className = 'ribbon urgent';
+rib.textContent = 'Ends in ' + urgentDays + ' day' + (urgentDays === 1 ? '' : 's');
+} else if(isNew){
+rib.style.display = 'inline-flex';
+rib.className = 'ribbon new';
+rib.textContent = 'NEW';
+}
+});
+})();
+</script>
+
+<script>
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Filter + Sort UI rules:
+- If store != all => sort disabled, store-view only.
+- If all => sort enabled:
+- "By Store" => grouped sections visible
+- "By Offer" => all-offers grid visible (already pre-sorted by build.py)
+*/
+var currentStore = 'all';
+var sortSel = document.getElementById('sort-mode');
+
+function updateResultsBar(count, storeLabel){
+var bar = document.getElementById('results-bar');
+var label = storeLabel || (currentStore === 'all' ? 'All stores' : 'Selected store');
+bar.textContent = 'Showing ' + count + ' offer' + (count === 1 ? '' : 's') + ' (' + label + ')';
+}
+
+function filterOffers(storeId, btn){
+currentStore = storeId;
+
+document.querySelectorAll('.f-btn').forEach(function(b){ b.classList.remove('active'); });
+if(btn) btn.classList.add('active');
+
+var viewStore = document.getElementById('view-by-store');
+var viewOffer = document.getElementById('view-by-offer');
+
+if(storeId === 'all'){
+// enable sort
+if(sortSel){ sortSel.disabled = false; }
+// default to current selection; if none, store
+var mode = sortSel ? sortSel.value : 'store';
+if(mode === 'offer'){
+viewStore.style.display = 'none';
+viewOffer.style.display = '';
+// count visible = all cards
+var allCards = viewOffer.querySelectorAll('.offer-card');
+updateResultsBar(allCards.length, 'All stores');
+document.getElementById('no-offers').style.display = (allCards.length ? 'none' : '');
+} else {
+viewOffer.style.display = 'none';
+viewStore.style.display = '';
+// show all store groups
+var groups = viewStore.querySelectorAll('.store-group');
+var total = 0;
+groups.forEach(function(g){
+g.style.display = '';
+total += g.querySelectorAll('.offer-card').length;
+});
+updateResultsBar(total, 'All stores');
+document.getElementById('no-offers').style.display = (total ? 'none' : '');
+}
+return;
+}
+
+// store-specific: disable sort and force store view
+if(sortSel){
+sortSel.value = 'store';
+sortSel.disabled = true;
+}
+viewOffer.style.display = 'none';
+viewStore.style.display = '';
+
+var visibleCount = 0;
+var visibleStoreName = null;
+viewStore.querySelectorAll('.store-group').forEach(function(g){
+var show = g.dataset.storeGroup === storeId;
+g.style.display = show ? '' : 'none';
+if(show){
+visibleCount += g.querySelectorAll('.offer-card').length;
+var nm = g.querySelector('.store-group-name');
+visibleStoreName = nm ? nm.textContent : null;
+}
 });
 
+document.getElementById('no-offers').style.display = (visibleCount ? 'none' : '');
+updateResultsBar(visibleCount, visibleStoreName || 'Selected store');
+}
+
+if(sortSel){
+sortSel.addEventListener('change', function(){
+if(currentStore !== 'all') return;
+filterOffers('all', document.querySelector('.f-btn[data-store="all"]'));
+});
+}
+</script>
+
+<script>
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Details Modal */
+function openDetailsModal(el){
+var card = el.closest('.offer-card');
+if(!card) return;
+
+var title = (card.querySelector('.offer-title') || {}).textContent || 'Offer';
+var store = card.getAttribute('data-store-name') || '';
+var valid = card.getAttribute('data-valid') || '';
+var details = (card.querySelector('.offer-details') || {}).textContent || '';
+
+document.getElementById('dm-title').textContent = title;
+document.getElementById('dm-meta').textContent = (store ? store + ' • ' : '') + (valid ? ('Valid till ' + valid) : '');
+document.getElementById('dm-body').textContent = details;
+
+document.getElementById('details-overlay').style.display = 'block';
+document.getElementById('details-modal').style.display = 'block';
+document.body.style.overflow = 'hidden';
+}
+function closeDetailsModal(){
+document.getElementById('details-overlay').style.display = 'none';
+document.getElementById('details-modal').style.display = 'none';
+document.body.style.overflow = '';
+}
+</script>
+
+<script>
+/* ────────────────────────────────────────────────────────────────────────── */
+/* Image Modal (image-only) */
+function openImgModal(src){
+if(!src) return;
+document.getElementById('img-modal-src').src = src;
+document.getElementById('img-modal-overlay').style.display = 'block';
+document.getElementById('img-modal').style.display = 'flex';
+document.body.style.overflow = 'hidden';
+}
+function closeImgModal(){
+document.getElementById('img-modal-overlay').style.display = 'none';
+document.getElementById('img-modal').style.display = 'none';
+document.getElementById('img-modal-src').src = '';
+document.body.style.overflow = '';
+}
+document.addEventListener('keydown',function(e){
+if(e.key==='Escape'){ closeImgModal(); closeDetailsModal(); }
+});
+</script>
+
+<script>
+/* Scroll-to-top */
 var scrollBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', function(){
-scrollBtn.classList.toggle('visible', window.scrollY > 320);
+if(scrollBtn) scrollBtn.classList.toggle('visible', window.scrollY > 320);
 }, {passive:true});
 </script>
+
+<script>
+/* Initialize default state */
+filterOffers('all', document.querySelector('.f-btn[data-store="all"]'));
+</script>
+
 </body>
 </html>
