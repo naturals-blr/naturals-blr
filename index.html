@@ -3,9 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <meta name="description" content="Naturals Salon &amp; Spa Bangalore — 5 locations across JP Nagar, Elements Mall, Devasandra, Frazer Town &amp; Hennur. Expert hair, skin &amp; bridal services. Book online.">
 <title>Naturals Salon &amp; Spa | Bangalore — 5 Locations</title>
 <link rel="canonical" href="https://naturals-blr.github.io/index.html">
+
+<script>(function(){var t=localStorage.getItem('naturals-theme')||'luxury';document.documentElement.setAttribute('data-theme',t);})();</script>
+
 <script type="application/ld+json">
 {
 "@context": "https://schema.org",
@@ -14,18 +18,12 @@
 "url": "https://naturals-blr.github.io/",
 "logo": "https://naturals-blr.github.io/images/naturals-logo.png",
 "description": "Premium hair, skin and beauty salon with 5 locations across Bangalore.",
-"areaServed": "Bangalore",
-"aggregateRating": {
-"@type": "AggregateRating",
-"ratingValue": "4.8",
-"reviewCount": "5",
-"bestRating": "5"
-}
+"areaServed": "Bangalore"
 }
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script>(function(){var t=localStorage.getItem('naturals-theme')||'luxury';document.documentElement.setAttribute('data-theme',t);})();</script>
 
 <style>
 :root {
@@ -45,123 +43,22 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
-img{display:block;width:100%;object-fit:cover;}
-a{text-decoration:none;color:inherit;}
-
-/* nav handled by partials/header.j2 */
-
-/* ── HERO ── */
-.hero{height:100vh;min-height:700px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
-.hero-bg{position:absolute;inset:0;}
-.hero-bg img{height:100%;object-fit:cover;}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,var(--hero-tint) 0%,var(--hero-tint2) 60%,rgba(0,0,0,0.1) 100%);}
-.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:800px;}
-.hero-tag{display:inline-flex;align-items:center;gap:12px;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px;}
-.hero-tag::before,.hero-tag::after{content:'';width:24px;height:1px;background:var(--gold);}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,100px);font-weight:300;color:#fff;line-height:0.92;letter-spacing:-2px;margin-bottom:20px;}
-.hero h1 em{font-style:italic;color:var(--gold);}
-.hero-sub{font-size:14px;color:rgba(255,255,255,0.5);font-weight:300;letter-spacing:1px;margin-bottom:40px;}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-hero-primary{background:var(--gold);color:var(--dark);padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border-radius:2px;}
-.btn-hero-primary:hover{background:var(--gold-pale);transform:translateY(-2px);}
-.btn-hero-secondary{border:1px solid rgba(255,255,255,0.35);color:#fff;padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border-radius:2px;}
-.btn-hero-secondary:hover{border-color:var(--gold);color:var(--gold);}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;}
-.hero-scroll span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);}
-.hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.3),transparent);}
-
-/* ── SHARED ── */
-.lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
-.lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
-.sec-hdr{text-align:center;max-width:600px;margin:0 auto 52px;}
-.sec-hdr .lbl{justify-content:center;}
-.sec-hdr .lbl::before{display:none;}
-.sec-hdr h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1;margin-bottom:16px;}
-.sec-hdr h2 em{font-style:italic;color:var(--green-mid);}
-.sec-hdr p{font-size:14px;color:var(--text-mid);font-weight:300;line-height:1.8;}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
-.reveal.visible{opacity:1;transform:translateY(0);}
-
-/* ── STORES ── */
-.stores-sec{padding:100px 60px;background:var(--dark);}
-.stores-sec .sec-hdr h2{color:#fff;}
-.stores-sec .sec-hdr h2 em{color:var(--green-soft);}
-.stores-sec .sec-hdr p{color:rgba(255,255,255,0.4);}
-.st-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;max-width:1100px;margin:0 auto;}
-.st-card{background:#fff;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;border:1px solid rgba(0,0,0,0.08);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.07);min-height:300px;}
-.st-card:hover{transform:translateY(-4px);box-shadow:0 12px 48px rgba(0,0,0,0.3);}
-.st-card-head{background:var(--dark);padding:20px 22px;border-bottom:2px solid var(--green);border-radius:10px 10px 0 0;}
-[data-theme="naturals"] .st-card-head{border-bottom-color:var(--green-mid);}
-.st-card-num{font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,0.2);letter-spacing:3px;margin-bottom:4px;}
-.st-card-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;font-weight:400;line-height:1.1;}
-.st-card-area{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:3px;}
-.st-card-body{padding:16px 22px 20px;flex:1;display:flex;flex-direction:column;}
-.st-card-addr{font-size:11px;color:var(--text-light);line-height:1.5;flex:1;margin-bottom:14px;}
-.st-card-actions{display:flex;gap:6px;flex-wrap:wrap;}
-.st-view-btn{border:1px solid rgba(0,0,0,0.14);color:var(--text-mid);padding:9px 13px;font-size:10px;min-height:36px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:all 0.3s;border-radius:2px;}
-.st-view-btn:hover{border-color:var(--green-mid);color:var(--green-mid);}
-.st-btn{border:none;color:#fff;padding:9px 13px;font-size:10px;min-height:36px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:all 0.3s;border-radius:2px;cursor:pointer;font-family:'Jost',sans-serif;}
-.st-btn-book{background:#1A73E8;}
-.st-btn-book:hover{background:#1557B0;transform:translateY(-1px);}
-.st-btn-wa{background:#25D366;}
-.st-btn-wa:hover{background:#1da851;transform:translateY(-1px);}
-.st-btn-call{background:#5F6368;}
-.st-btn-call:hover{background:#474c52;transform:translateY(-1px);}
-.st-btn-maps{background:#D93025;}
-.st-btn-maps:hover{background:#b71c1c;transform:translateY(-1px);}
-
-/* ── SERVICES ── */
-.services-sec{padding:100px 60px;background:var(--cream);}
-.svc-cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:48px;}
-.svc-cat-card{background:#fff;overflow:hidden;border-radius:8px;border:1px solid rgba(0,0,0,0.07);transition:all 0.3s;cursor:pointer;display:flex;flex-direction:column;}
-.svc-cat-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.1);border-color:var(--gold);}
-.svc-cat-img{height:180px;overflow:hidden;flex-shrink:0;}
-.svc-cat-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
-.svc-cat-card:hover .svc-cat-img img{transform:scale(1.05);}
-.svc-cat-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1;}
-.svc-cat-icon{font-size:22px;margin-bottom:8px;display:block;}
-.svc-cat-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:6px;line-height:1.1;}
-.svc-cat-desc{font-size:12px;color:var(--text-mid);line-height:1.7;font-weight:300;flex:1;}
-.svc-cat-price{margin-top:12px;font-size:13px;font-weight:600;color:var(--green-mid);letter-spacing:0.5px;}
-
-/* ── OFFERS ── */
-.offers-sec{padding:80px 60px;background:var(--dark);}
-.offers-sec .sec-hdr h2{color:#fff;}
-.offers-sec .sec-hdr h2 em{color:var(--gold);}
-.offers-sec .sec-hdr p{color:rgba(255,255,255,0.4);}
-.home-offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-bottom:32px;}
-.hoc{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:28px;transition:all 0.3s;}
-.hoc:hover{background:rgba(255,255,255,0.07);border-color:var(--gold);}
-.hoc-badge{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;}
-.hoc-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:300;margin-bottom:8px;line-height:1.2;}
-.hoc-details{font-size:12px;color:rgba(255,255,255,0.42);line-height:1.7;font-weight:300;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
-.hoc-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);}
-.hoc-store{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;}
-.hoc-valid{font-size:11px;color:var(--green-soft);}
-.hoc-book{background:var(--gold);color:var(--dark);padding:8px 16px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:5px;transition:all 0.3s;border-radius:2px;}
-.hoc-book:hover{background:var(--gold-pale);}
-.offers-view-all{text-align:center;}
-
-/* ── ABOUT STRIP ── */
-.about-strip{background:var(--cream);padding:52px 60px;display:flex;align-items:center;gap:60px;border-top:1px solid rgba(0,0,0,0.06);}
-.about-strip-stats{display:flex;gap:48px;flex-shrink:0;}
-.astat{text-align:center;}
-.astat-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--green-mid);font-weight:300;line-height:1;}
-.astat-lbl{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);margin-top:4px;}
-.about-strip-text{flex:1;}
-.about-strip-text p{font-size:14px;color:var(--text-mid);line-height:1.9;font-weight:300;}
-
-/* ── TESTIMONIALS ── */
-.reviews-sec{padding:100px 60px;background:#fff;}
-.rv-track{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:8px;}
-.rv-card{background:var(--cream);padding:32px 28px;}
-.rv-stars{color:var(--gold);font-size:14px;margin-bottom:12px;letter-spacing:2px;}
-.rv-q{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text);font-weight:400;line-height:1.6;margin-bottom:16px;font-style:italic;}
-.rv-name{font-size:11px;font-weight:600;color:var(--text);letter-spacing:1px;text-transform:uppercase;}
-.rv-store{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+/* Image responsiveness */
+img{max-width:100%;height:auto;display:block;}
+/* Prevent horizontal scroll */
+html,body{max-width:100%;overflow-x:hidden;}
+/* Smooth font scaling baseline */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;}
+/* Tap highlight suppression */
+a,button{-webkit-tap-highlight-color:transparent;}
+/* Min tap target */
+button,a{touch-action:manipulation;}
+@media(max-width:640px){
+/* Body bottom padding for sticky bar on all pages */
+body{padding-bottom:62px;}
+/* Tighten section padding globally */
+.section-hdr,.section-hdr h2,.lbl{padding-left:0;padding-right:0;}
+}
 
 .btn-book{background:#1A73E8;color:#fff;padding:13px 22px;min-height:48px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;border-radius:6px;white-space:nowrap;text-decoration:none;}
 .btn-book:hover{background:#1557B0;transform:translateY(-1px);}
@@ -196,9 +93,126 @@ footer{background:#080f0b;}
 @media(max-width:960px){.ft-top{grid-template-columns:1fr 1fr;gap:28px;padding:36px 20px 24px;}.ft-bottom{padding:14px 20px;flex-direction:column;text-align:center;}}
 @media(max-width:600px){.ft-top{grid-template-columns:1fr;padding:28px 16px 20px;}}
 
+.social-icons{display:flex;gap:10px;align-items:center;}
+.soc-icon{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);transition:all 0.25s;text-decoration:none;}
+.soc-icon:hover{transform:translateY(-2px);background:rgba(255,255,255,0.12);}
+.soc-wa:hover{border-color:#25D366;box-shadow:0 4px 12px rgba(37,211,102,0.25);}
+.soc-fb:hover{border-color:#1877F2;box-shadow:0 4px 12px rgba(24,119,242,0.25);}
+.soc-ig:hover{border-color:#C13584;box-shadow:0 4px 12px rgba(193,53,132,0.25);}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+img{display:block;width:100%;object-fit:cover;}
+a{text-decoration:none;color:inherit;}
+
+/* ── HERO ── */
+.hero{height:100vh;min-height:700px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{height:100%;object-fit:cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(135deg,var(--hero-tint) 0%,var(--hero-tint2) 60%,rgba(0,0,0,0.1) 100%);}
+.hero-inner{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:820px;}
+.hero-tag{display:inline-flex;align-items:center;gap:12px;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:24px;}
+.hero-tag::before,.hero-tag::after{content:'';width:24px;height:1px;background:var(--gold);}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,100px);font-weight:300;color:#fff;line-height:0.92;letter-spacing:-2px;margin-bottom:20px;}
+.hero h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{font-size:14px;color:rgba(255,255,255,0.5);font-weight:300;letter-spacing:1px;margin-bottom:40px;}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.btn-hero-primary{background:var(--gold);color:var(--dark);padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border-radius:2px;border:none;cursor:pointer;font-family:'Jost',sans-serif;}
+.btn-hero-primary:hover{background:var(--gold-pale);transform:translateY(-2px);}
+.btn-hero-secondary{border:1px solid rgba(255,255,255,0.35);background:transparent;color:#fff;padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border-radius:2px;cursor:pointer;font-family:'Jost',sans-serif;}
+.btn-hero-secondary:hover{border-color:var(--gold);color:var(--gold);}
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;}
+.hero-scroll span{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,0.3);}
+.hero-scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,rgba(255,255,255,0.3),transparent);}
+
+/* ── SHARED ── */
+.lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
+.sec-hdr{text-align:center;max-width:600px;margin:0 auto 52px;}
+.sec-hdr .lbl{justify-content:center;}
+.sec-hdr .lbl::before{display:none;}
+.sec-hdr h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;line-height:1;margin-bottom:16px;}
+.sec-hdr h2 em{font-style:italic;color:var(--green-mid);}
+.sec-hdr p{font-size:14px;color:var(--text-mid);font-weight:300;line-height:1.8;}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+/* ── STORES ── */
+.stores-sec{padding:100px 60px;background:var(--dark);}
+.stores-sec .sec-hdr h2{color:#fff;}
+.stores-sec .sec-hdr h2 em{color:var(--green-soft);}
+.stores-sec .sec-hdr p{color:rgba(255,255,255,0.4);}
+.st-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:1100px;margin:0 auto;}
+.st-card{background:#fff;overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;border:1px solid rgba(0,0,0,0.08);border-radius:10px;box-shadow:0 2px 12px rgba(0,0,0,0.07);min-height:300px;}
+.st-card:hover{transform:translateY(-4px);box-shadow:0 12px 48px rgba(0,0,0,0.3);}
+.st-card-head{background:var(--dark);padding:20px 22px;border-bottom:2px solid var(--green);border-radius:10px 10px 0 0;}
+[data-theme="naturals"] .st-card-head{border-bottom-color:var(--green-mid);}
+.st-card-num{font-family:'Cormorant Garamond',serif;font-size:13px;color:rgba(255,255,255,0.2);letter-spacing:3px;margin-bottom:4px;}
+.st-card-name{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;font-weight:400;line-height:1.1;}
+.st-card-area{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:3px;}
+.st-card-body{padding:16px 22px 20px;flex:1;display:flex;flex-direction:column;}
+.st-card-addr{font-size:11px;color:var(--text-light);line-height:1.5;flex:1;margin-bottom:14px;}
+.st-card-actions{display:flex;gap:6px;flex-wrap:wrap;}
+.st-view-btn{border:1px solid rgba(0,0,0,0.14);color:var(--text-mid);padding:9px 13px;font-size:10px;min-height:36px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:all 0.3s;border-radius:2px;}
+.st-view-btn:hover{border-color:var(--green-mid);color:var(--green-mid);}
+.st-btn{border:none;color:#fff;padding:9px 13px;font-size:10px;min-height:36px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;gap:5px;transition:all 0.3s;border-radius:2px;cursor:pointer;font-family:'Jost',sans-serif;}
+.st-btn-book{background:#1A73E8;}
+.st-btn-book:hover{background:#1557B0;transform:translateY(-1px);}
+.st-btn-wa{background:#25D366;}
+.st-btn-wa:hover{background:#1da851;transform:translateY(-1px);}
+.st-btn-call{background:#5F6368;}
+.st-btn-call:hover{background:#474c52;transform:translateY(-1px);}
+
+/* ── SERVICES ── */
+.services-sec{padding:100px 60px;background:var(--cream);}
+.svc-cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:48px;}
+.svc-cat-card{background:#fff;overflow:hidden;border-radius:8px;border:1px solid rgba(0,0,0,0.07);transition:all 0.3s;cursor:pointer;display:flex;flex-direction:column;}
+.svc-cat-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.1);border-color:var(--gold);}
+.svc-cat-img{height:180px;overflow:hidden;flex-shrink:0;}
+.svc-cat-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.6s ease;}
+.svc-cat-card:hover .svc-cat-img img{transform:scale(1.05);}
+.svc-cat-body{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1;}
+.svc-cat-icon{font-size:22px;margin-bottom:8px;display:block;}
+.svc-cat-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--text);margin-bottom:6px;line-height:1.1;}
+.svc-cat-desc{font-size:12px;color:var(--text-mid);line-height:1.7;font-weight:300;flex:1;}
+.svc-cat-price{margin-top:12px;font-size:13px;font-weight:600;color:var(--green-mid);letter-spacing:0.5px;}
+
+/* ── OFFERS ── */
+.offers-sec{padding:80px 60px;background:var(--dark);}
+.offers-sec .sec-hdr h2{color:#fff;}
+.offers-sec .sec-hdr h2 em{color:var(--gold);}
+.offers-sec .sec-hdr p{color:rgba(255,255,255,0.4);}
+.home-offers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px;}
+.hoc{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);padding:28px;transition:all 0.3s;border-radius:10px;}
+.hoc:hover{background:rgba(255,255,255,0.07);border-color:var(--gold);}
+.hoc-badge{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:10px;}
+.hoc-title{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;font-weight:300;margin-bottom:8px;line-height:1.2;}
+.hoc-details{font-size:12px;color:rgba(255,255,255,0.42);line-height:1.7;font-weight:300;margin-bottom:12px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+.hoc-meta{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;padding-top:12px;border-top:1px solid rgba(255,255,255,0.08);}
+.hoc-store{font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;}
+.hoc-valid{font-size:11px;color:var(--green-soft);}
+.offers-view-all{text-align:center;}
+
+/* ── ABOUT STRIP ── */
+.about-strip{background:var(--cream);padding:52px 60px;display:flex;align-items:center;gap:60px;border-top:1px solid rgba(0,0,0,0.06);}
+.about-strip-stats{display:flex;gap:48px;flex-shrink:0;}
+.astat{text-align:center;}
+.astat-num{font-family:'Cormorant Garamond',serif;font-size:42px;color:var(--green-mid);font-weight:300;line-height:1;}
+.astat-lbl{font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--text-light);margin-top:4px;}
+.about-strip-text{flex:1;}
+.about-strip-text p{font-size:14px;color:var(--text-mid);line-height:1.9;font-weight:300;}
+
+/* ── TESTIMONIALS ── */
+.reviews-sec{padding:100px 60px;background:#fff;}
+.rv-track{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px;}
+.rv-card{background:var(--cream);padding:32px 28px;border-radius:10px;border:1px solid rgba(0,0,0,0.06);}
+.rv-stars{color:var(--gold);font-size:14px;margin-bottom:12px;letter-spacing:2px;}
+.rv-q{font-family:'Cormorant Garamond',serif;font-size:18px;color:var(--text);font-weight:400;line-height:1.6;margin-bottom:16px;font-style:italic;}
+.rv-name{font-size:11px;font-weight:600;color:var(--text);letter-spacing:1px;text-transform:uppercase;}
+.rv-store{font-size:10px;color:var(--gold);letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;}
+
 @media(max-width:992px){
-nav{padding:0 20px;height:60px;}
-.nav-center{display:none;}
 .st-grid{grid-template-columns:1fr 1fr;}
 .svc-cats-grid{grid-template-columns:1fr 1fr;}
 .home-offers-grid{grid-template-columns:1fr;}
@@ -208,7 +222,6 @@ nav{padding:0 20px;height:60px;}
 .stores-sec,.services-sec,.offers-sec,.reviews-sec{padding:60px 20px;}
 }
 @media(max-width:600px){
-nav{padding:0 16px;}
 .hero h1{font-size:clamp(40px,10vw,60px);}
 .hero-btns{flex-direction:column;align-items:center;}
 .st-grid{grid-template-columns:1fr;}
@@ -218,6 +231,7 @@ nav{padding:0 16px;}
 }
 </style>
 </head>
+
 <body>
 
 <header id="site-header">
@@ -476,8 +490,8 @@ padding-top:78px;
 
 <section class="hero" aria-label="Hero">
 <div class="hero-bg">
-<img src="images/heroes/home.jpg" alt="Naturals Salon & Spa Bangalore — premium beauty services"
-onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1800&q=85'"
+<img src="images/heroes/home.jpg" alt="Naturals Salon &amp; Spa Bangalore — premium beauty services"
+onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1800&q=85'"
 loading="eager">
 </div>
 <div class="hero-ov" aria-hidden="true"></div>
@@ -502,6 +516,7 @@ loading="eager">
 <h2>Five stores.<br><em>One city.</em></h2>
 <p>Walk in or book online — premium beauty services at your doorstep across Bangalore.</p>
 </div>
+
 <div class="st-grid">
 <div class="st-card reveal">
 <div class="st-card-head">
@@ -509,19 +524,23 @@ loading="eager">
 <div class="st-card-name">JP Nagar 5th Phase</div>
 <div class="st-card-area">South Bangalore &middot; 560078</div>
 </div>
-<div class="st-card-body">
 
+<div class="st-card-body">
 <div class="st-card-addr">&#128205; 1st Floor, Anand Onyx, No 305, 15th Cross Rd, near Outer Ring Road, 5th Phase, J P Nagar Phase 5, J. P. Nagar, Bengaluru, Karnataka 560078, India</div>
+
 <div class="st-card-actions">
 <button class="st-btn st-btn-book"
 onclick="storePickerThen('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html','book')"
 aria-label="Book at JP Nagar 5th Phase">&#128197; Book</button>
+
 <button class="st-btn st-btn-wa"
 onclick="storePickerThen('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html','wa')"
 aria-label="WhatsApp JP Nagar 5th Phase">&#128172; Chat</button>
+
 <button class="st-btn st-btn-call"
 onclick="storePickerThen('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html','call')"
 aria-label="Call JP Nagar 5th Phase">&#128222; Call</button>
+
 <a href="stores/jpnagar.html" class="st-view-btn" aria-label="View JP Nagar 5th Phase">Info &#8594;</a>
 </div>
 </div>
@@ -532,19 +551,23 @@ aria-label="Call JP Nagar 5th Phase">&#128222; Call</button>
 <div class="st-card-name">Elements Mall</div>
 <div class="st-card-area">Nagavara &middot; 560077</div>
 </div>
-<div class="st-card-body">
 
+<div class="st-card-body">
 <div class="st-card-addr">&#128205; Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS Ramaiah North City, Manayata Tech Park, Nagavara, Bengaluru, Karnataka 560077, India</div>
+
 <div class="st-card-actions">
 <button class="st-btn st-btn-book"
 onclick="storePickerThen('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html','book')"
 aria-label="Book at Elements Mall">&#128197; Book</button>
+
 <button class="st-btn st-btn-wa"
 onclick="storePickerThen('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html','wa')"
 aria-label="WhatsApp Elements Mall">&#128172; Chat</button>
+
 <button class="st-btn st-btn-call"
 onclick="storePickerThen('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html','call')"
 aria-label="Call Elements Mall">&#128222; Call</button>
+
 <a href="stores/elements-mall.html" class="st-view-btn" aria-label="View Elements Mall">Info &#8594;</a>
 </div>
 </div>
@@ -555,19 +578,23 @@ aria-label="Call Elements Mall">&#128222; Call</button>
 <div class="st-card-name">Devasandra</div>
 <div class="st-card-area">KR Puram &middot; 560036</div>
 </div>
-<div class="st-card-body">
 
+<div class="st-card-body">
 <div class="st-card-addr">&#128205; 2,3, 1st Floor, Maruthi Tower, No. 1, Devasandra Main Rd, opp. Lulu's Bakery, Basavanapura, KRPuram, Bengaluru, Karnataka 560036, India</div>
+
 <div class="st-card-actions">
 <button class="st-btn st-btn-book"
 onclick="storePickerThen('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html','book')"
 aria-label="Book at Devasandra">&#128197; Book</button>
+
 <button class="st-btn st-btn-wa"
 onclick="storePickerThen('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html','wa')"
 aria-label="WhatsApp Devasandra">&#128172; Chat</button>
+
 <button class="st-btn st-btn-call"
 onclick="storePickerThen('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html','call')"
 aria-label="Call Devasandra">&#128222; Call</button>
+
 <a href="stores/devasandra.html" class="st-view-btn" aria-label="View Devasandra">Info &#8594;</a>
 </div>
 </div>
@@ -578,19 +605,23 @@ aria-label="Call Devasandra">&#128222; Call</button>
 <div class="st-card-name">Frazer Town</div>
 <div class="st-card-area">Pulikeshi Nagar &middot; 560005</div>
 </div>
-<div class="st-card-body">
 
+<div class="st-card-body">
 <div class="st-card-addr">&#128205; 1st floor, No.94, Mosque Rd, above Poorvika Mobile Store, Cleveland Town, Frazer Town, Bengaluru, Karnataka 560005, India</div>
+
 <div class="st-card-actions">
 <button class="st-btn st-btn-book"
 onclick="storePickerThen('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html','book')"
 aria-label="Book at Frazer Town">&#128197; Book</button>
+
 <button class="st-btn st-btn-wa"
 onclick="storePickerThen('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html','wa')"
 aria-label="WhatsApp Frazer Town">&#128172; Chat</button>
+
 <button class="st-btn st-btn-call"
 onclick="storePickerThen('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html','call')"
 aria-label="Call Frazer Town">&#128222; Call</button>
+
 <a href="stores/frazer-town.html" class="st-view-btn" aria-label="View Frazer Town">Info &#8594;</a>
 </div>
 </div>
@@ -601,19 +632,23 @@ aria-label="Call Frazer Town">&#128222; Call</button>
 <div class="st-card-name">Hennur</div>
 <div class="st-card-area">Hennur Cross &middot; 560043</div>
 </div>
-<div class="st-card-body">
 
+<div class="st-card-body">
 <div class="st-card-addr">&#128205; 1st Floor, No 40/A, 40/C, Main Road, above SBI Bank, Hennur Gardens, Bengaluru, Karnataka 560043, India</div>
+
 <div class="st-card-actions">
 <button class="st-btn st-btn-book"
 onclick="storePickerThen('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html','book')"
 aria-label="Book at Hennur">&#128197; Book</button>
+
 <button class="st-btn st-btn-wa"
 onclick="storePickerThen('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html','wa')"
 aria-label="WhatsApp Hennur">&#128172; Chat</button>
+
 <button class="st-btn st-btn-call"
 onclick="storePickerThen('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html','call')"
 aria-label="Call Hennur">&#128222; Call</button>
+
 <a href="stores/hennur.html" class="st-view-btn" aria-label="View Hennur">Info &#8594;</a>
 </div>
 </div>
@@ -629,8 +664,7 @@ aria-label="Call Hennur">&#128222; Call</button>
 </div><div class="svc-cats-grid">
 <a href="services.html?gender=female" class="svc-cat-card reveal" aria-label="Haircuts & Styling services">
 <div class="svc-cat-img">
-<img src="images/services/haircare.jpg" alt="Haircuts & Styling" loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80'">
+<img src="images/services/haircare.jpg" alt="Haircuts & Styling" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#9984;</span>
@@ -641,8 +675,7 @@ onerror="this.src='https://images.unsplash.com/photo-1562322140-8baeececf3df?w=6
 </a>
 <a href="services.html?gender=female&cat=colouring" class="svc-cat-card reveal" aria-label="Hair Colour & Highlights services">
 <div class="svc-cat-img">
-<img src="images/services/colour.jpg" alt="Hair Colour & Highlights" loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80'">
+<img src="images/services/colour.jpg" alt="Hair Colour & Highlights" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#127752;</span>
@@ -653,8 +686,7 @@ onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?
 </a>
 <a href="services.html?gender=female&cat=hair+spa" class="svc-cat-card reveal" aria-label="Hair Spa & Treatments services">
 <div class="svc-cat-img">
-<img src="images/services/hairspa.jpg" alt="Hair Spa & Treatments" loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80'">
+<img src="images/services/hairspa.jpg" alt="Hair Spa & Treatments" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#127774;</span>
@@ -665,8 +697,7 @@ onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=6
 </a>
 <a href="services.html?gender=female&cat=facial" class="svc-cat-card reveal" aria-label="Skin Care & Facials services">
 <div class="svc-cat-img">
-<img src="images/services/skincare.jpg" alt="Skin Care & Facials" loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80'">
+<img src="images/services/skincare.jpg" alt="Skin Care & Facials" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#10024;</span>
@@ -676,8 +707,7 @@ onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?
 </a>
 <a href="services.html?gender=female&cat=bridal" class="svc-cat-card reveal" aria-label="Bridal & Makeup services">
 <div class="svc-cat-img">
-<img src="images/services/bridal.jpg" alt="Bridal & Makeup" loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80'">
+<img src="images/services/bridal.jpg" alt="Bridal & Makeup" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#128141;</span>
@@ -687,8 +717,7 @@ onerror="this.src='https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?
 </a>
 <a href="services.html?gender=male" class="svc-cat-card reveal" aria-label="Men's Grooming services">
 <div class="svc-cat-img">
-<img src="images/services/mens-grooming.jpg" alt="Men's Grooming" loading="lazy"
-onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80'">
+<img src="images/services/mens-grooming.jpg" alt="Men's Grooming" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#9988;</span>
@@ -698,6 +727,7 @@ onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?
 </div>
 </a>
 </div>
+
 <div class="view-all reveal" style="text-align:center;">
 <a href="services.html" class="btn-gold" aria-label="View all services and pricing">View Full Services &amp; Pricing &#8594;</a>
 </div>
@@ -709,6 +739,7 @@ onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?
 <h2>Current <em>offers</em></h2>
 <p>Seasonal deals and promotions across all our Bangalore locations.</p>
 </div>
+
 <div class="home-offers-grid">
 <div class="hoc reveal">
 <div class="hoc-badge">Special Offer</div>
@@ -738,6 +769,7 @@ onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?
 </div>
 </div>
 </div>
+
 <div class="offers-view-all reveal">
 <a href="offers.html" class="btn-gold" aria-label="View all offers">View All Offers &#8594;</a>
 </div>
@@ -751,7 +783,7 @@ onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?
 <div class="astat"><div class="astat-num">4.8★</div><div class="astat-lbl">Avg Rating</div></div>
 </div>
 <div class="about-strip-text reveal">
-<p>Naturals Salon &amp; Spa is India's most trusted salon network — built on 25 years of passion, craft and genuine care. Across 5 Bangalore locations we bring world-class beauty services to your neighbourhood with every stylist, product and visit crafted to perfection.</p>
+<p>Naturals Salon &amp; Spa is India's most trusted salon network — built on 25 years of passion, craft and care. Across 5 Bangalore locations we bring world-class beauty services to your neighbourhood.</p>
 </div>
 </div>
 
@@ -760,10 +792,11 @@ onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?
 <div class="lbl">Client Love</div>
 <h2>What our guests<br><em>say about us.</em></h2>
 </div>
+
 <div class="rv-track">
 <div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;The haircut was perfect &mdash; they took time to understand exactly what I wanted. Calming and luxurious ambience.&rdquo;</blockquote><div class="rv-name">Priya S.</div><div class="rv-store">JP Nagar 5th Phase</div></div>
 <div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;Amazing experience! Staff was friendly and professional. I&rsquo;ve tried many salons in Bangalore &mdash; Naturals is another level.&rdquo;</blockquote><div class="rv-name">Rahul M.</div><div class="rv-store">Elements Mall</div></div>
-<div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;My bridal package was absolutely flawless. I felt like royalty on my wedding day. Thank you Naturals!&rdquo;</blockquote><div class="rv-name">Anjali K.</div><div class="rv-store">Frazer Town</div></div>
+<div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;My bridal package was flawless. I felt like royalty on my wedding day. Thank you Naturals!&rdquo;</blockquote><div class="rv-name">Anjali K.</div><div class="rv-store">Frazer Town</div></div>
 <div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;The facial was divine &mdash; my skin has never looked better. Products are clearly premium quality.&rdquo;</blockquote><div class="rv-name">Deepa R.</div><div class="rv-store">Hennur</div></div>
 <div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;Best keratin treatment in Bangalore. Hair is silky smooth and results lasted longer than any other salon.&rdquo;</blockquote><div class="rv-name">Kavitha N.</div><div class="rv-store">Devasandra</div></div>
 <div class="rv-card reveal"><div class="rv-stars" aria-label="5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><blockquote class="rv-q">&ldquo;Walk-in on a Saturday and was attended within minutes. Great service every single time — highly recommend.&rdquo;</blockquote><div class="rv-name">Sneha V.</div><div class="rv-store">Elements Mall</div></div>
@@ -825,7 +858,9 @@ window.NATURALS_BASE = '';
 <button class="spm-close" onclick="closeStorePicker()" aria-label="Close">&#10005;</button>
 </div>
 <div class="spm-cards">
-<div class="spm-card" onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')" role="button" tabindex="0">
+<div class="spm-card"
+onclick="selectStore('Store_N78','JP Nagar 5th Phase','https://naturals-salon-jpnagar5phase.setmore.com/','918792642299','+918792642299','https://g.page/Naturals_JPNagar5thPhase/','stores/jpnagar.html')"
+role="button" tabindex="0">
 <div class="spm-card-num">1</div>
 <div class="spm-card-info">
 <div class="spm-card-name">JP Nagar 5th Phase</div>
@@ -834,7 +869,9 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')" role="button" tabindex="0">
+<div class="spm-card"
+onclick="selectStore('Store_N77','Elements Mall','https://naturals-salon-elementsmall.setmore.com/','919901000017','+919901000017','https://maps.google.com/?q=Naturals+Salon+Elements+Mall','stores/elements-mall.html')"
+role="button" tabindex="0">
 <div class="spm-card-num">2</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Elements Mall</div>
@@ -843,7 +880,9 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')" role="button" tabindex="0">
+<div class="spm-card"
+onclick="selectStore('Store_N36','Devasandra','https://naturals-salon-devasandra.setmore.com/','917259490009','+917259490009','https://maps.google.com/?q=Naturals+Salon+Devasandra','stores/devasandra.html')"
+role="button" tabindex="0">
 <div class="spm-card-num">3</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Devasandra</div>
@@ -852,7 +891,9 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')" role="button" tabindex="0">
+<div class="spm-card"
+onclick="selectStore('Store_N05','Frazer Town','https://naturals-salon-frazertown.setmore.com/','919945488040','+919945488040','https://maps.google.com/?q=Naturals+Salon+Frazer+Town','stores/frazer-town.html')"
+role="button" tabindex="0">
 <div class="spm-card-num">4</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Frazer Town</div>
@@ -861,7 +902,9 @@ window.NATURALS_BASE = '';
 </div>
 <div class="spm-card-cta">Select &#8594;</div>
 </div>
-<div class="spm-card" onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')" role="button" tabindex="0">
+<div class="spm-card"
+onclick="selectStore('Store_N43','Hennur','https://naturals-salon-hennur.setmore.com/','919606900069','+919606900069','https://maps.google.com/?q=Naturals+Salon+Hennur','stores/hennur.html')"
+role="button" tabindex="0">
 <div class="spm-card-num">5</div>
 <div class="spm-card-info">
 <div class="spm-card-name">Hennur</div>
@@ -1035,9 +1078,6 @@ if(nt)nt.classList.toggle('active',saved==='naturals');
 </script>
 
 <script>
-/* Nav scroll effect */
-/* scroll handled by partials/header.j2 */
-
 /* Intersection observer for reveal */
 var io=new IntersectionObserver(function(entries){
 entries.forEach(function(e,i){
@@ -1049,6 +1089,25 @@ io.unobserve(e.target);
 },{threshold:0});
 document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
 
+/* Helper: direct action from store card without opening modal */
+function storePickerThen(id,name,book,wa,call,maps,pageUrl,action){
+// Save selection
+try{
+var sd={id:id,name:name,book:book,wa:wa,call:call,maps:maps,pageUrl:pageUrl};
+localStorage.setItem('naturals-store',JSON.stringify(sd));
+if(typeof window._applyStickyStore==='function') window._applyStickyStore(sd);
+}catch(e){}
+
+// Perform action
+if(action==='book' && book) return window.open(book,'_blank');
+if(action==='wa' && wa) return window.open('https://wa.me/'+wa,'_blank');
+if(action==='call' && call) return (window.location.href='tel:'+call);
+if(action==='maps' && maps) return window.open(maps,'_blank');
+
+// fallback: store page
+if(pageUrl) window.location.href = pageUrl;
+}
 </script>
+
 </body>
 </html>
