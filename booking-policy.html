@@ -112,229 +112,193 @@ footer{background:#080f0b;}
 <div class="hdr-inner">
 
 <a href="index.html" class="hdr-logo" aria-label="Naturals Salon & Spa — Home">
-<img src="images/logo/naturals_header_logo.png" alt="Naturals Salon & Spa"
-style="height:80px;width:auto;"
-loading="lazy" onerror="this.style.display='none'">
+<img src="images/logo/naturals_header_logo.png"
+alt="Naturals Salon & Spa"
+loading="lazy"
+onerror="this.style.display='none'">
 </a>
 
-<div class="hdr-right">
-<nav class="hdr-nav" aria-label="Main navigation">
-<a href="index.html"
-class="hdr-link hdr-active">Home</a>
-<a href="services.html"
-class="hdr-link">Services</a>
-<a href="offers.html"
-class="hdr-link">Offers</a>
-
-<div class="hdr-dd" id="stores-dd">
-<button class="hdr-link hdr-dd-btn"
-aria-haspopup="true" aria-expanded="false" id="stores-dd-btn">
-Our Stores <span class="hdr-caret" aria-hidden="true">&#9662;</span>
+<button id="hamburger" aria-label="Menu">
+<span class="hb-line"></span>
+<span class="hb-line"></span>
+<span class="hb-line"></span>
 </button>
-<div class="hdr-dd-menu" role="menu">
-<a href="stores/jpnagar.html" class="hdr-dd-item" role="menuitem">
-<span class="hdr-dd-name">JP Nagar 5th Phase</span>
-<span class="hdr-dd-area">South Bangalore</span>
-</a>
-<a href="stores/elements-mall.html" class="hdr-dd-item" role="menuitem">
-<span class="hdr-dd-name">Elements Mall</span>
-<span class="hdr-dd-area">Nagavara</span>
-</a>
-<a href="stores/devasandra.html" class="hdr-dd-item" role="menuitem">
-<span class="hdr-dd-name">Devasandra</span>
-<span class="hdr-dd-area">KR Puram</span>
-</a>
-<a href="stores/frazer-town.html" class="hdr-dd-item" role="menuitem">
-<span class="hdr-dd-name">Frazer Town</span>
-<span class="hdr-dd-area">Pulikeshi Nagar</span>
-</a>
-<a href="stores/hennur.html" class="hdr-dd-item" role="menuitem">
-<span class="hdr-dd-name">Hennur</span>
-<span class="hdr-dd-area">Hennur Cross</span>
-</a>
-</div>
-</div>
 
-<a href="contact.html"
-class="hdr-link">Contact Us</a>
+<div id="drawer-overlay"></div>
+
+<nav id="drawer">
+<a href="index.html">Home</a>
+<a href="services.html">Services</a>
+<a href="offers.html">Offers</a>
+<a href="contact.html">Contact</a>
+
+<div class="drawer-divider"></div>
+
+<div class="drawer-divider"></div>
+
+<a href="index.html#our-stores" class="drawer-cta">
+Book Appointment
+</a>
 </nav>
 
-<div id="store-indicator" style="display:none;">
-<span id="si-label">Viewing: <strong id="si-name"></strong></span>
-<button onclick="openStorePicker()" id="si-change">Change</button>
-</div>
 <style>
-#store-indicator{display:flex;align-items:center;gap:8px;font-size:10px;letter-spacing:1px;color:rgba(255,255,255,0.5);white-space:nowrap;}
-#si-label strong{color:var(--gold);}
-#si-change{background:none;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.5);padding:4px 10px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.2s;}
-#si-change:hover{border-color:var(--gold);color:var(--gold);}
-@media(max-width:992px){ #store-indicator{display:none!important;}}
+.hb-line{
+display:block;
+width:20px;
+height:2px;
+background:#fff;
+margin:4px 0;
+transition:0.3s;
+}
+
+/* Drawer */
+#drawer{
+position:fixed;
+top:0;
+right:-320px;
+width:300px;
+height:100%;
+background:var(--dark);
+padding:90px 30px 40px;
+display:flex;
+flex-direction:column;
+gap:18px;
+transition:right 0.35s ease;
+z-index:10001;
+}
+
+#drawer a{
+color:#fff;
+text-decoration:none;
+font-size:14px;
+letter-spacing:1px;
+text-transform:uppercase;
+}
+
+.drawer-divider{
+height:1px;
+background:rgba(255,255,255,0.1);
+margin:10px 0;
+}
+
+.drawer-cta{
+background:var(--gold);
+color:var(--dark) !important;
+padding:10px 16px;
+border-radius:6px;
+text-align:center;
+font-weight:600;
+}
+
+/* Overlay */
+#drawer-overlay{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,0.5);
+backdrop-filter:blur(4px);
+-webkit-backdrop-filter:blur(4px);
+opacity:0;
+pointer-events:none;
+transition:opacity 0.3s;
+z-index:10000;
+}
+
+/* Open state */
+.drawer-open #drawer{
+right:0;
+}
+
+.drawer-open #drawer-overlay{
+opacity:1;
+pointer-events:auto;
+}
+
+/* Animate hamburger */
+.drawer-open #hamburger .hb-line:nth-child(1){
+transform:rotate(45deg) translate(5px,5px);
+}
+.drawer-open #hamburger .hb-line:nth-child(2){
+opacity:0;
+}
+.drawer-open #hamburger .hb-line:nth-child(3){
+transform:rotate(-45deg) translate(6px,-6px);
+}
 </style>
 
-<a href="index.html#our-stores" class="hdr-cta">Book Now</a>
-<button id="hamburger" aria-label="Open menu" aria-expanded="false">
-<span></span><span></span><span></span>
-</button>
-<div id="nav-overlay" onclick="closeDrawer()"></div>
-<nav id="nav-drawer" aria-label="Mobile navigation">
-<button id="drawer-close" onclick="closeDrawer()" aria-label="Close menu">&#10005;</button>
-<div class="drawer-logo">
-<div class="drawer-brand">Naturals <span>Salon &amp; Spa</span></div>
-</div>
-<ul class="drawer-links">
-<li><a href="index.html" class="drawer-active" onclick="closeDrawer()">Home</a></li>
-<li><a href="services.html" class="" onclick="closeDrawer()">Services</a></li>
-<li><a href="offers.html" class="" onclick="closeDrawer()">Offers</a></li>
-<li class="drawer-has-sub">
-<button class="drawer-sub-btn"
-onclick="toggleDrawerSub(this)" aria-expanded="false">
-Our Stores <span class="drawer-sub-caret">&#9662;</span>
-</button>
-<ul class="drawer-sub">
-</ul>
-</li>
-<li><a href="about.html" class="" onclick="closeDrawer()">About Us</a></li>
-<li><a href="contact.html" class="" onclick="closeDrawer()">Contact Us</a></li>
-</ul>
-<div class="drawer-cta">
-<a href="index.html#our-stores" class="drawer-book-btn" onclick="closeDrawer()">&#128197; Book Appointment</a>
-</div>
-</nav>
-<style>
-#hamburger{display:none;flex-direction:column;justify-content:space-between;width:28px;height:20px;background:none;border:none;cursor:pointer;padding:0;z-index:210;}
-#hamburger span{display:block;width:100%;height:2px;background:#fff;transition:all 0.3s;}
-#hamburger.open span:nth-child(1){transform:translateY(9px) rotate(45deg);}
-#hamburger.open span:nth-child(2){opacity:0;}
-#hamburger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg);}
-#nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:400;backdrop-filter:blur(2px);}
-#nav-overlay.show{display:block;}
-#nav-drawer{position:fixed;top:0;right:-320px;width:300px;height:100%;background:var(--dark);z-index:500;padding:0;transition:right 0.35s cubic-bezier(0.4,0,0.2,1);display:flex;flex-direction:column;box-shadow:-8px 0 40px rgba(0,0,0,0.4);overflow-y:auto;}
-[data-theme='naturals'] #nav-drawer{background:#12032a;}
-#nav-drawer.open{right:0;}
-#drawer-close{position:absolute;top:18px;right:20px;background:none;border:none;color:rgba(255,255,255,0.5);font-size:20px;cursor:pointer;padding:8px;transition:color 0.2s;line-height:1;}
-#drawer-close:hover{color:#fff;}
-.drawer-logo{padding:28px 28px 20px;border-bottom:1px solid rgba(255,255,255,0.07);}
-.drawer-brand{font-family:'Cormorant Garamond',serif;font-size:20px;color:#fff;font-weight:300;}
-.drawer-brand span{color:var(--gold);font-style:italic;}
-.drawer-links{list-style:none;padding:16px 0;flex:1;}
-.drawer-links li a,.drawer-sub-btn{display:block;padding:14px 28px;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.55);font-weight:500;transition:all 0.2s;border-left:2px solid transparent;text-decoration:none;width:100%;text-align:left;background:none;border-top:none;border-right:none;border-bottom:none;cursor:pointer;font-family:'Jost',sans-serif;}
-.drawer-links li a:hover,.drawer-links li a.drawer-active,.drawer-sub-btn:hover,.drawer-sub-btn.drawer-active{color:#fff;border-left-color:var(--gold);background:rgba(255,255,255,0.04);}
-.drawer-sub-btn{display:flex;justify-content:space-between;align-items:center;}
-.drawer-sub-caret{font-size:9px;transition:transform 0.2s;opacity:0.5;}
-.drawer-sub-btn.open .drawer-sub-caret{transform:rotate(180deg);}
-.drawer-sub{list-style:none;max-height:0;overflow:hidden;transition:max-height 0.3s ease;background:rgba(0,0,0,0.2);}
-.drawer-sub.open{max-height:400px;}
-.drawer-sub li a{padding:10px 28px 10px 38px;font-size:11px;letter-spacing:1.5px;display:flex;flex-direction:column;gap:2px;}
-.drawer-sub li a small{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;}
-.drawer-cta{padding:20px 28px;border-top:1px solid rgba(255,255,255,0.07);margin-top:auto;}
-.drawer-book-btn{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--gold);color:var(--dark);padding:14px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;text-decoration:none;transition:all 0.3s;border-radius:6px;}
-.drawer-book-btn:hover{background:var(--gold-pale);}
-@media(max-width:1024px){ #hamburger{display:flex;}}
-</style>
 <script>
-function openDrawer(){
-var d=document.getElementById('nav-drawer'),o=document.getElementById('nav-overlay'),h=document.getElementById('hamburger');
-if(!d||!o||!h)return;
-d.classList.add('open');o.classList.add('show');h.classList.add('open');
-h.setAttribute('aria-expanded','true');document.body.style.overflow='hidden';
+(function(){
+var body = document.body;
+var hamburger = document.getElementById('hamburger');
+var overlay = document.getElementById('drawer-overlay');
+
+function toggle(){
+body.classList.toggle('drawer-open');
 }
-function closeDrawer(){
-var d=document.getElementById('nav-drawer'),o=document.getElementById('nav-overlay'),h=document.getElementById('hamburger');
-if(!d||!o||!h)return;
-d.classList.remove('open');o.classList.remove('show');h.classList.remove('open');
-h.setAttribute('aria-expanded','false');document.body.style.overflow='';
-}
-function toggleDrawerSub(btn){
-var sub=btn.nextElementSibling;
-var isOpen=sub.classList.contains('open');
-sub.classList.toggle('open',!isOpen);
-btn.classList.toggle('open',!isOpen);
-btn.setAttribute('aria-expanded',!isOpen?'true':'false');
-}
-/* Attach hamburger click listener — use DOMContentLoaded to guarantee
-the element exists regardless of where in the page this script runs */
-document.addEventListener('DOMContentLoaded',function(){
-var h=document.getElementById('hamburger');
-if(h){
-h.addEventListener('click',function(e){
-e.stopPropagation();
-this.classList.contains('open')?closeDrawer():openDrawer();
-});
-}
-/* Close drawer on Escape */
-document.addEventListener('keydown',function(e){if(e.key==='Escape')closeDrawer();});
-/* Close drawer when a nav link inside the drawer is tapped.
-We scope to #nav-drawer only — avoids swallowing page-level link clicks */
-var drawer=document.getElementById('nav-drawer');
-if(drawer){
-drawer.addEventListener('click',function(e){
-var a=e.target.closest('a[href]');
-if(a) closeDrawer();
-});
-}
-/* Close drawer when clicking the overlay background */
-var overlay=document.getElementById('nav-overlay');
-if(overlay) overlay.addEventListener('click',closeDrawer);
-});
+
+hamburger.addEventListener('click', toggle);
+overlay.addEventListener('click', toggle);
+})();
 </script>
 
-</div>
 </div>
 </header>
 
 <style>
-#site-header{position:fixed;top:0;left:0;right:0;z-index:200;height:70px;transition:background 0.35s,box-shadow 0.35s;}
-#site-header.hdr-scrolled,#site-header.hdr-solid{background:var(--nav-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 1px 0 rgba(255,255,255,0.07);}
-.hdr-inner{height:70px;padding:0 52px;display:flex;align-items:center;justify-content:space-between;max-width:1380px;margin:0 auto;}
-.hdr-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
-.hdr-logo img{height:32px;width:auto;filter:brightness(0) invert(1);}
-.hdr-logo-text{font-family:'Cormorant Garamond',serif;font-size:18px;color:#fff;letter-spacing:1px;white-space:nowrap;}
-.hdr-logo-text span{color:var(--gold);font-style:italic;font-weight:300;}
-.hdr-right{display:flex;align-items:center;gap:16px;}
-.hdr-nav{display:flex;align-items:center;gap:2px;}
-.hdr-link{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:500;color:rgba(255,255,255,0.6);padding:8px 11px;text-decoration:none;transition:color 0.2s;background:none;border:none;cursor:pointer;font-family:'Jost',sans-serif;white-space:nowrap;line-height:1;}
-.hdr-link:hover,.hdr-active{color:var(--gold)!important;}
-/* Dropdown */
-.hdr-dd{position:relative;}
-.hdr-dd-btn{display:flex;align-items:center;gap:5px;}
-.hdr-caret{font-size:8px;transition:transform 0.2s;display:inline-block;opacity:0.6;}
-.hdr-dd.open .hdr-caret{transform:rotate(180deg);}
-.hdr-dd-menu{display:none;position:absolute;top:calc(100% + 10px);left:50%;transform:translateX(-50%);min-width:230px;background:var(--dark);border:1px solid rgba(255,255,255,0.1);box-shadow:0 12px 40px rgba(0,0,0,0.45);z-index:300;padding:6px 0;}
-[data-theme='naturals'] .hdr-dd-menu{background:#12032a;}
-.hdr-dd.open .hdr-dd-menu{display:block;animation:ddFade 0.15s ease;}
-@keyframes ddFade{from{opacity:0;transform:translateX(-50%) translateY(-4px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
-.hdr-dd-item{display:flex;flex-direction:column;padding:10px 18px;text-decoration:none;transition:background 0.15s;border-left:2px solid transparent;}
-.hdr-dd-item:hover{background:rgba(255,255,255,0.05);border-left-color:var(--gold);}
-.hdr-dd-name{font-size:12px;color:#fff;font-weight:500;}
-.hdr-dd-area{font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:1px;margin-top:2px;}
-/* Book CTA */
-.hdr-cta{background:var(--gold);color:var(--dark);padding:9px 20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:700;text-decoration:none;white-space:nowrap;border-radius:6px;transition:all 0.25s;flex-shrink:0;}
-.hdr-cta:hover{background:var(--gold-pale);}
-@media(max-width:1024px){
-.hdr-inner{padding:0 20px;}
-.hdr-nav{display:none;}
-.hdr-cta{display:none;}
-#store-indicator{display:none!important;}
+#site-header{
+position:fixed;
+top:0;
+left:0;
+right:0;
+height:70px;
+z-index:9999;
+transition:background 0.35s ease, backdrop-filter 0.35s ease;
 }
-/* Hamburger always visible — subtle bg ensures contrast on transparent hero header */
+
+#site-header.hdr-scrolled{
+background:var(--nav-bg);
+backdrop-filter:blur(20px);
+-webkit-backdrop-filter:blur(20px);
+box-shadow:0 1px 0 rgba(255,255,255,0.07);
+}
+
+.hdr-inner{
+height:70px;
+padding:0 28px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+max-width:1380px;
+margin:0 auto;
+}
+
+.hdr-logo img{
+height:32px;
+width:auto;
+filter:brightness(0) invert(1);
+}
+
+/* Hamburger */
 #hamburger{
+position:relative;
+z-index:10000;
 background:rgba(0,0,0,0.28);
 border-radius:6px;
 padding:8px 7px;
-width:40px;height:36px;
+width:40px;
+height:36px;
 backdrop-filter:blur(4px);
 -webkit-backdrop-filter:blur(4px);
-transition:background 0.25s;
+transition:background 0.25s ease;
+cursor:pointer;
 }
-#hamburger:hover{background:rgba(0,0,0,0.5);}
-/* Once header has dark bg, strip the extra pill styling */
-#site-header.hdr-scrolled #hamburger,
-#site-header.hdr-solid #hamburger{
-background:transparent;
-padding:0;
-width:28px;height:20px;
-backdrop-filter:none;
--webkit-backdrop-filter:none;
+
+#hamburger:hover{
+background:rgba(0,0,0,0.5);
+}
+
+/* Offset page for fixed header */
+body{
+padding-top:70px;
 }
 </style>
 
@@ -342,21 +306,10 @@ backdrop-filter:none;
 (function(){
 var hdr = document.getElementById('site-header');
 if(!hdr) return;
-if(hdr.dataset.solid==='true') hdr.classList.add('hdr-solid');
+
 window.addEventListener('scroll',function(){
-if(hdr.dataset.solid!=='true') hdr.classList.toggle('hdr-scrolled',window.scrollY>60);
+hdr.classList.toggle('hdr-scrolled',window.scrollY>60);
 },{passive:true});
-var dd=document.getElementById('stores-dd');
-var btn=document.getElementById('stores-dd-btn');
-if(!dd||!btn) return;
-var isTouch=false;
-window.addEventListener('touchstart',function(){isTouch=true;},{once:true,passive:true});
-var t;
-dd.addEventListener('mouseenter',function(){if(isTouch)return;clearTimeout(t);dd.classList.add('open');btn.setAttribute('aria-expanded','true');});
-dd.addEventListener('mouseleave',function(){if(isTouch)return;t=setTimeout(function(){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');},180);});
-btn.addEventListener('click',function(e){e.preventDefault();var o=dd.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');});
-document.addEventListener('click',function(e){if(!dd.contains(e.target)){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'){dd.classList.remove('open');btn.setAttribute('aria-expanded','false');}});
 })();
 </script>
 <div class="page-hero">
