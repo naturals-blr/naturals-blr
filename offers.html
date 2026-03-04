@@ -41,6 +41,25 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
+/* GLOBAL MINIMUM TYPOGRAPHY & SPACING RULES */
+html{scroll-behavior:smooth;}
+body{font-size:16px;line-height:1.6;}
+h1, .h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,5vw,60px);font-weight:300;line-height:1.05;}
+h2, .h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,40px);font-weight:300;line-height:1.15;}
+h3, .h3{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,24px);font-weight:400;line-height:1.25;}
+.lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:12px;}
+.lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
+
+/* COMPONENT CLASSES (8px System) */
+.section{padding:80px 60px;}
+@media(max-width:768px){.section{padding:48px 20px;}}
+.container{max-width:1200px;margin:0 auto;width:100%;}
+.card{background:#fff;border-radius:14px;border:1px solid rgba(0,0,0,0.06);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.08);border-color:var(--card-hover-border);}
+
+/* ACCESSIBILITY */
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px;}
+
 .page-hero{background:var(--dark);position:relative;overflow:hidden;height:70vh;min-height:500px;display:flex;align-items:flex-end;}
 .page-hero-bg{position:absolute;inset:0;}
 .page-hero-bg img{width:100%;height:100%;object-fit:cover;filter:saturate(1.05);}
@@ -87,7 +106,7 @@ appearance:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,
 
 .results-bar{background:var(--cream);padding:14px 60px;border-bottom:1px solid rgba(0,0,0,0.06);font-size:13px;color:var(--text-light);}
 
-.offers-main{padding:42px 60px;}
+.offers-main{}
 .store-group{margin-bottom:52px;}
 .store-group-hdr{display:flex;align-items:baseline;gap:16px;margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid rgba(0,0,0,0.06);}
 .store-group-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;color:var(--text);}
@@ -188,6 +207,15 @@ display:flex;align-items:center;justify-content:center;
 .btn-maps:hover{background:#8e1f1f;transform:translateY(-1px);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
+
+/* UNIFIED BUTTON SYSTEM */
+.btn-primary{background:var(--gold);color:var(--dark);padding:14px 28px;min-height:48px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.3s;border-radius:6px;text-decoration:none;border:1px solid transparent;cursor:pointer;}
+.btn-primary:hover{background:#b5943b;transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,0.12);}
+
+.btn-secondary{background:transparent;color:var(--text);padding:10px 20px;min-height:40px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:all 0.3s;border-radius:6px;text-decoration:none;border:1px solid rgba(0,0,0,0.12);cursor:pointer;}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.04);}
+.page-hero-inner .btn-secondary{color:#fff;border-color:rgba(255,255,255,0.4);}
+.page-hero-inner .btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
 </style>
 
 <style>
@@ -214,7 +242,6 @@ footer{background:#080f0b;}
 .page-hero-inner{padding:76px 20px 40px;}
 .filter-bar{padding:0 20px 16px;top:60px;}
 .results-bar{padding:12px 20px;}
-.offers-main{padding:28px 20px;}
 #scroll-top{bottom:20px;right:20px;}
 .sort-wrap{width:100%;margin-left:0;justify-content:flex-end;}
 }
@@ -228,6 +255,7 @@ footer{background:#080f0b;}
 <a href="index.html" class="hdr-logo" aria-label="Naturals Salon & Spa — Home">
 <img src="images/logo/naturals_header_logo.png"
 alt="Naturals Salon & Spa"
+width="200" height="68"
 loading="lazy"
 onerror="this.style.display='none'">
 </a>
@@ -526,7 +554,7 @@ loading="eager">
 
 <div class="results-bar" id="results-bar">Showing 5 offers (All stores)</div>
 
-<main class="offers-main" id="offers-main">
+<main class="offers-main section" id="offers-main">
 
 <section id="view-by-store">
 <div class="store-group" data-store-group="Store_N78">
@@ -1555,7 +1583,7 @@ else img.style.display='none';
 <script>
 /* Ribbons: urgent (<7 days) / NEW (<7 days since Valid_From) */
 (function(){
-var now = "2026-03-05T00:22:49.204600+05:30" ? new Date("2026-03-05T00:22:49.204600+05:30") : new Date();
+var now = "2026-03-05T01:03:10.712319+05:30" ? new Date("2026-03-05T01:03:10.712319+05:30") : new Date();
 function daysBetween(a,b){ return Math.floor((b.getTime()-a.getTime())/86400000); }
 var NEW_DAYS=7;
 

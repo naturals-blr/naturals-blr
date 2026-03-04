@@ -28,6 +28,25 @@
 --nav-bg:rgba(26,5,51,0.97);
 }
 
+/* GLOBAL MINIMUM TYPOGRAPHY & SPACING RULES */
+html{scroll-behavior:smooth;}
+body{font-size:16px;line-height:1.6;}
+h1, .h1{font-family:'Cormorant Garamond',serif;font-size:clamp(48px,5vw,60px);font-weight:300;line-height:1.05;}
+h2, .h2{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,4vw,40px);font-weight:300;line-height:1.15;}
+h3, .h3{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,2.5vw,24px);font-weight:400;line-height:1.25;}
+.lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:12px;display:flex;align-items:center;gap:12px;}
+.lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
+
+/* COMPONENT CLASSES (8px System) */
+.section{padding:80px 60px;}
+@media(max-width:768px){.section{padding:48px 20px;}}
+.container{max-width:1200px;margin:0 auto;width:100%;}
+.card{background:#fff;border-radius:14px;border:1px solid rgba(0,0,0,0.06);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;}
+.card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.08);border-color:var(--card-hover-border);}
+
+/* ACCESSIBILITY */
+:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px;}
+
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
@@ -46,10 +65,6 @@ a{text-decoration:none;color:inherit;}
 .hero h1 em{font-style:italic;color:var(--gold);}
 .hero-sub{font-size:14px;color:rgba(255,255,255,0.7);font-weight:300;line-height:1.8;max-width:650px;margin:0 auto 40px;}
 .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
-.btn-hero-primary{background:#1A73E8;color:#fff;padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border-radius:10px;}
-.btn-hero-primary:hover{background:#1557B0;transform:translateY(-2px);}
-.btn-hero-secondary{background:var(--gold);color:var(--dark);padding:16px 36px;font-size:11px;letter-spacing:2.5px;text-transform:uppercase;font-weight:700;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;border-radius:10px;}
-.btn-hero-secondary:hover{background:var(--gold-pale);transform:translateY(-2px);}
 
 .lbl{font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
 .lbl::before{content:'';width:18px;height:1px;background:var(--gold);}
@@ -63,7 +78,7 @@ a{text-decoration:none;color:inherit;}
 .reveal.visible{opacity:1;transform:translateY(0);}
 
 /* STORES */
-.stores-sec{padding:100px 60px;background:var(--dark);}
+.stores-sec{background:var(--dark);}
 .stores-sec .sec-hdr h2{color:#fff;}
 .stores-sec .sec-hdr h2 em{color:var(--green-soft);}
 .stores-sec .sec-hdr p{color:rgba(255,255,255,0.4);}
@@ -115,7 +130,7 @@ transition:all 0.2s;border-radius:10px;background:#fff;text-decoration:none;
 .st-view-btn:hover{border-color:var(--gold);color:var(--gold);}
 
 /* SERVICES (unchanged structure) */
-.services-sec{padding:100px 60px;background:var(--cream);}
+.services-sec{background:var(--cream);}
 .svc-cats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:48px;}
 .svc-cat-card{background:#fff;overflow:hidden;border-radius:14px;border:1px solid rgba(0,0,0,0.07);transition:all 0.3s;cursor:pointer;display:flex;flex-direction:column;}
 .svc-cat-card:hover{transform:translateY(-4px);box-shadow:0 12px 36px rgba(0,0,0,0.1);border-color:var(--gold);}
@@ -129,7 +144,7 @@ transition:all 0.2s;border-radius:10px;background:#fff;text-decoration:none;
 .svc-cat-price{margin-top:12px;font-size:13px;font-weight:700;color:var(--green-mid);}
 
 /* OFFERS (homepage) */
-.offers-sec{padding:80px 60px;background:var(--dark);}
+.offers-sec{background:var(--dark);}
 .offers-sec .sec-hdr h2{color:#fff;}
 .offers-sec .sec-hdr h2 em{color:var(--gold);}
 .offers-sec .sec-hdr p{color:rgba(255,255,255,0.4);}
@@ -183,6 +198,15 @@ display:flex;align-items:center;justify-content:center;
 .btn-maps:hover{background:#8e1f1f;transform:translateY(-1px);}
 .btn-gold{background:var(--gold);color:var(--dark);padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;gap:8px;transition:all 0.3s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold-pale);transform:translateY(-1px);}
+
+/* UNIFIED BUTTON SYSTEM */
+.btn-primary{background:var(--gold);color:var(--dark);padding:14px 28px;min-height:48px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:all 0.3s;border-radius:6px;text-decoration:none;border:1px solid transparent;cursor:pointer;}
+.btn-primary:hover{background:#b5943b;transform:translateY(-2px);box-shadow:0 8px 16px rgba(0,0,0,0.12);}
+
+.btn-secondary{background:transparent;color:var(--text);padding:10px 20px;min-height:40px;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;display:inline-flex;align-items:center;justify-content:center;gap:6px;transition:all 0.3s;border-radius:6px;text-decoration:none;border:1px solid rgba(0,0,0,0.12);cursor:pointer;}
+.btn-secondary:hover{border-color:var(--gold);color:var(--gold);background:rgba(201,168,76,0.04);}
+.page-hero-inner .btn-secondary{color:#fff;border-color:rgba(255,255,255,0.4);}
+.page-hero-inner .btn-secondary:hover{border-color:#fff;background:rgba(255,255,255,0.1);}
 </style>
 
 <style>
@@ -250,6 +274,7 @@ footer{background:#080f0b;}
 <a href="index.html" class="hdr-logo" aria-label="Naturals Salon & Spa — Home">
 <img src="images/logo/naturals_header_logo.png"
 alt="Naturals Salon & Spa"
+width="200" height="68"
 loading="lazy"
 onerror="this.style.display='none'">
 </a>
@@ -504,8 +529,10 @@ body{padding-top:58px;}
 <section class="hero" aria-label="Hero">
 <div class="hero-bg">
 <img src="images/heroes/home.jpg" alt="Naturals Salon & Spa Bangalore — premium beauty services"
+width="1800" height="1200"
 onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1800&q=85'"
-loading="eager">
+loading="eager"
+fetchpriority="high">
 </div>
 <div class="hero-ov" aria-hidden="true"></div>
 <div class="hero-inner">
@@ -513,15 +540,47 @@ loading="eager">
 <h1>Beauty that<br><em>moves you.</em></h1>
 <p class="hero-sub">5 locations &middot; Expert stylists &middot; World-class services</p>
 <div class="hero-btns">
-<button onclick="openStorePicker()" class="btn-hero-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" style="flex-shrink:0" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
+<button onclick="openStorePicker()" class="btn-primary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-calendar" style="flex-shrink:0" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/></svg>
 Book Now</button>
-<button onclick="openStorePicker()" class="btn-hero-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" style="flex-shrink:0" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+<button onclick="openStorePicker()" class="btn-secondary"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" style="flex-shrink:0" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
 Choose Your Store</button>
 </div>
 </div>
 </section>
 
-<section class="stores-sec" id="our-stores" aria-label="Our store locations">
+<div style="text-align:center;">
+<div class="rating-summary-wrap">
+<div class="rs-stars">
+<svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+<svg viewBox="0 0 24 24" fill="var(--gold)"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+</div>
+<div class="rs-text">
+<span class="rs-score">4.8/5</span>
+<span class="rs-count">(2,400+ reviews)</span>
+</div>
+<a href="https://g.page/naturals" target="_blank" rel="noopener" class="rs-link">View on Google</a>
+</div>
+<style>
+.rating-summary-wrap{display:inline-flex;align-items:center;flex-wrap:wrap;gap:12px;background:#fff;padding:12px 20px;border-radius:99px;box-shadow:0 8px 24px rgba(0,0,0,0.06);border:1px solid rgba(0,0,0,0.04);position:relative;z-index:10;}
+.rs-stars{display:flex;gap:4px;}
+.rs-stars svg{width:16px;height:16px;}
+.rs-text{font-size:13px;display:flex;gap:6px;align-items:center;font-weight:600;}
+.rs-score{color:var(--text);}
+.rs-count{color:var(--text-mid);font-weight:400;}
+.rs-link{font-size:12px;color:var(--green-mid);font-weight:600;text-decoration:none;margin-left:4px;padding-left:12px;border-left:1px solid rgba(0,0,0,0.1);transition:color 0.2s;}
+.rs-link:hover{color:var(--gold);}
+@media(max-width:600px){
+.rating-summary-wrap{flex-direction:column;gap:8px;border-radius:12px;padding:16px;text-align:center;}
+.rs-link{border-left:none;padding-left:0;border-top:1px solid rgba(0,0,0,0.1);padding-top:8px;width:100%;}
+}
+</style>
+
+</div>
+
+<section class="stores-sec section" id="our-stores" aria-label="Our store locations">
 <div class="sec-hdr reveal">
 <div class="lbl">Our Locations</div>
 <h2>5 stores.<br><em>One city.</em></h2>
@@ -710,7 +769,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </div><div class="svc-cats-grid">
 <a href="services.html?gender=female" class="svc-cat-card reveal" aria-label="Haircuts & Styling services">
 <div class="svc-cat-img">
-<img src="images/services/haircare.jpg" alt="Haircuts & Styling" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80'">
+<img src="images/services/haircare.jpg" alt="Haircuts & Styling" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#9984;</span>
@@ -721,7 +780,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </a>
 <a href="services.html?gender=female&cat=colouring" class="svc-cat-card reveal" aria-label="Hair Colour & Highlights services">
 <div class="svc-cat-img">
-<img src="images/services/colour.jpg" alt="Hair Colour & Highlights" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80'">
+<img src="images/services/colour.jpg" alt="Hair Colour & Highlights" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#127752;</span>
@@ -732,7 +791,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </a>
 <a href="services.html?gender=female&cat=hair+spa" class="svc-cat-card reveal" aria-label="Hair Spa & Treatments services">
 <div class="svc-cat-img">
-<img src="images/services/hairspa.jpg" alt="Hair Spa & Treatments" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80'">
+<img src="images/services/hairspa.jpg" alt="Hair Spa & Treatments" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#127774;</span>
@@ -743,7 +802,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </a>
 <a href="services.html?gender=female&cat=facial" class="svc-cat-card reveal" aria-label="Skin Care & Facials services">
 <div class="svc-cat-img">
-<img src="images/services/skincare.jpg" alt="Skin Care & Facials" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80'">
+<img src="images/services/skincare.jpg" alt="Skin Care & Facials" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#10024;</span>
@@ -753,7 +812,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </a>
 <a href="services.html?gender=female&cat=bridal" class="svc-cat-card reveal" aria-label="Bridal & Makeup services">
 <div class="svc-cat-img">
-<img src="images/services/bridal.jpg" alt="Bridal & Makeup" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80'">
+<img src="images/services/bridal.jpg" alt="Bridal & Makeup" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#128141;</span>
@@ -763,7 +822,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </a>
 <a href="services.html?gender=male" class="svc-cat-card reveal" aria-label="Men's Grooming services">
 <div class="svc-cat-img">
-<img src="images/services/mens-grooming.jpg" alt="Men's Grooming" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80'">
+<img src="images/services/mens-grooming.jpg" alt="Men's Grooming" width="400" height="300" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=600&q=80'">
 </div>
 <div class="svc-cat-body">
 <span class="svc-cat-icon" aria-hidden="true">&#9988;</span>
@@ -775,7 +834,7 @@ Shop No 26, 3rd Floor, Elements Mall, 100 Ft Rd, near Manyata Tech Park Road, MS
 </div>
 
 <div class="view-all reveal" style="text-align:center;">
-<a href="services.html" class="btn-gold">View Full Services &amp; Pricing &#8594;</a>
+<a href="services.html" class="btn-secondary">View Full Services &#8594;</a>
 </div>
 </section>
 
@@ -795,6 +854,7 @@ data-offer-title="Pay 20000, Get 30000">
 <img class="home-offer-img"
 data-img-base="images/offers/Store_N78_20260226_Pay_20000,_Get_30000"
 alt="Pay 20000, Get 30000"
+width="400" height="300"
 loading="lazy">
 </div>
 
@@ -819,6 +879,7 @@ data-offer-title="Pay 20000, Get 30000">
 <img class="home-offer-img"
 data-img-base="images/offers/Store_N77_20260226_Pay_20000,_Get_30000"
 alt="Pay 20000, Get 30000"
+width="400" height="300"
 loading="lazy">
 </div>
 
@@ -843,6 +904,7 @@ data-offer-title="Pay 20000, Get 30000">
 <img class="home-offer-img"
 data-img-base="images/offers/Store_N36_20260226_Pay_20000,_Get_30000"
 alt="Pay 20000, Get 30000"
+width="400" height="300"
 loading="lazy">
 </div>
 
@@ -862,7 +924,7 @@ loading="lazy">
 </div>
 
 <div class="offers-view-all reveal">
-<a href="offers.html" class="btn-gold">View All Offers &#8594;</a>
+<a href="offers.html" class="btn-secondary">View All Offers &#8594;</a>
 </div>
 </section>
 
