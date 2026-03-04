@@ -102,21 +102,20 @@ appearance:none;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,
 #cat-select option{background:var(--dark);color:#fff;}
 
 /* PRICE SORT BUTTONS */
-.sort-wrap{margin-left:auto;display:flex;align-items:center;gap:10px;}
-.sort-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.25);font-weight:600;}
+.sort-wrap{margin-left:auto;display:flex;align-items:center;}
 .price-sort-btn{
 background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);
 color:rgba(255,255,255,0.7);padding:6px 12px;font-size:11px;letter-spacing:1px;
 text-transform:uppercase;font-family:'Jost',sans-serif;font-weight:500;cursor:pointer;
 transition:all 0.3s;border-radius:10px;display:flex;align-items:center;gap:6px;
-min-width:120px;justify-content:center;
+min-width:80px;justify-content:center;
 }
 .price-sort-btn:hover{border-color:rgba(255,255,255,0.3);color:#fff;}
 .price-sort-btn.active{background:var(--gold);border-color:var(--gold);color:var(--dark);font-weight:600;}
 [data-theme="naturals"] .price-sort-btn.active{background:var(--green-mid);border-color:var(--green-mid);color:#fff;}
 .price-sort-btn .rupee{font-size:12px;font-weight:600;}
-.price-sort-btn .arrow{font-size:10px;transition:transform 0.2s;}
-.price-sort-btn.desc .arrow{transform:rotate(180deg);}
+.price-sort-btn .sort-icon{font-size:10px;transition:transform 0.2s;}
+.price-sort-btn.desc .sort-icon{transform:rotate(180deg);}
 
 /* RESULTS BAR */
 .results-bar{background:var(--cream);padding:14px 60px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(0,0,0,0.06);}
@@ -537,14 +536,9 @@ loading="eager">
 </div>
 
 <div class="sort-wrap">
-<span class="sort-lbl">Sort</span>
-<button id="price-sort-asc" class="price-sort-btn" onclick="handlePriceSort('price-low')">
+<button id="price-sort-btn" class="price-sort-btn" onclick="handlePriceSort()">
 <span class="rupee">₹</span>
-<span class="arrow">▲</span>
-</button>
-<button id="price-sort-desc" class="price-sort-btn" onclick="handlePriceSort('price-high')">
-<span class="rupee">₹</span>
-<span class="arrow">▲</span>
+<span class="sort-icon">⇅</span>
 </button>
 </div>
 </div>
@@ -696,19 +690,24 @@ sel.classList.toggle('active', sel.value !== 'all');
 renderServices();
 }
 
-// ── handlePriceSort — handles price sort button clicks ──
-function handlePriceSort(sortType) {
-// Remove active class from all sort buttons
-document.querySelectorAll('.price-sort-btn').forEach(btn => {
-btn.classList.remove('active');
-});
+// ── handlePriceSort — handles price sort button toggle ──
+function handlePriceSort() {
+const btn = document.getElementById('price-sort-btn');
 
-// Add active class to clicked button
-const activeBtn = document.getElementById(sortType === 'price-low' ? 'price-sort-asc' : 'price-sort-desc');
-activeBtn.classList.add('active');
+// Toggle between sort states
+if (activeFilters.sort === 'default' || activeFilters.sort === 'price-high') {
+activeFilters.sort = 'price-low';
+btn.classList.remove('desc');
+} else {
+activeFilters.sort = 'price-high';
+btn.classList.add('desc');
+}
 
-// Set sort filter
-activeFilters.sort = sortType;
+// Add active class if sorting
+if (activeFilters.sort !== 'default') {
+btn.classList.add('active');
+}
+
 renderServices();
 }
 
