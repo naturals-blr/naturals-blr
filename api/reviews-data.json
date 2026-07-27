@@ -1,5 +1,44 @@
 [
   {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "Zaid Muhammed",
+    "review_comments": "I had a great experience with Gufran. He was professional, attentive, and understood exactly the kind of haircut I wanted. He paid close attention to detail, took his time to ensure everything was perfect, and the final result exceeded my expectations. The haircut was clean, stylish, and suited me really well. I truly appreciate his skill and dedication. Highly recommended for anyone looking for a quality haircut and excellent service!",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-27",
+    "review_id": "AbFvOqnMOp7MLaliTFEO6AZfnQOw9mtM-P00spjLj3lEjBbJq35Pc1xHFas4SGTMpCNWmV-_s41PvQ",
+    "Stars": 5,
+    "response": "Dear Zaid, we are thrilled to hear that Gufran provided you with an exceptional experience, showcasing his expertise in delivering a precision haircut that exceeded your expectations. Our team, including Gufran, is dedicated to providing top-notch service, making us a premium hair salon in Frazer Town. We appreciate your kind words and look forward to serving you again, visit us at https://naturalsprime.in/frazertown/ for latest offers and updates. Your Hair & Beauty Crew at Naturals Frazer Town",
+    "response_date": "2026-07-27"
+  },
+  {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "5",
+    "customer_name": "Thippagari Saisree",
+    "review_comments": "Had good experience. As I visited first time. Over all service is good and especially Keerthi patiently and proficient she did good job.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-27",
+    "review_id": "AbFvOqmzKoETGBoctwM7yTivMC4BDLU-E76J8QpfnL1Zq6SxVbCVwtZyri8EYjD4PChWkKVcIxk9Ww",
+    "Stars": 5,
+    "response": "",
+    "response_date": ""
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "1",
+    "customer_name": "Ayesha Jabbar",
+    "review_comments": "The service is good for men haircut is good. But they don’t have time sense absolutely. We booked a appointment at 7 and waited for almost more than one hour.. If they can’t keep a time frame then they should not be taking prior appointments and make customers to wait.. The manager is always on phone call and does not bother to respond to queries.. This is the first time I am giving negative comment about anyone in my life., so imagine the disappointment I would have felt.. At this rate you will only loose customers.. If you don’t value your time then atleast value others time.. Time is priceless-Hope you will understand and do the needful.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-27",
+    "review_id": "AbFvOqnpzHNemmnoMm6Hd2QARh8jw3JC0Sm6YRHwVbFU3w9YestgrOTI-K31yAYCQUz7eC_fZUNi6g",
+    "Stars": 1,
+    "response": "",
+    "response_date": ""
+  },
+  {
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "2",
@@ -61,8 +100,8 @@
     "date_posted": "2026-07-26",
     "review_id": "AbFvOqn2HH1HANHrXWtpbihwkZou8jFNU5zvniKoo6Uk6ZuX85pqv8R7PPVT96l3bjEdrgiebRNc1g",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Uma, we are thrilled to hear that Radha gaaru Parvathi you with exceptional service, demonstrating the patience and dedication that our team at Naturals Ayyappa Nagar strives for, making us the best unisex salon in Ayyappa Nagar. Our team, including Radha, was delighted to have you visit us and can't wait to welcome you back.  Your Personal Glow Team, Naturals Ayyappa Nagar",
+    "response_date": "2026-07-26"
   },
   {
     "store_id": "N05",
@@ -87,8 +126,8 @@
     "date_posted": "2026-07-26",
     "review_id": "AbFvOqk__tyj7QVC1fcJI8sjsPx6ZpLz1V4hTEDMDGNCtnS2ihUkYMCtPuWvVgIAOQWqTrrpuLHQCA",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Veronica, we are thrilled to hear that Stella provided you with great service, doing it with patience and ensuring you had a wonderful experience at our premium unisex salon in Hennur. Our team, including Stella, is dedicated to delivering exceptional service to every client.  The Master Stylists at Naturals Hennur",
+    "response_date": "2026-07-26"
   },
   {
     "store_id": "N45",
