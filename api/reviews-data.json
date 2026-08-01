@@ -1,5 +1,57 @@
 [
   {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "5",
+    "customer_name": "Hema Reddy",
+    "review_comments": "I liked the services of Keerthi",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-31",
+    "review_id": "AbFvOql8CuFdfnyff7wIrHx2qmdb6LR-5rvvHfD-b2ANgTnnChSGHh2P5PQaIdAfKxQbp2ekxsIOMg",
+    "Stars": 5,
+    "response": "Dear Hema, we are thrilled to hear that you enjoyed your experience with our team, particularly with Kerthana and our stylists were delighted to have you at our premium salon in Nagavara. As the best unisex salon in Nagavara, we strive for excellence in every service we provide. We look forward to welcoming you again, and for the latest offers and updates, please visit us at https://naturalsprime.in/nagavara/  Your Premium Grooming Experts @ Naturals Nagavara",
+    "response_date": "2026-07-31"
+  },
+  {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "4",
+    "customer_name": "SUDEEPTHI SIDDABATHUNI",
+    "review_comments": "",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-31",
+    "review_id": "AbFvOqm4HCkJRp9rH7XVrJZV8Y8INeRSaSQLDZVFJl00lj87lPevY3rTI_1jXZQnhmE8myBK646pgQ",
+    "Stars": 4,
+    "response": "Dear Sudeepthi, we appreciate the time you took to share your experience with us, and our team is delighted to have had the opportunity to serve you at our premium salon in Nagavara, striving to be the best unisex salon in Nagavara. We are committed to delivering exceptional service and look forward to welcoming you back.  The Stylists & Care Team at Naturals Nagavara",
+    "response_date": "2026-07-31"
+  },
+  {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "5",
+    "customer_name": "Aswini Reddy",
+    "review_comments": "I loved the session and Keerthi was very patient, didn't rush it. She took her time and did it perfectly and I love my hair even more after styling. All thanks to Keerthi and naturals.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-31",
+    "review_id": "AbFvOqkS2juRleR1YzxFWMul7UP1ECuU_VAzfMmzh97cSweaRLgyciWESe3sk1QHuIoWH2CTP_xrYQ",
+    "Stars": 5,
+    "response": "Dear Aswini, we are thrilled to hear that you had a wonderful experience with Kerthana who took the time to ensure your hair was styled to perfection, and our team at Naturals Nagavara is grateful for your kind words. As a premium hair salon in Nagavara, we strive for excellence in every session, and it's delightful to know that Kerthana patience and expertise met your expectations. We look forward to serving you again, and you can visit us at https://naturalsprime.in/nagavara/ for our latest offers and updates. Naturals Nagavara Management & Stylists",
+    "response_date": "2026-07-31"
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "1",
+    "customer_name": "Mathew Mammen Jacob",
+    "review_comments": "Made me wait for more than 45 minutes even though i had an appointment. They kept making me wait while working on other people who had no appointments  Very disappointed. Didnt even have a haircut",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-31",
+    "review_id": "AbFvOqn1YeblBh_uR6VnKYUGLP2I-wAQrBpSs6KO4XpelAcXFOpvunjj6mfGnGVXpYIhFP2kT4LL6Q",
+    "Stars": 1,
+    "response": "",
+    "response_date": ""
+  },
+  {
     "store_id": "N36",
     "store_name": "Ayyappa Nagar",
     "stars": "4",
@@ -24,6 +76,19 @@
     "Stars": 5,
     "response": "Dear Barsha, we are delighted to hear that you had a wonderful experience at our salon, and our team, including Stella ma'am, were able to provide you with the friendly and excellent service that we strive for as the best unisex salon in Hennur. Our stylists, such as Stella, are dedicated to ensuring every visit is nothing short of exceptional 🩷. We look forward to welcoming you back and invite you to visit us at https://naturalsprime.in/hennur/ for our latest offers and updates. Naturals Hennur — Your Salon Family",
     "response_date": "2026-07-30"
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "Dan Galastor",
+    "review_comments": "Amazing service, got my hair dyed and styled by Gurfan. 10/10, paid attention to every detail and made sure I was comfortable throughout. Would 100% go again.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-30",
+    "review_id": "AbFvOqn5COfIHWwys25mmP0A7Pb7wnwzpifKfw_Kyt20JZKSyrb3RfCeKRts5OUGMOM3DojszH4aaw",
+    "Stars": 5,
+    "response": "Dear Dan, we are thrilled to hear that our stylist, Gufran, provided you with an exceptional experience, paying close attention to every detail to Anas your comfort and satisfaction with your hair dye and styling. As a premium hair salon in Frazer Town, our team, including Gufran, is dedicated to delivering expert hair styling that exceeds our clients' expectations. We look forward to welcoming you back and invite you to visit us at https://naturalsprime.in/frazertown/ for our latest offers and updates. The Self-Care Crew at Naturals Frazer Town",
+    "response_date": "2026-07-31"
   },
   {
     "store_id": "N78",
