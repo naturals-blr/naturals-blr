@@ -1,5 +1,31 @@
 [
   {
+    "store_id": "N36",
+    "store_name": "Ayyappa Nagar",
+    "stars": "5",
+    "customer_name": "Kavya Sonu",
+    "review_comments": "The service was really good ,felt very comfortable and fully satisfied,met my expectations 😁 By paul and bhagya",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-04",
+    "review_id": "AbFvOqmdgqxPqVDOYHYRGV2z-X59BqIiqNeucMw0EHtdaHStY8PVYnKhrUUFGAvAExmgtsXOENx56w",
+    "Stars": 5,
+    "response": "Dear Kavya, we are thrilled to hear that our service met your expectations and that you felt comfortable and satisfied with your experience at our premium salon in Ayyappa Nagar, which is renowned as the best unisex salon in Ayyappa Nagar. Our team, particularly Paul and Bhagya, were delighted to have been able to Parvathi you with a wonderful experience 😁.  Team Naturals Ayyappa Nagar (Looking forward to your next visit!)",
+    "response_date": "2026-08-04"
+  },
+  {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "4",
+    "customer_name": "Praveen B",
+    "review_comments": "Rashid is hands down one of the best stylists I have ever met. He has incredible precision and very steady hands. Naturals is already well-known for its excellent salon experience, but having Rashid on their team takes it to the next level. The outstanding service and warm hospitality at Naturals truly add an extra star to the whole experience. Highly recommended.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-04",
+    "review_id": "AbFvOqlRsFgOyHfGozJZlx8rJuiTME7jCscCMybZdaCQpvdXPWEyqXPchJA6lw3qsygxfNA2gLNa",
+    "Stars": 4,
+    "response": "",
+    "response_date": ""
+  },
+  {
     "store_id": "N43",
     "store_name": "Hennur",
     "stars": "1",
@@ -438,8 +464,8 @@
     "date_posted": "2026-07-26",
     "review_id": "AbFvOqktQ_juEEX_WuvnL_ItrRZnY669OfiYjvIrVG6qij-rxFF_MIjguCj0SI9iXMusPK613XAD",
     "Stars": 2,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Nahida Begum, Thank you for sharing your feedback. We are genuinely sorry to hear that your experience did not meet your expectations. After reviewing your visit with our team, we understand that your skin was quite sensitive and developed swelling during the service. To ensure your safety and avoid further irritation, our therapist proceeded with extra care and adjusted the service accordingly. Our priority is always the well-being of our clients rather than completing procedures in a way that could aggravate sensitive skin. We also regret that you felt the facial and waxing experience was rushed. That was certainly not our intention, and we appreciate your feedback as it helps us improve our service standards and communication with our clients. We value every guest and would welcome the opportunity to discuss your experience further and understand your concerns better. Please feel free to reach out to us directly so we can assist you. Thank you for bringing this to our attention.",
+    "response_date": "2026-08-03"
   },
   {
     "store_id": "N45",
