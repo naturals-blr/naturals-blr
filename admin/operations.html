@@ -123,7 +123,7 @@ exportToJson()            ← called during export/build
         ▼
       reviews.archive.json ← full historical record (7,700+, never pruned)
         │
-        ├──▶ local server  ← /api/reviews-data serves from archive
+        ├──▶ local server  ← /api/reviews-data composes archive + live CSV on demand
         └──▶ build.py      ← copies archive → out/api/reviews-data.json for static site
 </pre>
 
@@ -169,7 +169,7 @@ exportToJson()            ← called during export/build
   <li><strong>Sync</strong> — <code>syncReviewsFromGMB.js</code> fetches current reviews from GBP, saves to <code>reviews_database.csv</code>, removes stale IDs</li>
   <li><strong>Export</strong> — <code>exportToJson()</code> reads the CSV and writes <code>reviews.json</code> (fresh snapshot)</li>
   <li><strong>Archive</strong> — <code>mergeIntoArchive()</code> is called automatically inside <code>exportToJson()</code>. It reads the existing archive, upserts every CSV entry (adds new reviews, updates reply status), and writes back — <strong>never deletes anything</strong></li>
-  <li><strong>Serve</strong> — The local console server (<code>/api/reviews-data</code>) serves <code>reviews.archive.json</code> with fallback to <code>reviews.json</code></li>
+  <li><strong>Serve</strong> — The local console server (<code>/api/reviews-data</code>) composes the read-model on demand via <code>getMergedReviewData()</code>: archive (full history) overlaid with live CSV rows (CSV wins on <code>review_id</code>). It never reads the committed <code>reviews.json</code> snapshot, which can go stale between export runs.</li>
   <li><strong>Build</strong> — <code>build.py</code> copies <code>reviews.archive.json</code> → <code>out/api/reviews-data.json</code> for the static site</li>
 </ol>
 
@@ -180,7 +180,7 @@ exportToJson()            ← called during export/build
 <tr><td><code>scripts/steps/syncReviewsFromGMB.js</code></td><td>Fetches from GBP → writes CSV → exports JSON → merges archive</td></tr>
 <tr><td><code>scripts/steps/syncAndReplyReviews.js</code></td><td>Syncs + auto-replies + exports → merge</td></tr>
 <tr><td><code>tools/sync-reviews.js</code></td><td>Standalone sync + export + archive merge</td></tr>
-<tr><td><code>tools/local-console/server.js</code></td><td>Serves archive via <code>/api/reviews-data</code></td></tr>
+<tr><td><code>tools/local-console/server.js</code></td><td>Serves merged read-model (archive + live CSV) via <code>/api/reviews-data</code></td></tr>
 <tr><td><code>build/exportDataForBuild.js</code></td><td>Build-time export: CSV → JSON + archive merge</td></tr>
 <tr><td><code>build/build.py</code></td><td>Copies archive → <code>out/api/reviews-data.json</code></td></tr>
 <tr><td><code>scripts/steps/negativeAlerts.js</code></td><td>Reads CSV + <code>negative_review_status.json</code> for alerts</td></tr>
