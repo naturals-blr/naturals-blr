@@ -30,6 +30,7 @@ async function publishSocial() { return api('/publish-social', { method: 'POST' 
 async function getCampaigns() { return api('/campaigns'); }
 async function publishSelectedCampaigns(campaignIds, platforms, dateOverrides, storeIds) { return api('/publish-selective', { method: 'POST', body: JSON.stringify({ campaignIds, platforms, dateOverrides, storeIds }) }); }
 async function refreshBuildData() { return api('/data/refresh', { method: 'POST' }); }
+async function updateGBPWebsiteUrls(dryRun) { return api('/gbp/website-urls', { method: 'POST', body: JSON.stringify({ dryRun }) }); }
 async function testTokens() {
   const res = await fetch(apiBase + '/tokens/test');
   const body = await res.json();
