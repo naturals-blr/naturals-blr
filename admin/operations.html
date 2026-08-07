@@ -405,6 +405,34 @@ exportToJson()            ← called during export/build
 </section>
 
 <section>
+<h2>GBP Website URL Updater</h2>
+<p style="font-size:0.875rem;color:#6b7280;margin-bottom:1rem">Keeps each store's Google Business Profile <code>websiteUri</code> pointing at its naturalsprime.in store page so stores rank for local queries (e.g. "naturals nagavara").</p>
+
+<h4>Commands</h4>
+<table>
+<thead><tr><th>Command</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><code>npm run gbp:urls</code></td><td>Live update — PATCH any profile whose <code>websiteUri</code> is not already <code>naturalsprime.in</code> to its store page</td></tr>
+<tr><td><code>npm run gbp:urls:dry</code></td><td>Dry run — list profiles and the target URL without making changes (exit 0 even if updates are pending)</td></tr>
+</tbody>
+</table>
+
+<h4>From the Admin Console</h4>
+<p style="font-size:0.875rem;color:#6b7280">Local console → Tools → <strong>GBP Website URLs</strong> card. <em>Check (dry)</em> runs the dry run; <em>Apply live</em> runs <code>DRY_RUN=false</code>. Output streams live in the card. (The card is disabled in production by default.)</p>
+
+<h4>Implementation</h4>
+<ul style="font-size:0.875rem">
+<li>Script: <code>scripts/updateGBPWebsiteUrls.js</code> — for each store, <code>getLocationLocationId</code> → PATCH <code>profile.websiteUri</code> from the store's <code>store_website_url</code>.</li>
+<li>Target map is the stores' <code>store_website_url</code> (built from <code>website_builder</code> data), not a hardcoded list.</li>
+<li>Dry-run mode is the default (<code>DRY_RUN</code> env; console card passes <code>DRY_RUN=true|false</code>).</li>
+<li>Console endpoint: <code>POST /api/gbp/website-urls</code> in <code>tools/local-console/server.js</code>.</li>
+</ul>
+
+<h4>Important scope note</h4>
+<p style="font-size:0.875rem;color:#6b7280">Only the <code>websiteUri</code> field is editable via the API. The GBP <strong>Menu / Products</strong> links are <strong>not</strong> API-writable (the legacy v4.9 API that supported <code>menuUrl</code> was sunset in 2022). Set Menu/Products links manually in the GBP UI, pointing at the store's <code>/services</code> page.</p>
+</section>
+
+<section>
 <h2>Quick Reference — Common Commands</h2>
 <table>
 <thead><tr><th>Command</th><th>Purpose</th></tr></thead>

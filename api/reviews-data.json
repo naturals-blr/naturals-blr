@@ -1,5 +1,31 @@
 [
   {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "5",
+    "customer_name": "Priya Kamath",
+    "review_comments": "Had hair cut for my daughter and Hair spa for me. Great service from Stella . Highly recommend her !",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-06",
+    "review_id": "AbFvOqkKbMGJjVk3WDhYG60MC7ww9AquAKhn_98PpoXkJQz7GKH7CUESTNUoyqSl_oX0MwqNI-XvTw",
+    "Stars": 5,
+    "response": "Dear Priya, we are thrilled to hear that you and your daughter had a wonderful experience at Naturals Hennur, particularly with Stella great service, showcasing our dedication to expert hair styling. Our team, including stylists like Stella, Asif, Rashid, and Shikha, strive to provide the best service, making us a premium hair salon in Hennur. We appreciate your recommendation and look forward to serving you again,  The Self-Care Crew at Naturals Hennur",
+    "response_date": "2026-08-06"
+  },
+  {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "5",
+    "customer_name": "Praveen Sasikumar",
+    "review_comments": "Haircut was down by Arman. Good experience.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-06",
+    "review_id": "AbFvOqmnFbIA-UqZHZcVEgKFF8PUwUc3AZy5tqDTHVn3QVWrrRk5mebMhgp1eY6y53yutvmUYVc8",
+    "Stars": 5,
+    "response": "Dear Praveen, we are delighted to hear that you had a good experience with your haircut done by Arman, and our team at Naturals Hennur appreciates your kind words. As a premium hair salon in Hennur, we strive for perfection in every haircut, and it's great to know that we could meet your expectations. We look forward to serving you again and providing you with the best grooming experience. Your Premium Grooming Experts @ Naturals Hennur",
+    "response_date": "2026-08-06"
+  },
+  {
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "5",
@@ -35,8 +61,8 @@
     "date_posted": "2026-08-05",
     "review_id": "AbFvOqnGkSGJwPtXYqZ5tYL8BME5XLBBLsGhWcrWw-mbWfvu6uhHg04WFzVIa7kZu2QPVogLBElM",
     "Stars": 5,
-    "response": "Dear Sharief Maths, Thank you for your support! Have a wonderful day and we hope to see you again soon!",
-    "response_date": "2026-08-05"
+    "response": "Dear Sharief, we are absolutely delighted to hear that your experiences at Naturals Frazer Town have been consistently wonderful, and our stylists, particularly Anas, have been able to deliver outstanding results that leave you feeling confident and refreshed. As a premium hair salon in Frazer Town, we are dedicated to perfection in every haircut, and it's great to know that Anas professionalism and patience have made such a positive impact on your visits.  With love and style, Team Naturals Frazer Town",
+    "response_date": "2026-08-06"
   },
   {
     "store_id": "N43",
@@ -338,6 +364,19 @@
     "response_date": "2026-08-01"
   },
   {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "Ayesha Siddiqua",
+    "review_comments": "",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-01",
+    "review_id": "AbFvOqkBiumqfLEJt_KhM0ge9go86obHViPdahFapjs94g5o8yTOMXC-suYeNuvyPYKIW92MeVD76g",
+    "Stars": 5,
+    "response": "Dear Ayesha, we are thrilled to have received a 5-star rating from you and are grateful for the trust you have placed in our team at Naturals Frazer Town, the best Anas salon in Frazer Town. Our stylists, including Anas, Gufran, Jyothi, Poornima, and Soheb, were delighted to have had the opportunity to serve you and look forward to welcoming you back for another exceptional experience.  Your Personal Glow Team, Naturals Frazer Town",
+    "response_date": "2026-08-01"
+  },
+  {
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "5",
@@ -388,6 +427,19 @@
     "Stars": 1,
     "response": "Dear Customer,  Thank you for taking the time to share your feedback. We sincerely apologize for the inconvenience and frustration caused by the delay during your visit.  We understand how valuable your time is, and waiting for over an hour despite having a prior appointment is not the experience we aim to provide. We also regret that you felt your concerns were not addressed promptly by our team during your visit.  Your feedback has been taken very seriously and has been shared with the salon manager and the entire team. We are reviewing our appointment scheduling process and reinforcing the importance of timely communication and attentive customer service to ensure this does not happen again.  We truly appreciate your honest feedback, especially knowing that this is the first negative review you have ever posted. We value every customer and hope you will give us another opportunity to provide you with the level of service and professionalism you deserve.  Thank you once again for helping us improve.",
     "response_date": "2026-08-03"
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "Maxence Aridi",
+    "review_comments": "Very kind and professional, thank you Anas",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-31",
+    "review_id": "AbFvOqml7MNeGT6AiFhh3FvWXxC9Bxf8QZOfx_bpYb-5bwAjvN2_i3-znKvSeKp6nL6bQ9xtrOGz",
+    "Stars": 5,
+    "response": "Dear Maxence, we are thrilled to hear that our team, particularly Anas, provided you with a kind and professional experience, embodying the high standards of our premium luxury salon in Frazer Town. Our stylists were delighted to have you at Naturals Frazer Town, and we look forward to welcoming you back for another exceptional visit.  The Wellness & Beauty Team, Naturals Frazer Town",
+    "response_date": "2026-07-31"
   },
   {
     "store_id": "N36",
@@ -804,6 +856,19 @@
     "Stars": 5,
     "response": "Dear Vasim, we are thrilled to hear that Soheb provided you with a wonderful experience at our premium salon in Frazer Town, and our team is delighted to have been able to meet your expectations. Our stylists, including Soheb, are dedicated to delivering exceptional service, making us one of the best Anas salons in Frazer Town. We look forward to welcoming you back and providing you with another outstanding experience, visit us at https://naturalsprime.in/frazertown/ for our latest offers and updates. Your Personal Stylists @ Naturals Frazer Town",
     "response_date": "2026-07-23"
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "3",
+    "customer_name": "Mr Shasanth",
+    "review_comments": "",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-07-23",
+    "review_id": "AbFvOqn162fGp12Kqu2S6X0qM8mczOSQRuy7iKf2q_MjGyNE_fPneLum0H_hTTnIJ3tYZPCAwJRmTQ",
+    "Stars": 3,
+    "response": "Dear Mr Shasanth, Thank you for taking the time to share your review.. The experience you describe is not exactly what we wish for our customers: we shall forward your feedback to the relevant team for them to work on. Regards, Naturals",
+    "response_date": "2026-07-30"
   },
   {
     "store_id": "N45",
@@ -9494,7 +9559,7 @@
     "store_name": "Frazer Town",
     "stars": "5",
     "customer_name": "Michael Gilbert",
-    "review_comments": "",
+    "review_comments": "Gufran was very meticulous and did a good job. One of the few staff who speaks good English",
     "show_it_in_website": "Yes",
     "date_posted": "2026-04-11",
     "review_id": "AbFvOqmYXxRhN3CPoO-00RPof75ZohZJ8HQwuYvLLKOwVFZqpdBWYCgbORdfQJ8i7wQI6PEBsoCtoQ",
@@ -11111,8 +11176,8 @@
     "date_posted": "2026-03-16",
     "review_id": "AbFvOqkSrB1wUYu8r_lO93ctVxxTDVO9seTtrwUAHMRIdQe6MPbw6gVnex_ot4kzo7TV3ZtjYe-6ow",
     "Stars": 5,
-    "response": "Dear Mohammed Usaid, Thank you for your support! Have a wonderful day and we hope to see you again soon!",
-    "response_date": "2026-06-19"
+    "response": "Dear Mohammed, our team at Naturals Frazer Town is thrilled to hear that Anas provided you with a great experience, particularly with his expertise in finding the right kind of fade to complement your face type. As one of the best Anas salons in Frazer Town, we pride ourselves on our stylists' ability to understand and enhance each client's unique features.  With love and style, Team Naturals Frazer Town",
+    "response_date": "2026-07-26"
   },
   {
     "store_id": "N05",
@@ -21883,7 +21948,7 @@
     "store_name": "Frazer Town",
     "stars": "5",
     "customer_name": "Aakash M",
-    "review_comments": "Excellent haircut and service by Gufran",
+    "review_comments": "Excellent haircut and service by Gufran and Shoaib",
     "show_it_in_website": "Yes",
     "date_posted": "2025-06-02",
     "review_id": "AbFvOqlngtVc86hRVwoT70dSsBiPnRYp0vBSVW8Kiob-MTw3pfv_NQqKDI-sneg-jnBUYE26Rp7WWw",
