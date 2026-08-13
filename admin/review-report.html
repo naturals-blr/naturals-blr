@@ -30,6 +30,9 @@
     .period-btn { border: 1px solid #d1d5db; transition: all 0.15s ease; }
     .period-btn.active { background: #7C3AED; color: white; border-color: #7C3AED; }
     .period-btn:hover:not(.active) { border-color: #7C3AED; color: #7C3AED; }
+    .store-pill { border: 1px solid #E5E7EB; transition: all 0.15s; cursor: pointer; border-radius: 999px; padding: 4px 14px; font-size: 0.8125rem; font-weight: 500; background: white; color: #374151; white-space: nowrap; }
+    .store-pill:hover { border-color: #7C3AED; color: #7C3AED; background: #F5F3FF; }
+    .store-pill.active { background: #7C3AED; color: white; border-color: #7C3AED; }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased min-h-screen font-sans">
@@ -56,7 +59,7 @@
     <div class="bg-white rounded-xl border border-gray-200 p-4 mb-6 space-y-3">
       <div class="flex items-center gap-2 flex-wrap">
         <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mr-1">Store</span>
-        <select id="store-filter" class="text-xs border border-gray-200 rounded-lg px-2 py-1.5 bg-white text-gray-600 focus:outline-none focus:ring-1 focus:ring-royal-300 max-w-[220px]"></select>
+        <span id="store-pills-container" class="flex items-center gap-2 flex-wrap"></span>
       </div>
       <div class="flex items-center gap-2 flex-wrap">
         <span class="text-xs font-semibold text-gray-400 uppercase tracking-wider mr-1">Period</span>
@@ -467,10 +470,13 @@
     }
 
     function populateStoreFilter() {
-      const sel = $('store-filter');
-      sel.innerHTML = '<option value="">All Stores</option>';
-      for (const s of storeOrder) sel.innerHTML += `<option value="${escHtml(s.name)}">${escHtml(s.name)}</option>`;
-      sel.value = selectedStore;
+      const container = $('store-pills-container');
+      const allPill = `<span class="store-pill ${!selectedStore ? 'active' : ''}" data-store="">All Stores</span>`;
+      const pills = storeOrder.map(s => {
+        const active = selectedStore === s.name;
+        return `<span class="store-pill ${active ? 'active' : ''}" data-store="${escHtml(s.name)}">${escHtml(s.name)}</span>`;
+      });
+      container.innerHTML = allPill + pills.join('');
     }
 
     function parseDate(s) {
@@ -724,10 +730,13 @@
     $('date-to').onchange = function() { if (currentPeriod === 'custom') { dateTo = this.value || null; dateFrom = $('date-from').value || null; refreshDisplay(); } };
 
     // ── Store filter — filters every section ──
-    $('store-filter').onchange = function() {
-      selectedStore = this.value;
+    $('store-pills-container').addEventListener('click', function(e) {
+      const pill = e.target.closest('.store-pill');
+      if (!pill) return;
+      selectedStore = pill.dataset.store || '';
+      this.querySelectorAll('.store-pill').forEach(p => p.classList.toggle('active', p === pill));
       refreshDisplay();
-    };
+    });
 
     // ── Sortable table headers ──
     $('store-table').querySelector('thead').addEventListener('click', function(e) {
