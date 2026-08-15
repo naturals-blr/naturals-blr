@@ -16,6 +16,32 @@
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "5",
+    "customer_name": "Shrushti",
+    "review_comments": "I had an excellent experience with Shikha.She was very polite and professional, the salon was also pretty clean. Highly recommend her to get service from her!!",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-14",
+    "review_id": "AbFvOqm7wmmvV7Al4ILWzDQefyRUu8JuLUW8lMZEmVOfK-edRC3xN4aYgMs9bpkGE22rWnU5GPafBQ",
+    "Stars": 5,
+    "response": "",
+    "response_date": ""
+  },
+  {
+    "store_id": "N36",
+    "store_name": "Ayyappa Nagar",
+    "stars": "5",
+    "customer_name": "SWARNALATHA SRINIVASAN",
+    "review_comments": "I’m very happy with the service and the haircut turned out pretty..thank you Paul for the wonderful service done ..",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-14",
+    "review_id": "AbFvOqmifC4LYJAho8FbUeWp-tr0XmfQH_FeV-3qV_RSj7L3oDMUJAdPiZcfpJnc5KamREe8I4i-jQ",
+    "Stars": 5,
+    "response": "",
+    "response_date": ""
+  },
+  {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "5",
     "customer_name": "Wanna More",
     "review_comments": "Went here today for a hair treatment for dandruff. Thyagaraja did a great job, first explaining the process and then did a very professional work on the hair. Can feel the difference in the hair immediately after the procedure.",
     "show_it_in_website": "Yes",
@@ -845,19 +871,6 @@
     "response_date": "2026-08-05"
   },
   {
-    "store_id": "N45",
-    "store_name": "Nagavara",
-    "stars": "5",
-    "customer_name": "Harshitha Aluru Naresh",
-    "review_comments": "Nice waxing seevice by Shika",
-    "show_it_in_website": "Yes",
-    "date_posted": "2026-08-05",
-    "review_id": "AbFvOqkXZQXNPljhxbmRdQws4NDmFrjIkssOLZa5lSjFsmYddz1q1a4xdYBmKfhEUytNoptaF0xQ",
-    "Stars": 5,
-    "response": "Dear Harshitha, we are thrilled to hear that you enjoyed the waxing service by Shika, and our team at Naturals Nagavara is committed to delivering expert hair styling and grooming services, making us a premium hair salon in Nagavara. Our stylists were delighted to have you at our salon and can't wait to welcome you back for your next grooming session.  Your Premium Grooming Experts @ Naturals Nagavara",
-    "response_date": "2026-08-05"
-  },
-  {
     "store_id": "N36",
     "store_name": "Ayyappa Nagar",
     "stars": "5",
@@ -894,19 +907,6 @@
     "review_id": "AbFvOql0JUlr2ALuuXSvN4kFQI3Py1KxHgnwyG_r-65CCi8Q8xRt5vgBZZ1n71mGzZ_k12KhSwms",
     "Stars": 5,
     "response": "Dear Razia, our team at Naturals Hennur, a premium hair salon in Hennur, is thrilled to hear that Armaan did an excellent job with your haircut. Armaan's attention to detail and expertise in haircutting are truly commendable, and we're glad you had a wonderful experience. We look forward to serving you again, and you can visit us at https://naturalsprime.in/hennur/ for the latest offers and updates. Naturals Hennur — Your Salon Family",
-    "response_date": "2026-08-05"
-  },
-  {
-    "store_id": "N45",
-    "store_name": "Nagavara",
-    "stars": "5",
-    "customer_name": "Barugu Srilatha",
-    "review_comments": "Fabulous experience, Polite and homely nature Especially Keerthi, very good and neat work",
-    "show_it_in_website": "Yes",
-    "date_posted": "2026-08-04",
-    "review_id": "AbFvOqnS0bIi3qyRBI3zU5cAiFGdNHW5Im4J1wZJgEGG0g02i-Yfl-npnfr10ytZhXD7HLOC_uMl-w",
-    "Stars": 5,
-    "response": "Dear Barugu, we are thrilled to hear that you had a fabulous experience at our premium salon in Nagavara, and our team, especially Kerthana, was delighted to provide you with polite and homely service, ensuring very good and neat work. As one of the best unisex salons in Nagavara, we strive for perfection in every aspect.  With love and style, Team Naturals Nagavara",
     "response_date": "2026-08-05"
   },
   {
@@ -1037,19 +1037,6 @@
     "review_id": "AbFvOqmCLFU1AW2agGMx-FDmWGDxv3dEzqWGHIq1GvaXqND45Vog-_t9iBsKB5Mc3-i9WAyC6LP20A",
     "Stars": 5,
     "response": "Dear Kavya, we are thrilled to hear that you had an amazing experience with your nanoplastia treatment at our premium hair salon in Hennur, and our stylist Rashid was delighted to have been able to provide you with such outstanding service. His professionalism and attention to detail are a testament to our commitment to expert hair styling, and we're glad you're enjoying the smoother, shinier, and healthier results. Visit us at https://naturalsprime.in/hennur/ for latest offers and updates. Naturals Hennur — Your Dedicated Luxury Stylists",
-    "response_date": "2026-08-02"
-  },
-  {
-    "store_id": "N45",
-    "store_name": "Nagavara",
-    "stars": "5",
-    "customer_name": "sreelekha choudarapu",
-    "review_comments": "Had a very good experience. Got pedi and hair spa done by shikha , and she was very good and hospitality was very welcoming.",
-    "show_it_in_website": "Yes",
-    "date_posted": "2026-08-02",
-    "review_id": "AbFvOqkSVFO6jn7B9GYlAvMXvCQmydfkyOSeb-H-jEK8AhCV1S8k5_UXnP-mFhmI4hq2DubG259F4g",
-    "Stars": 5,
-    "response": "Dear Sreelekha, we're delighted to hear that you had a wonderful experience at our premium hair salon in Nagavara, and our stylists, including Shikha, were thrilled to provide you with exceptional service and hospitality. Our team, including Kerthana, Lalitha, MangBoi, Sameer, and Thyagaraj, strive for perfection in every hair treatment, ensuring each guest feels pampered and relaxed. Please visit us at https://naturalsprime.in/nagavara/ for the latest offers and updates, and we look forward to welcoming you back to our salon. Naturals Nagavara — Your Dedicated Luxury Stylists",
     "response_date": "2026-08-02"
   },
   {
@@ -1246,19 +1233,6 @@
     "Stars": 5,
     "response": "Dear Dan, we are thrilled to hear that our stylist, Gufran, provided you with an exceptional experience, paying close attention to every detail to Anas your comfort and satisfaction with your hair dye and styling. As a premium hair salon in Frazer Town, our team, including Gufran, is dedicated to delivering expert hair styling that exceeds our clients' expectations. We look forward to welcoming you back and invite you to visit us at https://naturalsprime.in/frazertown/ for our latest offers and updates. The Self-Care Crew at Naturals Frazer Town",
     "response_date": "2026-07-31"
-  },
-  {
-    "store_id": "N05",
-    "store_name": "Frazer Town",
-    "stars": "1",
-    "customer_name": "Raghavendra Udupa",
-    "review_comments": "Poor service",
-    "show_it_in_website": "Yes",
-    "date_posted": "2026-07-30",
-    "review_id": "AbFvOqldyJ5ofSK_misJYUSMeAxsyyUNCs0AKnjHwIkIEYCT84IufCqV1cW9_-a9cnHOTPVnjSwEHw",
-    "Stars": 1,
-    "response": "Dear Raghavendra, we apologize for not meeting your expectations during your recent visit to Naturals Frazer Town, and our team,  truly sorry to hear that you experienced poor service. As the best salon in Frazer Town, we strive for 5-Star Only service excellence, and it's clear we fell short in your case. We hope you will give us another chance to serve you better. Team Naturals Frazer Town (Looking forward to your next visit!)",
-    "response_date": "2026-08-13"
   },
   {
     "store_id": "N78",
@@ -3059,7 +3033,7 @@
     "store_name": "Nagavara",
     "stars": "5",
     "customer_name": "Suche D",
-    "review_comments": "I had a wonderful haircut by Lalita and I absolutely loved the result.",
+    "review_comments": "Good service by keerti.. much appreciated 👍",
     "show_it_in_website": "Yes",
     "date_posted": "2026-07-05",
     "review_id": "AbFvOqka1ZW9_uALyblmo_IL6YxUEmBSpY9xm3F-Cu55gidCyMnFcZp2EkgRVBgKPU-HGl-uilXUAQ",
@@ -3514,7 +3488,7 @@
     "store_name": "Hennur",
     "stars": "5",
     "customer_name": "Nandana Sunil",
-    "review_comments": "Extremely happy with the services....Nisha was a great stylist....",
+    "review_comments": "Extremely happy with the services.....Rashid has did a really good job on my hair....",
     "show_it_in_website": "Yes",
     "date_posted": "2026-07-02",
     "review_id": "AbFvOqn8-mTCQ38_eVD72tk8PxlCk3ncAIUF4qtF7ryU3iN7VYmwSvzkuBo75-LLT4sxbcI0lDivcQ",
@@ -5061,7 +5035,7 @@
     "store_name": "Nagavara",
     "stars": "5",
     "customer_name": "Tulasi Ram",
-    "review_comments": "Had a great experience with Thyagaraju at Naturals. He took the time to understand exactly what I wanted and suggested a style that suited my face shape, hair texture, and beard. He maintained the hair length while adding layers and texture, and the beard shaping was done very professionally. The haircut looks natural, stylish, and easy to manage. Really happy with the outcome and would definitely recommend him to anyone looking for a personalized grooming experience. Thanks, Thyagaraju!\"  Visited the store once again and got hair cut and beard services from Sameer who is very good listener and suggest you the best style that suits. Encourage you all to take services from him. Thank you once again",
+    "review_comments": "Had a great experience with Thyagaraju at Naturals. He took the time to understand exactly what I wanted and suggested a style that suited my face shape, hair texture, and beard. He maintained the hair length while adding layers and texture, and the beard shaping was done very professionally. The haircut looks natural, stylish, and easy to manage. Really happy with the outcome and would definitely recommend him to anyone looking for a personalized grooming experience. Thanks, Thyagaraju!\"",
     "show_it_in_website": "Yes",
     "date_posted": "2026-06-19",
     "review_id": "AbFvOqn6qS1xQui6XaVtn5Fvpx1Xt3qfk2qdRrxkFLxZGZ2PXgzf5gc33P4q2rxcM-Iyxz4Phisepg",
@@ -15799,7 +15773,7 @@
     "store_name": "Hennur",
     "stars": "5",
     "customer_name": "CP ATHIRA",
-    "review_comments": "Facial service that i opted waa great",
+    "review_comments": "Awesome service. MOMBROY HAS done a great job",
     "show_it_in_website": "Yes",
     "date_posted": "2025-12-05",
     "review_id": "AbFvOqlXxFzEIVUMAZ6_0gm1d7-NZFNIaNqvAH59e9QgT3feAKQG-iYIS299WsU9ZEDxv9XLmdSnqQ",
@@ -23040,7 +23014,7 @@
     "store_name": "Hennur",
     "stars": "5",
     "customer_name": "Durga Dash",
-    "review_comments": "I had a great experience with my hair cut at Naturals. Many Thanks to Rashid who was very nice and super in his services. Will visit again",
+    "review_comments": "I had a great experience with my hair cut at Naturals. Many Thanks to Asif who was very nice and super in his services. Will visit again",
     "show_it_in_website": "Yes",
     "date_posted": "2025-05-30",
     "review_id": "AbFvOqm2CuXQKqkui3akdBOxj3W6XNVOyqfyaLt3QLWpPANM2XjLUcjj5XzRQ1lo5JvGzWZ3lr75",
@@ -28435,12 +28409,12 @@
     "store_name": "Ayyappa Nagar",
     "stars": "5",
     "customer_name": "Revathy Deepu",
-    "review_comments": "I enjoyed my facial at Naturals. Staff Bhagya  was so gentle, professional, and knowledgeable. They took the time to assess my skin type before starting and explained each step of the process. The massage was incredibly relaxing, and my skin had an immediate, healthy glow. Left feeling super refreshed.",
+    "review_comments": "I recently had a facial at Naturals and was very impressed with the entire experience!The staff (Radha) was very knowledgeable about my skin type and customized the treatment accordingly. It was a nice experience",
     "show_it_in_website": "Yes",
     "date_posted": "2024-12-21",
     "review_id": "AbFvOqm39nu3XqY2XclyEzrGJluic-cbKHoHRxSAa5n5CUjC4C6oie7gEv4J50RODt7NG8JZZZs5JQ",
     "Stars": 5,
-    "response": "Dear Revathy Deepu Thank you for your high ratings , Appreciated. Your positive response is a great motivation for us , that will help us to achieve higher standards. Visit us again and please do like us on Facebook to receive regular updates and best offers: http://facebook.com/Naturals.Salon.Devasandra/  Regards, Naturals Unisex Salon (Naturals at 36) || No. 1,2,3, 1st Floor || Opp. Lulu's Bakery || Devasandra Main Road || Basavanapura || KRPuram || Bangalore 560036 || ",
+    "response": "Dear Revathy Deepu Thank you for your high ratings , Appreciated. Your positive response is a great motivation for us , that will help us to achieve higher standards. Visit us again and please do like us on Facebook to receive regular updates and best offers: http://facebook.com/Naturals.Salon.Devasandra/  Regards, Naturals Unisex Salon (Naturals at 36) || No. 1,2,3, 1st Floor || Opp. Lulu's Bakery || Devasandra Main Road || Basavanapura || KRPuram || Bangalore 560036 ||",
     "response_date": "2025-12-22"
   },
   {
@@ -33661,13 +33635,13 @@
     "store_name": "Nagavara",
     "stars": "5",
     "customer_name": "Nidhin Rajan",
-    "review_comments": "Very good service and staff overall.  Thyagraj and Sameer are  very professional and excellent service",
+    "review_comments": "Very good service and staff overall.  Thyagraj was very professional and good service",
     "show_it_in_website": "Yes",
     "date_posted": "2024-08-03",
     "review_id": "AbFvOqmEyaqrXWfqHATh5RMZSO95Y5Zz_LECi3qe6osJ5DE8uHW_ySGD6EFekgJ2eG_ttqDsnUfAUQ",
     "Stars": 5,
-    "response": "Dear Nidhin, we are thrilled to hear that you experienced very good service overall at our premium salon in Nagavara, and our team, particularly Thyagaraj and Sameer, provided you with excellent service, showcasing their professionalism. Our stylists, including Thyagaraj and Sameer, take immense pride in delivering top-notch experiences, making us one of the best unisex salons in Nagavara. We appreciate your kind words and look forward to welcoming you back for another exceptional visit! Team Naturals Nagavara (Looking forward to your next visit!)",
-    "response_date": "2026-07-24"
+    "response": "Dear Nidhin Rajan,Thank you for your support! Have a wonderful day and we hope to see you again soon!",
+    "response_date": "2024-08-03"
   },
   {
     "store_id": "N43",
@@ -41674,8 +41648,8 @@
     "date_posted": "2024-01-07",
     "review_id": "AbFvOqknoxsFZmJJzJBU2-qyzGGGL2-ND-pVg_OY3sexsCIfboNak3wZPWLf7c9OsP7e21fuxC5RFg",
     "Stars": 5,
-    "response": "Dear Payaswini,  We are thrilled to be your go-to destination for a haircut and other pampering treatments, and our team, especially Sarah is delighted to have provided you with a wonderful hair spa experience. As a premium hair salon in JP Nagar 5th Phase, we strive for perfection in every service, ensuring that every visit to Naturals JP Nagar 5th Phase is nothing short of exceptional. The Master Stylists at Naturals JP Nagar 5th Phase",
-    "response_date": "2026-08-13"
+    "response": "Dear payaswini kamath,Thank you for your support! Have a wonderful day and we hope to see you again soon!",
+    "response_date": "2025-09-02"
   },
   {
     "store_id": "N78",
@@ -51497,7 +51471,7 @@
     "store_name": "Nagavara",
     "stars": "5",
     "customer_name": "Shagun Sezwar",
-    "review_comments": "Sameer was courteous and a great barber . New location is great too ! Great service :)",
+    "review_comments": "Thyagaraj was courteous and a great barber . New location is great too ! Shifted from Elements mall to Nagwara. Thanks.",
     "show_it_in_website": "Yes",
     "date_posted": "2023-05-04",
     "review_id": "AbFvOqkcrS_cTyYOIKyEjrsVHDrJTiVhgTTUvbOo0jCiPjC__MBqTnti9eS_0EYwahB8wWYPhm5T5A",
