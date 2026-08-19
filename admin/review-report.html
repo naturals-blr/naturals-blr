@@ -196,9 +196,12 @@
       $('summary-stats').classList.add('opacity-50');
       $('reviews-container').innerHTML = '<div class="text-center text-gray-400 py-8 text-sm">Loading reviews...</div>';
       try {
+        // Cache-bust: never serve stale zeros from a cached response. Both the
+        // local console and the deployed site can return a cached /api JSON, so
+        // force a fresh fetch on every page load.
         const [storesRes, reviewsRes] = await Promise.all([
-          fetch('/api/stores-sheet.json'),
-          fetch('/api/reviews-data.json'),
+          fetch('/api/stores-sheet.json?t=' + Date.now(), { cache: 'no-store' }),
+          fetch('/api/reviews-data.json?t=' + Date.now(), { cache: 'no-store' }),
         ]);
 
         let storesJson = await storesRes.json();
