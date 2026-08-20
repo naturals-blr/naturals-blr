@@ -9,8 +9,8 @@
     "date_posted": "2026-08-20",
     "review_id": "AbFvOqn3ppYbgtBX4fJYWtN-Nd1gxg6DbZdsQUszgPtYg32Z_sqijPHzh3rTeE-cDNlvoIdCiHoDjw",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Mathin, We are absolutely delighted to hear you enjoyed your haircut with Arif; it's wonderful to know our dedication to expert hair styling left you so happy! We eagerly await your next visit to Naturals Ayyappa Nagar. Naturals Ayyappa Nagar Team",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N05",
@@ -39,6 +39,32 @@
     "response_date": "2026-08-20"
   },
   {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "5",
+    "customer_name": "Nelanti Anjali",
+    "review_comments": "Good service, hair spa is gud by Tyagaraju",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-20",
+    "review_id": "AbFvOqnBAOOnACh8ano-usOUfSpHZ3wnBaqMWcX5jBmf7BMMS-swq7KK1awaKk9BNdmmncA7tI3hog",
+    "Stars": 5,
+    "response": "Dear Nelanti, We are absolutely delighted to hear you enjoyed your hair spa with Thyagaraj; our team is dedicated to providing expert hair styling and the very best in premium hair care. We look forward to welcoming you back to Naturals Nagavara for another pampering experience soon. Naturals Nagavara — Your Dedicated Luxury Stylists",
+    "response_date": "2026-08-20"
+  },
+  {
+    "store_id": "N45",
+    "store_name": "Nagavara",
+    "stars": "5",
+    "customer_name": "Bhageerath",
+    "review_comments": "Service was very professional. Especially, the stylist Lalitha was exceptionally good at her work. It was an amazing experience.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-20",
+    "review_id": "AbFvOqlUmiPl5F6uHylzqMJTeFkbgDhUeGXCiqU30caEH3rYUeQfGOM5Kc1jFpHBom4nBKrl-VkpZg",
+    "Stars": 5,
+    "response": "Dear Bhageerath, We are absolutely delighted to hear you had such an amazing experience with us, and Lalitha was thrilled to know her professional care made such a wonderful impression. It's always our pleasure to provide the best unisex salon experience in Nagavara. The Self-Care Crew at Naturals Nagavara",
+    "response_date": "2026-08-20"
+  },
+  {
     "store_id": "N36",
     "store_name": "Ayyappa Nagar",
     "stars": "5",
@@ -48,8 +74,8 @@
     "date_posted": "2026-08-19",
     "review_id": "AbFvOqkKYQ1lTLMeu2xhOOgcCQnEPsYPDFevKPr9ij_jpBC_UtJmzTgzsUo6GBmCS9726H1SCVsKwQ",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Arya, We are absolutely delighted to hear about your wonderful experience with Arif and his dedication to perfecting your hair service! It truly warms us to know you appreciated his attentive care and precision, reflecting our commitment to expert hair styling. ✨ The Self-Care Crew at Naturals Ayyappa Nagar",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N05",
@@ -126,8 +152,8 @@
     "date_posted": "2026-08-17",
     "review_id": "AbFvOqnPvuTF6JNmnOOmkgms_jdE29Mps8t92ny_gQZ985zs0vyE-nwvOwHlRgOMvAU3ngxgQyusIQ",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Karnam, We are absolutely delighted to hear you had a wonderful experience and that Sarah provided such excellent hair styling and valuable tips! It warms our hearts to know our dedication to perfection in hair care resonated so beautifully with you. Naturals JP Nagar 5th Phase Guest Relations Team",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N36",
@@ -191,8 +217,8 @@
     "date_posted": "2026-08-17",
     "review_id": "AbFvOqnsgUUf1_SpOfOCmN2UNgr-_VDpkjHpegFU69wvJWkDeB-tI-aYyJQA-o66LKJZQ0Tj3gD2nQ",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Dr.neha, We are absolutely delighted to hear you had such a wonderful experience with us, and that Sarah expertise in creating your layer cut and hair spa exceeded your expectations. It truly warms our hearts when our dedication to expert hair styling shines through so beautifully. Naturals JP Nagar 5th Phase Guest Relations Team",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N36",
@@ -105633,6 +105659,19 @@
     "show_it_in_website": "Yes",
     "date_posted": "",
     "review_id": ">>>>>>> 918312c1fdba30508629aff3f18812aff958c1b8",
+    "Stars": 0,
+    "response": "",
+    "response_date": ""
+  },
+  {
+    "store_id": "",
+    "store_name": "",
+    "stars": "",
+    "customer_name": "Anonymous",
+    "review_comments": "",
+    "show_it_in_website": "Yes",
+    "date_posted": "",
+    "review_id": ">>>>>>> 2bd0ade1374aa4354b58d0b30c7cf87d0cda7e62",
     "Stars": 0,
     "response": "",
     "response_date": ""
