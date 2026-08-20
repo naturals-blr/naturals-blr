@@ -3,6 +3,45 @@
     "store_id": "N36",
     "store_name": "Ayyappa Nagar",
     "stars": "5",
+    "customer_name": "Mathin Parvin",
+    "review_comments": "I have done hair cut it’s really good .. thank you Mr Arif .. I’m happy with your service.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-20",
+    "review_id": "AbFvOqn3ppYbgtBX4fJYWtN-Nd1gxg6DbZdsQUszgPtYg32Z_sqijPHzh3rTeE-cDNlvoIdCiHoDjw",
+    "Stars": 5,
+    "response": "",
+    "response_date": ""
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "IBR Bangalore",
+    "review_comments": "",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-20",
+    "review_id": "AbFvOqn9m2DT3dciXup4qWdQt5N0ZCMjVOC8_rn3RWCLTJ6hlx96EGDQC2xW1fZyDWbRItDicdiE",
+    "Stars": 5,
+    "response": "Thank you, Ibr! Your 5-star review means a lot to our team at Naturals Frazer Town. 🌟",
+    "response_date": "2026-08-20"
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "Krishnawati Devi",
+    "review_comments": "Had a great experience at natural . this been our 8th time already and thanks to jyoti mam we keep coming here .",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-20",
+    "review_id": "AbFvOqmm4vqmfxu_QyzLisNdbzF6O_2rzTb6cslX1tEMMEt8v4Xbk5VeDCxhdxAM9ELZydWMzrjCmw",
+    "Stars": 5,
+    "response": "Hi Krishnawati! Really appreciate you taking the time to share this. Thanks for noticing the details—we care about them. Hope we get to welcome you back again soon. Thank you! Warmly, Naturals Frazer Town",
+    "response_date": "2026-08-20"
+  },
+  {
+    "store_id": "N36",
+    "store_name": "Ayyappa Nagar",
+    "stars": "5",
     "customer_name": "Arya Vignesh",
     "review_comments": "I had a really good experience with Arif for my hair service. He was very punctual, professional, and attentive throughout the service. I really appreciated how patiently he understood what I wanted and made sure everything was done perfectly. Very happy with the service and would definitely recommend Arif! ✨",
     "show_it_in_website": "Yes",
@@ -22,8 +61,8 @@
     "date_posted": "2026-08-19",
     "review_id": "AbFvOqm2UApq5L0_yCareMZKkr03vV1HC2shCnskdDbQlRbKwFNlEBaTMqcpm-UwFagxt031McuoQQ",
     "Stars": 5,
-    "response": "Dear Aswin Das, Thank you for your support! Have a wonderful day and we hope to see you again soon!",
-    "response_date": "2026-08-19"
+    "response": "Thank you so much, Aswin! Grateful for your lovely feedback. We’ll keep working to maintain the same standard. We look forward to welcoming you again. Thank you! With gratitude, Your Naturals Frazer Town family",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N45",
@@ -100,8 +139,8 @@
     "date_posted": "2026-08-17",
     "review_id": "AbFvOqnOZdMnaB7qO4YfjpnGDh8p0EXESgtSpYx2kPjfAIv2RUdJE37zE1zDiG03MIXvMX4D5eCEdg",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Thank you so much, Spoorthy! Your feedback made our day, Spoorthy. We’ll keep working to maintain the same standard. Can’t wait to host you again. Thank you! Sincerely, Team Naturals Ayyappa Nagar",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N05",
