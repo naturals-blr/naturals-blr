@@ -26,19 +26,6 @@
     "response_date": "2026-08-20"
   },
   {
-    "store_id": "N05",
-    "store_name": "Frazer Town",
-    "stars": "5",
-    "customer_name": "Krishnawati Devi",
-    "review_comments": "Had a great experience at natural . this been our 8th time already and thanks to jyoti mam we keep coming here .",
-    "show_it_in_website": "Yes",
-    "date_posted": "2026-08-20",
-    "review_id": "AbFvOqmm4vqmfxu_QyzLisNdbzF6O_2rzTb6cslX1tEMMEt8v4Xbk5VeDCxhdxAM9ELZydWMzrjCmw",
-    "Stars": 5,
-    "response": "Hi Krishnawati! Really appreciate you taking the time to share this. Thanks for noticing the details—we care about them. Hope we get to welcome you back again soon. Thank you! Warmly, Naturals Frazer Town",
-    "response_date": "2026-08-20"
-  },
-  {
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "5",
@@ -62,6 +49,19 @@
     "review_id": "AbFvOqlUmiPl5F6uHylzqMJTeFkbgDhUeGXCiqU30caEH3rYUeQfGOM5Kc1jFpHBom4nBKrl-VkpZg",
     "Stars": 5,
     "response": "Dear Bhageerath, We are absolutely delighted to hear you had such an amazing experience with us, and Lalitha was thrilled to know her professional care made such a wonderful impression. It's always our pleasure to provide the best unisex salon experience in Nagavara. The Self-Care Crew at Naturals Nagavara",
+    "response_date": "2026-08-20"
+  },
+  {
+    "store_id": "N05",
+    "store_name": "Frazer Town",
+    "stars": "5",
+    "customer_name": "Krishnawati Devi",
+    "review_comments": "Had a great experience at natural . this been our 8th time already and thanks to jyoti mam we keep coming here .",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-20",
+    "review_id": "AbFvOqmm4vqmfxu_QyzLisNdbzF6O_2rzTb6cslX1tEMMEt8v4Xbk5VeDCxhdxAM9ELZydWMzrjCmw",
+    "Stars": 5,
+    "response": "Hi Krishnawati! Really appreciate you taking the time to share this. Thanks for noticing the details—we care about them. Hope we get to welcome you back again soon. Thank you! Warmly, Naturals Frazer Town",
     "response_date": "2026-08-20"
   },
   {
@@ -100,8 +100,8 @@
     "date_posted": "2026-08-18",
     "review_id": "AbFvOqlm0ba53wKTnX5LyY7AeRUfsBO7SWdQx_URrOVIJOcVhLofWzCZJZZboUlHWQv6VgXlYgTW",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Vijay, We are absolutely delighted to hear about your wonderful experience with Thyagaraj professional and patient service for your beard and facial. It's always our pleasure to provide rejuvenating facials and ensure every visit leaves you feeling your best. Team Naturals Nagavara (Looking forward to your next visit!)",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N45",
@@ -126,8 +126,8 @@
     "date_posted": "2026-08-18",
     "review_id": "AbFvOqnH9nMGKH3wUczhfhF-vDmqHgp-dNURZUkaUzFzZ1FDcFSqubWxc_iDwVIDmMt254wvr15Ajw",
     "Stars": 4,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Nishitha, We are delighted to hear you enjoyed your haircut service with Kerthana Our team at Naturals Nagavara strives to provide expert hair styling, ensuring every visit is a truly luxurious experience. The Relaxation Experts at Naturals Nagavara",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N05",
@@ -243,8 +243,8 @@
     "date_posted": "2026-08-17",
     "review_id": "AbFvOqk8re8E3zAdN0sDccsJyHIcA3KaDcvJT8J8yJ6ffgJ0_5Xnkva6jqRbLgVuSHglr29kzCYDhw",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "So happy to know you enjoyed your visit. We appreciate the trust you placed in us. We look forward to welcoming you again. Thank you!",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N36",
@@ -282,8 +282,8 @@
     "date_posted": "2026-08-17",
     "review_id": "AbFvOql9TaNSulSNLR2FOX3stIaSY9OIDLdtQJiic-E-yyytLyGFHwSi5xkIpwqX96UQUwCgW6kxNA",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Raji, We are absolutely delighted to hear you had such a wonderful experience with Thyagaraj and are thrilled you enjoyed your haircut! Our team is dedicated to providing expert hair styling, ensuring every visit leaves you feeling your best. The Master Stylists at Naturals Nagavara",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N45",
@@ -295,8 +295,8 @@
     "date_posted": "2026-08-17",
     "review_id": "AbFvOqmOSS0sJj3CVWuB-tbPVsQ3wkVd0W4EVqsGzAuoPyMvPMJnnZIx25cfw503jwwOqyxsIPKXJQ",
     "Stars": 4,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Sarath, We are delighted to hear that Thyagaraj provided you with such a wonderful experience! Our team strives to ensure every visit to Naturals Nagavara is truly exceptional, cementing our reputation as the best unisex salon in Nagavara. Naturals Nagavara Beauty Desk",
+    "response_date": "2026-08-20"
   },
   {
     "store_id": "N45",
@@ -1726,19 +1726,6 @@
     "review_id": "AbFvOqmCLFU1AW2agGMx-FDmWGDxv3dEzqWGHIq1GvaXqND45Vog-_t9iBsKB5Mc3-i9WAyC6LP20A",
     "Stars": 5,
     "response": "Dear Kavya, we are thrilled to hear that you had an amazing experience with your nanoplastia treatment at our premium hair salon in Hennur, and our stylist Rashid was delighted to have been able to provide you with such outstanding service. His professionalism and attention to detail are a testament to our commitment to expert hair styling, and we're glad you're enjoying the smoother, shinier, and healthier results. Visit us at https://naturalsprime.in/hennur/ for latest offers and updates. Naturals Hennur — Your Dedicated Luxury Stylists",
-    "response_date": "2026-08-02"
-  },
-  {
-    "store_id": "N45",
-    "store_name": "Nagavara",
-    "stars": "5",
-    "customer_name": "sreelekha choudarapu",
-    "review_comments": "Had a very good experience. Got pedi and hair spa done by shikha , and she was very good and hospitality was very welcoming.",
-    "show_it_in_website": "Yes",
-    "date_posted": "2026-08-02",
-    "review_id": "AbFvOqkSVFO6jn7B9GYlAvMXvCQmydfkyOSeb-H-jEK8AhCV1S8k5_UXnP-mFhmI4hq2DubG259F4g",
-    "Stars": 5,
-    "response": "Dear Sreelekha, we're delighted to hear that you had a wonderful experience at our premium hair salon in Nagavara, and our stylists, including Shikha, were thrilled to provide you with exceptional service and hospitality. Our team, including Kerthana, Lalitha, MangBoi, Sameer, and Thyagaraj, strive for perfection in every hair treatment, ensuring each guest feels pampered and relaxed. Please visit us at https://naturalsprime.in/nagavara/ for the latest offers and updates, and we look forward to welcoming you back to our salon. Naturals Nagavara — Your Dedicated Luxury Stylists",
     "response_date": "2026-08-02"
   },
   {
@@ -105659,19 +105646,6 @@
     "show_it_in_website": "Yes",
     "date_posted": "",
     "review_id": ">>>>>>> 918312c1fdba30508629aff3f18812aff958c1b8",
-    "Stars": 0,
-    "response": "",
-    "response_date": ""
-  },
-  {
-    "store_id": "",
-    "store_name": "",
-    "stars": "",
-    "customer_name": "Anonymous",
-    "review_comments": "",
-    "show_it_in_website": "Yes",
-    "date_posted": "",
-    "review_id": ">>>>>>> 2bd0ade1374aa4354b58d0b30c7cf87d0cda7e62",
     "Stars": 0,
     "response": "",
     "response_date": ""
