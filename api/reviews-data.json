@@ -105610,57 +105610,5 @@
     "Stars": 1,
     "response": "2019-10-02T14:22:22.431Z",
     "response_date": "2019-10-02"
-  },
-  {
-    "store_id": "",
-    "store_name": "",
-    "stars": "",
-    "customer_name": "Anonymous",
-    "review_comments": "",
-    "show_it_in_website": "Yes",
-    "date_posted": "",
-    "review_id": "<<<<<<< HEAD",
-    "Stars": 0,
-    "response": "",
-    "response_date": ""
-  },
-  {
-    "store_id": "",
-    "store_name": "",
-    "stars": "",
-    "customer_name": "Anonymous",
-    "review_comments": "",
-    "show_it_in_website": "Yes",
-    "date_posted": "",
-    "review_id": "=======",
-    "Stars": 0,
-    "response": "",
-    "response_date": ""
-  },
-  {
-    "store_id": "",
-    "store_name": "",
-    "stars": "",
-    "customer_name": "Anonymous",
-    "review_comments": "0",
-    "show_it_in_website": "Yes",
-    "date_posted": "",
-    "review_id": ">>>>>>> 473bd00aaae238a2fe6cc9ad90ea095329e7abe1",
-    "Stars": 0,
-    "response": "",
-    "response_date": ""
-  },
-  {
-    "store_id": "",
-    "store_name": "",
-    "stars": "",
-    "customer_name": "Anonymous",
-    "review_comments": "",
-    "show_it_in_website": "Yes",
-    "date_posted": "",
-    "review_id": ">>>>>>> 918312c1fdba30508629aff3f18812aff958c1b8",
-    "Stars": 0,
-    "response": "",
-    "response_date": ""
   }
 ]
