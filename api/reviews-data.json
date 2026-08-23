@@ -78,6 +78,19 @@
     "response_date": "2026-08-22"
   },
   {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "5",
+    "customer_name": "Ananya Das",
+    "review_comments": "Rishi and Nisha gave an amazing servic",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-22",
+    "review_id": "AbFvOqkX3ymWYh5lsU-GdyCdVtqC9p4q-dAg6mNr29saJLWTX6PLdZKER6sXcPQbmdYUdP4DDtcHJg",
+    "Stars": 5,
+    "response": "Dear Ananya, We are absolutely delighted to hear that Rashid and Nisha provided you with such amazing service! It's our pleasure to ensure every visit to Naturals Hennur is a truly luxurious experience. The Wellness & Beauty Team, Naturals Hennur",
+    "response_date": "2026-08-22"
+  },
+  {
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "5",
@@ -113,8 +126,21 @@
     "date_posted": "2026-08-22",
     "review_id": "AbFvOqkWo4VccCiuqOOXD_9gU3pgImHZaVbW2yfGGByLt5NtGQQiLvzHjGBp9UOMReqlF7Lc1Tlv",
     "Stars": 5,
-    "response": "",
-    "response_date": ""
+    "response": "Dear Viharikachalla, We are absolutely delighted to hear such wonderful feedback about Kerthana Our entire team at Naturals Nagavara strives to provide an exceptional experience, ensuring we remain the best unisex salon in Nagavara. Your Everyday Beauty Partners, Naturals Nagavara",
+    "response_date": "2026-08-22"
+  },
+  {
+    "store_id": "N36",
+    "store_name": "Ayyappa Nagar",
+    "stars": "5",
+    "customer_name": "kancherla deepthi",
+    "review_comments": "",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-08-22",
+    "review_id": "AbFvOqknnVklBMmpVahCdddZ2SmEr0d_WyrwnOCaMPqttfGl8BhDnntRVD74hex6MSGeVE_0bKGtXw",
+    "Stars": 5,
+    "response": "Dear Kancherla, We are absolutely delighted to receive your 5-star rating for Naturals Ayyappa Nagar! It brings us immense joy to know that your experience with us was nothing short of exceptional, reflecting our commitment to being the best unisex salon in Ayyappa Nagar. We eagerly await your next visit for another pampering session. Your Personal Glow Team, Naturals Ayyappa Nagar",
+    "response_date": "2026-08-22"
   },
   {
     "store_id": "N43",
