@@ -1,5 +1,31 @@
 [
   {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "5",
+    "customer_name": "Vijayalakshmi",
+    "review_comments": "Stella was brilliant. Spoke to me in my mother language Tamil and very satisfied with the haircut.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-09-02",
+    "review_id": "AbFvOqkn5MOhmG9jQa0_jv0_i_aqlcDPWnlmA697RiBo9YLsndNeLWZSM5qQv3tFBoLLxRi0TSBskA",
+    "Stars": 5,
+    "response": "Dear Vijayalakshmi, It warms our hearts to know Stella provided such a delightful experience, and we are thrilled you are so satisfied with your haircut. Our team, especially our expert hair styling professionals, always strives to offer personalized care that truly resonates. The Self-Care Crew at Naturals Hennur",
+    "response_date": "2026-09-02"
+  },
+  {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "5",
+    "customer_name": "Darshini Reddy Thangam",
+    "review_comments": "Really good service provided by Armaan.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-09-02",
+    "review_id": "AbFvOqnggVNTgAHNxEMhGtQSX1jdeM_42aiXimrrpECXkQZdXdy2ILYHHLGIDF9ajeEpboG4QcwDqg",
+    "Stars": 5,
+    "response": "Dear Darshini, We are absolutely delighted to hear that Armaan provided you with such good service at Naturals Hennur. It brings us immense joy to know our team, dedicated to offering the best unisex salon experience in Hennur, made your visit a memorable one. Naturals Hennur — Your Salon Family",
+    "response_date": "2026-09-02"
+  },
+  {
     "store_id": "N45",
     "store_name": "Nagavara",
     "stars": "5",
