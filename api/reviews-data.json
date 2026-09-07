@@ -65,6 +65,32 @@
     "response_date": "2026-09-06"
   },
   {
+    "store_id": "N43",
+    "store_name": "Hennur",
+    "stars": "5",
+    "customer_name": "Reema Philips",
+    "review_comments": "Excellent haircut by Rasheed. Eyebrows and upper lip threading were done beautifully by Nisha. Thank you,  would visit again.",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-09-06",
+    "review_id": "AbFvOqnD2aioillinmTDTN2dmPBmf6QG9Os9IKYNf8-aFGpK5DQh0bNhUECCPEPI6yRNaEheTmNmZg",
+    "Stars": 5,
+    "response": "Dear Reema, We are absolutely delighted to hear you had such a wonderful experience with us at Naturals Hennur! It brings us immense joy to know that Rashid expert hair styling left you feeling excellent and that Nisha's meticulous care for your threading was beautiful. We eagerly await your next visit! Your Premium Grooming Experts @ Naturals Hennur",
+    "response_date": "2026-09-06"
+  },
+  {
+    "store_id": "N36",
+    "store_name": "Ayyappa Nagar",
+    "stars": "5",
+    "customer_name": "Shyamantika Chatterjee",
+    "review_comments": "Great service by Arif",
+    "show_it_in_website": "Yes",
+    "date_posted": "2026-09-06",
+    "review_id": "AbFvOqn8w9JicIxEV4_jpobIb5yc-j-KJhhKny19taOJH5EEr1sCl5StTQpCiFbubnBLmhvpanlyGg",
+    "Stars": 5,
+    "response": "Dear Shyamantika, We are absolutely delighted to hear that Arif Parvathi you with such great service! It is always our pleasure to ensure every visit to Naturals Ayyappa Nagar is a truly 5-star experience. Your Personal Glow Team,  Naturals Ayyappa Nagar",
+    "response_date": "2026-09-06"
+  },
+  {
     "store_id": "N36",
     "store_name": "Ayyappa Nagar",
     "stars": "5",
